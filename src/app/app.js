@@ -27,7 +27,7 @@ angular.module( 'main', [
                     if(config.url === 'signup/signup.tpl.html') {
                         return config;
                     }
-                    config.url = '1.0/' + config.url;
+                    config.url = '1.0' + config.url;
                     return config;
                 }
             };
