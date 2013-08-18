@@ -1,6 +1,66 @@
 @import "susy";
+@import "compass";
 
-h1{
-  color: red;
-  color: blue;
+h1,
+.h1 {
+  font-size: 38px;
+  font-size: 38px;
+}
+
+h2,
+.h2 {
+  font-size: 32px;
+}
+
+h3,
+.h3 {
+  font-size: 24px;
+}
+
+h4,
+.h4 {
+  font-size: 18px;
+}
+
+h5,
+.h5 {
+  font-size: 14px;
+}
+
+h6,
+.h6 {
+  font-size: 12px;
+}
+
+body{
+  font-family: "OpenSans", sans-serif;
+  margin: 0;
+
+}
+
+/* Few useful mixins
+   ========================================================================== */
+@function black($opacity) {
+  @return rgba(0,0,0,$opacity);
+}
+
+/* Few button base css
+   ========================================================================== */
+button{
+  border: none;
+}
+.btn{
+  padding: 7px 15px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+$buttonTop      :       rgba(252, 252, 252, 1.0000);
+$buttonBottom   :       rgba(191, 191, 191, 1.0000);
+.btn--gray{
+  border: 1px solid black(0.5);
+  @include border-radius(5px);
+  @include background(linear-gradient(top, $buttonTop 0%, $buttonBottom 100%));
+  &:hover {
+    @include background(linear-gradient(bottom, $buttonTop 0%, $buttonBottom 100%));
+  }
 }

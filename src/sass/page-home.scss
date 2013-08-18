@@ -1,0 +1,26 @@
+$greenTopBanner       :     rgba(93, 171, 31, 1.0000);
+$heightTopBanner      :     40px;
+
+.banner {
+  background-color: $greenTopBanner;
+  height: $heightTopBanner;
+  width: 100%;
+  min-width: 900px;
+  padding: 5px 0;
+}
+.banner .nav{
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+.banner .content, .banner .title{
+  background-color: $greenTopBanner;
+  margin: 0 auto;
+  display: inline-block;
+  margin: 0 10px;
+}
+.banner button {
+  position: absolute;
+  right: 20px;
+  top: 5px;
+}
