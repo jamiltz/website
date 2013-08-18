@@ -14,13 +14,13 @@ angular.module('bk-page-signup', [
         });
     })
 
-    .controller('SignupCtrl', function SignupCtrl($scope, User, $location) {
+    .controller('SignupCtrl', function SignupCtrl($scope, User, $state) {
 
         $scope.sendUser = function() {
             User.signup($scope.user)
                 .then(function(res, stat) {
 
-                    $location.path('/');
+                    $state.url('/');
 
                 }, function(res) {
                     $scope.error = res.reason;
