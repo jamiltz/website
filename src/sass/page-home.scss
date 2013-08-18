@@ -1,12 +1,11 @@
 $greenTopBanner       :     rgba(93, 171, 31, 1.0000);
-$heightTopBanner      :     40px;
+$heightTopBanner      :     45px;
 
 .banner {
   background-color: $greenTopBanner;
   height: $heightTopBanner;
   width: 100%;
   min-width: 900px;
-  padding: 5px 0;
 }
 .banner .nav{
   width: 1000px;
@@ -19,8 +18,22 @@ $heightTopBanner      :     40px;
   display: inline-block;
   margin: 0 10px;
 }
-.banner button {
+
+.menu{
   position: absolute;
+  top: 0;
   right: 20px;
-  top: 5px;
+}
+$hoverColor         :         rgba(255, 255, 255, 1.0000);
+.menu li{
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  border-top: 3px solid transparent;
+  &:hover{
+    border-top: 3px solid $hoverColor;
+  }
+}
+.menu li a{
+  margin-top: 10px;
 }

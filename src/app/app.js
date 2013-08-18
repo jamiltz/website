@@ -6,6 +6,7 @@
 angular.module( 'main', [
         'templates-app',
         'templates-common',
+        'bk-page-signup',
         'da-about',
         'da-users',
         'da-admin',
@@ -15,7 +16,7 @@ angular.module( 'main', [
     ])
 
     .config( function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider ) {
-        $urlRouterProvider.otherwise( '/admin' );
+        $urlRouterProvider.otherwise( '/' );
 
         $locationProvider.html5Mode(true);
     })

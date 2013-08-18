@@ -1,9 +1,28 @@
 @import "susy";
 @import "compass";
 
+/* Susy set-up
+   ========================================================================== */
+$total-columns      :       12;
+$column-width       :       4em;
+$grid-padding       :       1em;
+$gutter-width       :       1em;
+
+.text-center {
+  text-align: center;
+}
+
+.center{
+  margin: 0 auto;
+  display: block;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}
+
 h1,
 .h1 {
-  font-size: 38px;
   font-size: 38px;
 }
 
@@ -32,6 +51,13 @@ h6,
   font-size: 12px;
 }
 
+a{
+  display: inline-block;
+  font-style: none;
+  font-weight: bold;
+  color: black;
+}
+
 body{
   font-family: "OpenSans", sans-serif;
   margin: 0;
@@ -42,6 +68,18 @@ body{
    ========================================================================== */
 @function black($opacity) {
   @return rgba(0,0,0,$opacity);
+}
+
+/* List Styling
+   ========================================================================== */
+ul{
+  margin: 0;
+  display: inline-block;
+}
+ul li{
+  list-style: none;
+  display: inline-block;
+  text-align: center;
 }
 
 /* Few button base css
@@ -63,4 +101,18 @@ $buttonBottom   :       rgba(191, 191, 191, 1.0000);
   &:hover {
     @include background(linear-gradient(bottom, $buttonTop 0%, $buttonBottom 100%));
   }
+}
+
+/* Few input base css
+   ========================================================================== */
+input{
+
+}
+.ipt{
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.ipt--single{
+  display: block;
 }

@@ -18,7 +18,7 @@
 
     <!-- font awesome from BootstrapCDN -->
     <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-
+    <link href="http://necolas.github.io/normalize.css/2.1.2/normalize.css" rel="stylesheet">
     <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
     <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
 
@@ -39,12 +39,16 @@
         <div class="nav">
             <h2 class="title">Benkyet</h2>
             <h3 class="content">
-                Buy From your community
+                Buy it from your community
             </h3>
-            <button class="btn btn--gray">Log In</button>
+            <ul class="menu">
+                <li><a class="h5" href="/signup">Sign Up</a></li>
+                <button class="btn btn--gray">Log In</button>
+            </ul>
+
         </div>
     </header>
 
-    <div ui-view="main"></div>
+    <div ui-view="main" class="layout"></div>
 </body>
 </html>
