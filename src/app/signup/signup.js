@@ -18,8 +18,8 @@ angular.module('bk-page-signup', [
 
         $scope.sendUser = function() {
             User.signup($scope.user)
-                .then(function(res) {
-                    console.log(res);
+                .then(function(res, stat) {
+                    console.log(res, stat);
                     if(res.status === 409) {
                         $scope.error = res.reason;
                     } else if (res.status === 201) {
@@ -27,6 +27,8 @@ angular.module('bk-page-signup', [
                     }
 
 
+                }, function(res) {
+                    console.log(res)
                 })
         };
 
