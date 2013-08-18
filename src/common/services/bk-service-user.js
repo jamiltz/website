@@ -5,7 +5,7 @@ angular.module('bk-service-user', [])
         signup: function(data) {
             return $http.post('/user', data)
                 .then(function(result) {
-                    return result.data;
+                    return result;
                 });
         }
     };
