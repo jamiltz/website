@@ -14,9 +14,12 @@ angular.module('bk-page-signup', [
         });
     })
 
-    .controller('SignupCtrl', function AdminCtrl($scope) {
-        $scope.name = 'James';
-        $scope.name = 'James';
+    .controller('SignupCtrl', function AdminCtrl($scope, User) {
+
+        $scope.sendUser = function() {
+
+        };
+
 
 
     });

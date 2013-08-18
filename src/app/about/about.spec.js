@@ -4,21 +4,21 @@
  * process will exclude all '.spec.js' files from the build automatically
  */
 
-describe('Testing controller', function() {
-    var $scope;
-    var ctrl;
-
-    beforeEach(module('da-about'));
-
-    beforeEach(inject(function($rootScope, $controller) {
-        $scope = $rootScope.$new();
-
-        ctrl = $controller('AboutCtrl', {
-            $scope: $scope
-        });
-    }));
-
-    it('should publish something to the scope', function() {
-        expect($scope.name).toEqual('James');
-    });
-});
+//describe('Testing controller', function() {
+//    var $scope;
+//    var ctrl;
+//
+//    beforeEach(module('da-about'));
+//
+//    beforeEach(inject(function($rootScope, $controller) {
+//        $scope = $rootScope.$new();
+//
+//        ctrl = $controller('AboutCtrl', {
+//            $scope: $scope
+//        });
+//    }));
+//
+//    it('should publish something to the scope', function() {
+//        expect($scope.name).toEqual('James');
+//    });
+//});

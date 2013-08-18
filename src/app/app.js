@@ -12,13 +12,28 @@ angular.module( 'main', [
         'da-admin',
         'ui.state',
         'ui.router',
-        'da-service'
+        'da-service',
+        'bk-service-user'
     ])
 
-    .config( function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider ) {
+    .config( function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider, $httpProvider ) {
         $urlRouterProvider.otherwise( '/' );
 
         $locationProvider.html5Mode(true);
+
+        $httpProvider.interceptors.push(function() {
+            return {
+                'request': function(config) {
+                    if(config.url === 'signup/signup.tpl.html') {
+                        return config;
+                    }
+                    config.url = '1.0/' + config.url;
+                    return config;
+                }
+            };
+        });
+
+
     })
 
     .run( function run ( ) {
