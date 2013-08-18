@@ -13,11 +13,13 @@ describe('Adjunct List', function() {
 
         ptor.findElement(protractor.By.input('user.username')).sendKeys('James');
         ptor.findElement(protractor.By.input('user.email')).sendKeys('james.nocentini@gmail.com');
-        ptor.findElement(protractor.By.input('user.password')).sendKeys('narodnaia');
+        ptor.findElement(protractor.By.input('user.pass')).sendKeys('narodnaia');
         ptor.findElement(protractor.By.input('user.confirm')).sendKeys('narodnaia');
 
-        ptor.findElement(protractor.By.css('.js-signup')).click();
+        ptor.findElement(protractor.By.tagName('button')).click();
         ptor.waitForAngular();
+
+
 
     }, 5000);
 
