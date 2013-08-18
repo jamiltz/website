@@ -16,7 +16,7 @@ describe('Adjunct List', function() {
         ptor.findElement(protractor.By.input('user.password')).sendKeys('narodnaia');
         ptor.findElement(protractor.By.input('user.confirm')).sendKeys('narodnaia');
 
-        ptor.findElement(protractor.By.className('js-signup')).click();
+        ptor.findElement(protractor.By.css('.js-signup')).click();
         ptor.waitForAngular();
 
     }, 5000);
