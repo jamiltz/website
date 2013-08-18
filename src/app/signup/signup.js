@@ -20,7 +20,7 @@ angular.module('bk-page-signup', [
             User.signup($scope.user)
                 .then(function(res, stat) {
 
-                    $state.go('/about')
+                    $state.tansitionTo('/about')
 
                 }, function(res) {
                     $scope.error = res.reason;
