@@ -1,6 +1,7 @@
 <section class="signup">
     <h3 class="text-center">GET STARTED</h3>
     <h5 class="text-center">It's super easy and doesn't cost you a thing.</h5>
+    {{ error }}
     <input
             ng-model="user.username"
             type="text"
@@ -12,7 +13,7 @@
             placeholder="Email"
             class="ipt ipt--single center">
     <input
-            ng-model="user.password"
+            ng-model="user.pass"
             type="password"
             placeholder="Password"
             class="ipt ipt--single center">
@@ -22,7 +23,6 @@
             placeholder="Confirm"
             class="ipt ipt--single center">
     <button
-            class="btn btn--gray center">
+            class="btn btn--gray center js-signup">
         Sign Up</button>
-    YOOO
 </section>

@@ -12,7 +12,7 @@
     "angular": "v1.2.0rc1",
     "d3": "~3.2.8",
     "angular-ui-router": "~0.0.1",
-    "angular-mocks": "~1.0.7"
+    "angular-mocks": "v1.2.0rc1"
   },
   "resolutions": {
     "angular": "v1.2.0rc1"

@@ -11,10 +11,13 @@ describe('Adjunct List', function() {
     it('should do something', function() {
         ptor = protractor.getInstance();
 
-        ptor.findElement(protractor.By.input('user.username')).sendKeys('Jamesssss');
+        ptor.findElement(protractor.By.input('user.username')).sendKeys('James');
         ptor.findElement(protractor.By.input('user.email')).sendKeys('james.nocentini@gmail.com');
+        ptor.findElement(protractor.By.input('user.password')).sendKeys('narodnaia');
+        ptor.findElement(protractor.By.input('user.confirm')).sendKeys('narodnaia');
 
-
+        ptor.findElement(protractor.By.className('js-signup')).click();
+        ptor.waitForAngular();
 
     }, 5000);
 
@@ -22,8 +25,7 @@ describe('Adjunct List', function() {
         ptor = protractor.getInstance();
 
 
-        ptor.findElement(protractor.By.input('user.password')).sendKeys('narodnaia');
-        ptor.findElement(protractor.By.input('user.confirm')).sendKeys('narodnaia');
+
 
 
     }, 5000);

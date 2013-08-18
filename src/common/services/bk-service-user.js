@@ -2,14 +2,10 @@ angular.module('bk-service-user', [])
 
 .factory('User', function($http) {
     return {
-        signup: function() {
-            return $http.post('/user')
+        signup: function(data) {
+            return $http.post('/user', data)
                 .then(function(result) {
-                    var obj = {
-                        data: result.data,
-                        status: result.status
-                    };
-                    return obj;
+                    return result.data;
                 });
         }
     };

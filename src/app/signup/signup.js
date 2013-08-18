@@ -14,10 +14,19 @@ angular.module('bk-page-signup', [
         });
     })
 
-    .controller('SignupCtrl', function AdminCtrl($scope, User) {
+    .controller('SignupCtrl', function SignupCtrl($scope, User) {
 
         $scope.sendUser = function() {
+            User.signup($scope.user)
+                .then(function(res) {
+                    if(res.status === 409) {
+                        $scope.error = res.reason;
+                    } else if (res.status === 201) {
+                        console.log(res);
+                    }
 
+
+                })
         };
 
 
