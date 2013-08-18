@@ -20,7 +20,7 @@ describe('Adjunct List', function() {
         ptor.findElement(protractor.By.css('.js-signup')).click();
         ptor.waitForAngular();
 
-        expect(ptor.getCurrentUrl()).toBe(ptor.baseUrl + '/');
+        expect(ptor.getCurrentUrl()).toBe(ptor.baseUrl + '/about');
 
     }, 5000);
 
