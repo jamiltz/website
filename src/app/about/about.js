@@ -16,7 +16,7 @@ angular.module('da-about', [
  */
 .config(function config( $stateProvider ) {
     $stateProvider.state('about', {
-        url: '/about',
+        url: '/',
         views: {
             "main": {
                 controller: 'AboutCtrl',

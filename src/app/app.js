@@ -21,17 +21,17 @@ angular.module( 'main', [
 
         $locationProvider.html5Mode(true);
 
-        $httpProvider.interceptors.push(function() {
-            return {
-                'request': function(config) {
-                    if(config.url === 'signup/signup.tpl.html') {
-                        return config;
-                    }
-                    config.url = '1.0' + config.url;
-                    return config;
-                }
-            };
-        });
+//        $httpProvider.interceptors.push(function() {
+//            return {
+//                'request': function(config) {
+//                    if(config.url === 'signup/signup.tpl.html') {
+//                        return config;
+//                    }
+//                    config.url = '1.0' + config.url;
+//                    return config;
+//                }
+//            };
+//        });
 
 
     })

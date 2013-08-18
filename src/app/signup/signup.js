@@ -17,10 +17,12 @@ angular.module('bk-page-signup', [
     .controller('SignupCtrl', function SignupCtrl($scope, User, $state) {
 
         $scope.sendUser = function() {
+            console.log($state)
+
             User.signup($scope.user)
                 .then(function(res, stat) {
 
-                    $state.tansitionTo('/about')
+                    $state.transitionTo('about');
 
                 }, function(res) {
                     $scope.error = res.reason;
