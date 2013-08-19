@@ -20,7 +20,7 @@ angular.module('bk-page-signup', [
 
             User.signup($scope.user)
                 .then(function(res) {
-                    $state.transitionTo('about');
+                    $state.transitionTo('home');
 
                 }, function(res) {
                     console.log(res)

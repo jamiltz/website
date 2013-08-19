@@ -22,7 +22,7 @@ angular.module('bk-page-login', [
                     $http.defaults.headers.common['Authorization'] = User.getAuthHeader();
                     $rootScope.state = 'loggedIn';
                     $rootScope.auth = res;
-                    $state.transitionTo('about');
+                    $state.transitionTo('home');
                 }, function(res) {
                     $scope.error = res.data.reason;
                 })
