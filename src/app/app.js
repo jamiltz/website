@@ -13,7 +13,9 @@ angular.module( 'main', [
         'ui.state',
         'ui.router',
         'da-service',
-        'bk-service-user'
+        'bk-service-user',
+        'bk-page-login',
+        'bk-page-home'
     ])
 
     .config( function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider, $httpProvider ) {
@@ -36,7 +38,9 @@ angular.module( 'main', [
 
     })
 
-    .run( function run ( ) {
+    .run( function run ( $rootScope ) {
+
+        $rootScope.state = 'loggedOut';
 
     })
 

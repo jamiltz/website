@@ -1,0 +1,14 @@
+@import "susy";
+@import "compass";
+
+$backgroundColor      :       rgba(234, 234, 234, 1.0000);
+
+@include with-grid-settings(6, 4em, 1em, 1em) {
+  .login {
+    @include container;
+    background-color: $backgroundColor;
+    margin-top: 30px;
+    padding: 20px;
+    @include border-radius(5px);
+  }
+}

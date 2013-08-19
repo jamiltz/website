@@ -1,0 +1,39 @@
+$greenTopBanner       :     rgba(93, 171, 31, 1.0000);
+$heightTopBanner      :     45px;
+
+.banner {
+  background-color: $greenTopBanner;
+  height: $heightTopBanner;
+  width: 100%;
+  min-width: 900px;
+}
+.banner .nav{
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+.banner .content, .banner .title{
+  background-color: $greenTopBanner;
+  margin: 0 auto;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.menu{
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+$hoverColor         :         rgba(255, 255, 255, 1.0000);
+.menu li{
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  border-top: 3px solid transparent;
+  &:hover{
+    border-top: 3px solid $hoverColor;
+  }
+}
+.menu li a{
+  margin-top: 10px;
+}

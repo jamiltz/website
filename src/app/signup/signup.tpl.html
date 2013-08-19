@@ -1,7 +1,7 @@
 <section class="signup">
     <h3 class="text-center">GET STARTED</h3>
     <h5 class="text-center">It's super easy and doesn't cost you a thing.</h5>
-    {{ error }}
+    <h5 ng-bind="error"></h5>
     <input
             ng-model="user.username"
             type="text"

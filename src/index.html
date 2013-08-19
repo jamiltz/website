@@ -41,9 +41,12 @@
             <h3 class="content">
                 Buy it from your community
             </h3>
-            <ul class="menu">
+            <ul class="menu" ng-show="state === 'loggedOut'">
                 <li><a class="h5" href="/signup">Sign Up</a></li>
-                <button class="btn btn--gray">Log In</button>
+                <button class="btn btn--gray"><a href="/login">Log In</a></button>
+            </ul>
+            <ul class="menu" ng-show="state === 'loggedIn'">
+                <li><h5>Welcome back {{ auth.username }}</h5></li>
             </ul>
 
         </div>

@@ -1,4 +1,4 @@
-describe('User', function() {
+ddescribe('User', function() {
     describe('user signs up', function() {
         var httpBackend;
         var User;
@@ -18,7 +18,7 @@ describe('User', function() {
                 reason: 'Username already taken'
             };
 
-            httpBackend.expectPOST('/user').respond(returnData);
+            httpBackend.expectPOST('/1.0/user').respond(returnData);
             var test = {
                 handler: function() {}
             };
@@ -41,7 +41,7 @@ describe('User', function() {
                 status : 201
             };
 
-            httpBackend.expectPOST('/user').respond(201, returnData);
+            httpBackend.expectPOST('/1.0/user').respond(201, returnData);
             var test = {
                 handler: function() {}
             };
@@ -53,5 +53,22 @@ describe('User', function() {
             expect(test.handler).toHaveBeenCalledWith(returnData);
 
         });
+
+        it('should return 401 error with no user found', function() {
+            var returnData = {
+                status: 401,
+                reason: 'Sorry, this username was not found'
+            };
+            httpBackend.expectGET('/1.0/login').respond(returnData);
+            var test = {
+                handler: function() {}
+            };
+            spyOn(test, 'handler');
+            var returnedPromise = User.login('admin', 'pass');
+            returnedPromise.then(test.handler);
+            httpBackend.flush();
+
+            expect(test.handler).toHaveBeenCalledWith(returnData);
+        })
     });
 });

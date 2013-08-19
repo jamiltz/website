@@ -1,0 +1,19 @@
+<section class="login">
+    <h3 class="text-center">LOG IN</h3>
+    <h5 class="text-center">Hello. Great to see you again!</h5>
+    <h5 ng-bind="error"></h5>
+    <input
+            ng-model="user.username"
+            type="text"
+            placeholder="Username"
+            class="ipt ipt--single center">
+    <input
+            ng-model="user.pass"
+            type="password"
+            placeholder="Password"
+            class="ipt ipt--single center">
+    <button
+            class="btn btn--gray center js-login"
+            ng-click="loginUser();">
+        Log In</button>
+</section>

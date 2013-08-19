@@ -70,13 +70,13 @@ body {
    ========================================================================== */
 /* List Styling
    ========================================================================== */
-/* line 75, ../../src/sass/base.scss */
+/* line 78, ../../src/sass/base.scss */
 ul {
   margin: 0;
   display: inline-block;
 }
 
-/* line 79, ../../src/sass/base.scss */
+/* line 82, ../../src/sass/base.scss */
 ul li {
   list-style: none;
   display: inline-block;
@@ -85,19 +85,19 @@ ul li {
 
 /* Few button base css
    ========================================================================== */
-/* line 87, ../../src/sass/base.scss */
+/* line 90, ../../src/sass/base.scss */
 button {
   border: none;
 }
 
-/* line 90, ../../src/sass/base.scss */
+/* line 93, ../../src/sass/base.scss */
 .btn {
   padding: 7px 15px;
   font-weight: bolder;
   cursor: pointer;
 }
 
-/* line 97, ../../src/sass/base.scss */
+/* line 100, ../../src/sass/base.scss */
 .btn--gray {
   border: 1px solid rgba(0, 0, 0, 0.5);
   -webkit-border-radius: 5px;
@@ -111,7 +111,7 @@ button {
   background: -o-linear-gradient(top, #fcfcfc 0%, #bfbfbf 100%);
   background: linear-gradient(top, #fcfcfc 0%, #bfbfbf 100%);
 }
-/* line 101, ../../src/sass/base.scss */
+/* line 104, ../../src/sass/base.scss */
 .btn--gray:hover {
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #fcfcfc), color-stop(100%, #bfbfbf));
   background: -webkit-linear-gradient(bottom, #fcfcfc 0%, #bfbfbf 100%);
@@ -122,22 +122,232 @@ button {
 
 /* Few input base css
    ========================================================================== */
-/* line 111, ../../src/sass/base.scss */
+/* line 114, ../../src/sass/base.scss */
 .ipt {
   padding: 5px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-/* line 116, ../../src/sass/base.scss */
+/* line 119, ../../src/sass/base.scss */
 .ipt--single {
   display: block;
 }
 
+/* Susy set-up
+   ========================================================================== */
+/* line 11, ../../src/sass/base.scss */
+.text-center {
+  text-align: center;
+}
 
+/* line 15, ../../src/sass/base.scss */
+.center {
+  margin: 0 auto;
+  display: block;
+}
 
+/* line 20, ../../src/sass/base.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
 
-/* line 4, ../../src/sass/page-home.scss */
+/* line 24, ../../src/sass/base.scss */
+h1,
+.h1 {
+  font-size: 38px;
+}
+
+/* line 29, ../../src/sass/base.scss */
+h2,
+.h2 {
+  font-size: 32px;
+}
+
+/* line 34, ../../src/sass/base.scss */
+h3,
+.h3 {
+  font-size: 24px;
+}
+
+/* line 39, ../../src/sass/base.scss */
+h4,
+.h4 {
+  font-size: 18px;
+}
+
+/* line 44, ../../src/sass/base.scss */
+h5,
+.h5 {
+  font-size: 14px;
+}
+
+/* line 49, ../../src/sass/base.scss */
+h6,
+.h6 {
+  font-size: 12px;
+}
+
+/* line 54, ../../src/sass/base.scss */
+a {
+  display: inline-block;
+  font-style: none;
+  font-weight: bold;
+  color: black;
+}
+
+/* line 61, ../../src/sass/base.scss */
+body {
+  font-family: "OpenSans", sans-serif;
+  margin: 0;
+}
+
+/* Few useful mixins
+   ========================================================================== */
+/* List Styling
+   ========================================================================== */
+/* line 78, ../../src/sass/base.scss */
+ul {
+  margin: 0;
+  display: inline-block;
+}
+
+/* line 82, ../../src/sass/base.scss */
+ul li {
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Few button base css
+   ========================================================================== */
+/* line 90, ../../src/sass/base.scss */
+button {
+  border: none;
+}
+
+/* line 93, ../../src/sass/base.scss */
+.btn {
+  padding: 7px 15px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+/* line 100, ../../src/sass/base.scss */
+.btn--gray {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fcfcfc), color-stop(100%, #bfbfbf));
+  background: -webkit-linear-gradient(top, #fcfcfc 0%, #bfbfbf 100%);
+  background: -moz-linear-gradient(top, #fcfcfc 0%, #bfbfbf 100%);
+  background: -o-linear-gradient(top, #fcfcfc 0%, #bfbfbf 100%);
+  background: linear-gradient(top, #fcfcfc 0%, #bfbfbf 100%);
+}
+/* line 104, ../../src/sass/base.scss */
+.btn--gray:hover {
+  background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #fcfcfc), color-stop(100%, #bfbfbf));
+  background: -webkit-linear-gradient(bottom, #fcfcfc 0%, #bfbfbf 100%);
+  background: -moz-linear-gradient(bottom, #fcfcfc 0%, #bfbfbf 100%);
+  background: -o-linear-gradient(bottom, #fcfcfc 0%, #bfbfbf 100%);
+  background: linear-gradient(bottom, #fcfcfc 0%, #bfbfbf 100%);
+}
+
+/* Few input base css
+   ========================================================================== */
+/* line 114, ../../src/sass/base.scss */
+.ipt {
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 119, ../../src/sass/base.scss */
+.ipt--single {
+  display: block;
+}
+
+/* line 10, ../../src/sass/page-home.scss */
+.home {
+  *zoom: 1;
+  max-width: 59em;
+  _width: 59em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #eaeaea;
+}
+/* line 38, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.home:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 14, ../../src/sass/page-home.scss */
+.searchBox {
+  padding: 15px;
+  width: 83.05085%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+  background-color: #5dab1f;
+  color: white;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 21, ../../src/sass/page-home.scss */
+.searchBox .types {
+  margin-bottom: 20px;
+}
+
+/* line 24, ../../src/sass/page-home.scss */
+.searchBox .type__pill {
+  padding: 5px 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* line 29, ../../src/sass/page-home.scss */
+.type__pill.is-selected {
+  background-color: #7ebb4b;
+  -webkit-box-shadow: white 0 0 2px;
+  -moz-box-shadow: white 0 0 2px;
+  box-shadow: white 0 0 2px;
+}
+
+/* line 33, ../../src/sass/page-home.scss */
+.searchBox .forms {
+  width: 74.57627%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+  background-color: red;
+}
+
+/* line 37, ../../src/sass/page-home.scss */
+.searchBox .actuator {
+  width: 23.72881%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+  background-color: yellow;
+}
+
+/* line 4, ../../src/sass/page-index.scss */
 .banner {
   background-color: #5dab1f;
   height: 45px;
@@ -145,14 +355,14 @@ button {
   min-width: 900px;
 }
 
-/* line 10, ../../src/sass/page-home.scss */
+/* line 10, ../../src/sass/page-index.scss */
 .banner .nav {
   width: 1000px;
   margin: 0 auto;
   position: relative;
 }
 
-/* line 15, ../../src/sass/page-home.scss */
+/* line 15, ../../src/sass/page-index.scss */
 .banner .content, .banner .title {
   background-color: #5dab1f;
   margin: 0 auto;
@@ -160,28 +370,53 @@ button {
   margin: 0 10px;
 }
 
-/* line 22, ../../src/sass/page-home.scss */
+/* line 22, ../../src/sass/page-index.scss */
 .menu {
   position: absolute;
   top: 0;
   right: 20px;
 }
 
-/* line 28, ../../src/sass/page-home.scss */
+/* line 28, ../../src/sass/page-index.scss */
 .menu li {
   width: 100px;
   height: 40px;
   cursor: pointer;
   border-top: 3px solid transparent;
 }
-/* line 33, ../../src/sass/page-home.scss */
+/* line 33, ../../src/sass/page-index.scss */
 .menu li:hover {
   border-top: 3px solid white;
 }
 
-/* line 37, ../../src/sass/page-home.scss */
+/* line 37, ../../src/sass/page-index.scss */
 .menu li a {
   margin-top: 10px;
+}
+
+/* line 7, ../../src/sass/page-login.scss */
+.login {
+  *zoom: 1;
+  max-width: 29em;
+  _width: 29em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #eaeaea;
+  margin-top: 30px;
+  padding: 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 38, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.login:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /* line 7, ../../src/sass/page-signup.scss */

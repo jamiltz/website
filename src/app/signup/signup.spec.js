@@ -1,4 +1,4 @@
-ddescribe('Signup', function() {
+describe('Signup', function() {
     var $scope;
     var ctrl;
     var response;

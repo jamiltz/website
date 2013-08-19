@@ -1,39 +1,41 @@
-$greenTopBanner       :     rgba(93, 171, 31, 1.0000);
-$heightTopBanner      :     45px;
+@import "susy";
+@import "compass";
+@import "base";
 
-.banner {
-  background-color: $greenTopBanner;
-  height: $heightTopBanner;
-  width: 100%;
-  min-width: 900px;
-}
-.banner .nav{
-  width: 1000px;
-  margin: 0 auto;
-  position: relative;
-}
-.banner .content, .banner .title{
-  background-color: $greenTopBanner;
-  margin: 0 auto;
-  display: inline-block;
-  margin: 0 10px;
-}
+$backgroundColor        :           rgba(234, 234, 234, 1.0000);
+$darkGreen              :           rgba(93, 171, 31, 1.0000);
+$lightGreen             :           rgba(126, 187, 75, 1.0000);
 
-.menu{
-  position: absolute;
-  top: 0;
-  right: 20px;
-}
-$hoverColor         :         rgba(255, 255, 255, 1.0000);
-.menu li{
-  width: 100px;
-  height: 40px;
-  cursor: pointer;
-  border-top: 3px solid transparent;
-  &:hover{
-    border-top: 3px solid $hoverColor;
+@include with-grid-settings(12, 4em, 1em, 1em) {
+  .home {
+    @include container;
+    background-color: $backgroundColor;
   }
-}
-.menu li a{
-  margin-top: 10px;
+  .searchBox {
+    padding: 15px;
+    @include span-columns(10);
+    background-color: $darkGreen;
+    color: white;
+    @include border-radius(5px);
+  }
+  .searchBox .types{
+    margin-bottom: 20px;
+  }
+  .searchBox .type__pill {
+    padding: 5px 10px;
+    @include border-radius(5px);
+    cursor: pointer;
+  }
+  .type__pill.is-selected {
+    background-color: $lightGreen;
+    @include box-shadow(white(1) 0 0 2px);
+  }
+  .searchBox .forms {
+    @include span-columns(9);
+    background-color: red;
+  }
+  .searchBox .actuator {
+    @include span-columns(3 omega);
+    background-color: yellow;
+  }
 }

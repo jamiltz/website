@@ -1,6 +1,6 @@
 var util = require('util');
 
-describe('Adjunct List', function() {
+describe('Sign Up', function() {
     var ptor;
 
     beforeEach(function() {
@@ -8,7 +8,7 @@ describe('Adjunct List', function() {
         ptor.get('/signup');
     });
 
-    it('should do something', function() {
+    xit('should sign up user and redirect to /', function() {
         ptor = protractor.getInstance();
 
         var timeHack = new Date();
@@ -20,14 +20,23 @@ describe('Adjunct List', function() {
         ptor.findElement(protractor.By.css('.js-signup')).click();
         ptor.waitForAngular();
 
-        expect(ptor.getCurrentUrl()).toBe(ptor.baseUrl + '/about');
+        expect(ptor.getCurrentUrl()).toBe(ptor.baseUrl + '/');
 
     }, 5000);
 
-    xit('should do something', function() {
+    xit('should not sign up use and display an error message', function() {
         ptor = protractor.getInstance();
 
+        ptor.findElement(protractor.By.input('user.username')).sendKeys('admin');
+        ptor.findElement(protractor.By.input('user.email')).sendKeys('admin@gmail.com');
+        ptor.findElement(protractor.By.input('user.pass')).sendKeys('narodnaia');
+        ptor.findElement(protractor.By.input('user.confirm')).sendKeys('narodnaia');
 
+        ptor.findElement(protractor.By.css('.js-signup')).click();
+        ptor.waitForAngular();
+
+        expect(ptor.findElement(protractor.By.binding('error')).getText()).toEqual('Username already taken')
+        expect(ptor.getCurrentUrl()).toBe(ptor.baseUrl + '/signup');
 
 
 

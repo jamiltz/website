@@ -1,0 +1,34 @@
+<section class="home">
+    {{ test }}
+    <section class="searchBox">
+        <div class="types">
+            <span
+                    class="type__pill"
+                    ng-class="{'is-selected': type === '1st'}"
+                    ng-click="type = '1st'">All</span>
+            <span
+                    class="type__pill"
+                    ng-class="{'is-selected': type === '2nd'}"
+                    ng-click="type = '2nd'">Textbooks</span>
+            <span
+                    class="type__pill"
+                    ng-class="{'is-selected': type === '3rd'}"
+                    ng-click="type = '3rd'">Furniture</span>
+
+        </div>
+        <div class="forms">
+            <form ng-show="type === '1st'">
+                All
+            </form>
+            <form ng-show="type === '2nd'">
+                Textbooks
+            </form>
+            <form ng-show="type === '3rd'">
+                Furniture
+            </form>
+        </div>
+        <div class="actuator">
+            <button class="btn btn--gray">Search</button>
+        </div>
+    </section>
+</section>
