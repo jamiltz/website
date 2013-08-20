@@ -31,4 +31,11 @@
             <button class="btn btn--gray">Search</button>
         </div>
     </section>
+
+    <section>
+        <article ng-repeat="item in items">
+            {{ item.name }}
+            <img ng-src="{{ item.pictures[0] }}">
+        </article>
+    </section>
 </section>

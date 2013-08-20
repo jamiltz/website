@@ -1,5 +1,19 @@
 $greenTopBanner       :     rgba(93, 171, 31, 1.0000);
 $heightTopBanner      :     45px;
+$white                :     rgba(255,255,255,1);
+$heightSubBanner      :     30px;
+
+.sub-banner{
+  background-color: $white;
+  height: $heightSubBanner;
+  width: 100%;
+  min-width: 900px;
+}
+.sub-banner .content {
+  width: 1000px;
+  margin: 0 auto;
+  padding-left: 20px;
+}
 
 .banner {
   background-color: $greenTopBanner;
@@ -17,6 +31,10 @@ $heightTopBanner      :     45px;
   margin: 0 auto;
   display: inline-block;
   margin: 0 10px;
+  font-weight: normal;
+}
+.banner .title {
+  font-weight: bold;
 }
 
 .menu{
@@ -36,4 +54,8 @@ $hoverColor         :         rgba(255, 255, 255, 1.0000);
 }
 .menu li a{
   margin-top: 10px;
+}
+
+.layout{
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAALElEQVQIHWN88+LOfwYk8OXLVwYmJD6YycPDjRAEqYABuEqQChhgQlYBEwQAUMYMlj+hubwAAAAASUVORK5CYII=');
 }

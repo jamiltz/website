@@ -1,0 +1,18 @@
+@import "susy";
+@import "compass";
+@import "base";
+
+@include with-grid-settings(12, 4em, 1em, 1em) {
+  .form {
+    @include container;
+    background-color: green;
+  }
+  .form input {
+    margin: 0 auto;
+  }
+  .thumb{
+    width: 100px;
+    vertical-align: middle;
+  }
+
+}

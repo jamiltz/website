@@ -1,0 +1,31 @@
+<section>
+    Hello, this is the account page hello
+     {{ name }}
+
+    <form class="form">
+        <h2>Upload a new item to sell in 60 seconds.</h2>
+        <input
+                ng-model="item.name"
+                class="ipt ipt--inline"
+                placeholder="Name"
+                type="text">
+        <input
+                ng-model="item.price"
+                class="ipt ipt--inline"
+                placeholder="Price"
+                type="text">
+        <input
+                ng-model="item.location"
+                class="ipt ipt--inline"
+                placeholder="Location"
+                type="text">
+        <textarea ng-model="item.description" rows="10" cols="100" placeholder="Describe the item here">
+        </textarea>
+        <br>
+        <fileupload pictures="pictures"></fileupload>
+        <br>
+        <button
+                ng-click="sendItem();">Send</button>
+
+    </form>
+</section>

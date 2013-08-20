@@ -1,0 +1,9 @@
+<input
+        class="ipt--single"
+        type="file"
+        multiple
+        accept="image/*"
+        onchange="angular.element(this).scope().readFilesAndDisplayPreview(files)"
+        ng-model="files">
+
+<output id="list"></output>

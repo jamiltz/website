@@ -15,7 +15,10 @@ angular.module( 'main', [
         'da-service',
         'bk-service-user',
         'bk-page-login',
-        'bk-page-home'
+        'bk-page-home',
+        'bk-page-account',
+        'bk-directive-fileupload',
+        'bk-service-list'
     ])
 
     .config( function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider, $httpProvider ) {

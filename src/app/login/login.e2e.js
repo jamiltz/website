@@ -8,7 +8,7 @@ describe('Log in', function() {
         ptor.get('/login');
     });
 
-    xit('should login user and redirect to /', function() {
+    it('should login user and redirect to /', function() {
         ptor = protractor.getInstance();
 
         ptor.findElement(protractor.By.input('user.username')).sendKeys('admin');
@@ -19,7 +19,7 @@ describe('Log in', function() {
 
     }, 5000);
 
-    xit('should not log in user and display an error message', function() {
+    it('should not log in user and display an error message', function() {
         ptor = protractor.getInstance();
 
         ptor.findElement(protractor.By.input('user.username')).sendKeys('admin');
