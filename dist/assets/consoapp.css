@@ -139,6 +139,23 @@ button {
   display: block;
 }
 
+/* A few css classes for images to display
+   ========================================================================== */
+/* line 128, ../../src/sass/base.scss */
+.thumb--medium {
+  width: 150px;
+  vertical-align: middle;
+}
+
+/* line 132, ../../src/sass/base.scss */
+.thumb--box {
+  width: 150px;
+  vertical-align: top;
+}
+
+/* A few box rules
+   ========================================================================== */
+
 /* Susy set-up
    ========================================================================== */
 /* line 11, ../../src/sass/base.scss */
@@ -280,6 +297,22 @@ button {
   display: block;
 }
 
+/* A few css classes for images to display
+   ========================================================================== */
+/* line 128, ../../src/sass/base.scss */
+.thumb--medium {
+  width: 150px;
+  vertical-align: middle;
+}
+
+/* line 132, ../../src/sass/base.scss */
+.thumb--box {
+  width: 150px;
+  vertical-align: top;
+}
+
+/* A few box rules
+   ========================================================================== */
 /* line 6, ../../src/sass/page-account.scss */
 .form {
   *zoom: 1;
@@ -450,6 +483,22 @@ button {
   display: block;
 }
 
+/* A few css classes for images to display
+   ========================================================================== */
+/* line 128, ../../src/sass/base.scss */
+.thumb--medium {
+  width: 150px;
+  vertical-align: middle;
+}
+
+/* line 132, ../../src/sass/base.scss */
+.thumb--box {
+  width: 150px;
+  vertical-align: top;
+}
+
+/* A few box rules
+   ========================================================================== */
 /* line 10, ../../src/sass/page-home.scss */
 .home {
   *zoom: 1;
@@ -470,10 +519,12 @@ button {
 
 /* line 14, ../../src/sass/page-home.scss */
 .searchBox {
+  margin: 20px 0;
   padding: 15px;
-  width: 83.05085%;
-  float: left;
-  margin-right: 1.69492%;
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
   display: inline;
   background-color: #5dab1f;
   color: white;
@@ -482,14 +533,16 @@ button {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
+  position: relative;
+  left: 15px;
 }
 
-/* line 21, ../../src/sass/page-home.scss */
+/* line 24, ../../src/sass/page-home.scss */
 .searchBox .types {
   margin-bottom: 20px;
 }
 
-/* line 24, ../../src/sass/page-home.scss */
+/* line 27, ../../src/sass/page-home.scss */
 .searchBox .type__pill {
   padding: 5px 10px;
   -webkit-border-radius: 5px;
@@ -500,7 +553,7 @@ button {
   cursor: pointer;
 }
 
-/* line 29, ../../src/sass/page-home.scss */
+/* line 32, ../../src/sass/page-home.scss */
 .type__pill.is-selected {
   background-color: #7ebb4b;
   -webkit-box-shadow: white 0 0 2px;
@@ -508,7 +561,7 @@ button {
   box-shadow: white 0 0 2px;
 }
 
-/* line 33, ../../src/sass/page-home.scss */
+/* line 36, ../../src/sass/page-home.scss */
 .searchBox .forms {
   width: 74.57627%;
   float: left;
@@ -517,7 +570,7 @@ button {
   background-color: red;
 }
 
-/* line 37, ../../src/sass/page-home.scss */
+/* line 40, ../../src/sass/page-home.scss */
 .searchBox .actuator {
   width: 23.72881%;
   float: right;
@@ -525,6 +578,40 @@ button {
   *margin-left: -1em;
   display: inline;
   background-color: yellow;
+}
+
+/* line 44, ../../src/sass/page-home.scss */
+.item-box {
+  margin: 20px 0;
+  display: block;
+}
+
+/* line 48, ../../src/sass/page-home.scss */
+.item-box .item--thumb {
+  float: left;
+  margin-right: 10px;
+  cursor: pointer;
+}
+/* line 52, ../../src/sass/page-home.scss */
+.item-box .item--thumb img {
+  width: 100px;
+  display: block;
+}
+
+/* line 57, ../../src/sass/page-home.scss */
+.item--text {
+  overflow: hidden;
+  display: inline-block;
+  width: 700px;
+}
+/* line 61, ../../src/sass/page-home.scss */
+.item--text h3, .item--text .price {
+  display: inline-block;
+}
+/* line 64, ../../src/sass/page-home.scss */
+.item--text .price {
+  float: right;
+  margin: 0;
 }
 
 /* line 6, ../../src/sass/page-index.scss */

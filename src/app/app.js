@@ -7,7 +7,6 @@ angular.module( 'main', [
         'templates-app',
         'templates-common',
         'bk-page-signup',
-        'da-about',
         'da-users',
         'da-admin',
         'ui.state',
@@ -18,7 +17,9 @@ angular.module( 'main', [
         'bk-page-home',
         'bk-page-account',
         'bk-directive-fileupload',
-        'bk-service-list'
+        'bk-service-list',
+        'bk-page-item',
+        'bk-service-item'
     ])
 
     .config( function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider, $httpProvider ) {

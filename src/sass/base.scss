@@ -122,3 +122,17 @@ input{
 .ipt--single{
   display: block;
 }
+
+/* A few css classes for images to display
+   ========================================================================== */
+.thumb--medium {
+  width: 150px;
+  vertical-align: middle;
+}
+.thumb--box{
+  width: 150px;
+  vertical-align: top;
+}
+
+/* A few box rules
+   ========================================================================== */

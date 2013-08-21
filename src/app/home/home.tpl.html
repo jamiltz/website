@@ -1,5 +1,4 @@
 <section class="home">
-    {{ test }}
     <section class="searchBox">
         <div class="types">
             <span
@@ -31,11 +30,17 @@
             <button class="btn btn--gray">Search</button>
         </div>
     </section>
-
+    <br>
     <section>
-        <article ng-repeat="item in items">
-            {{ item.name }}
-            <img ng-src="{{ item.pictures[0] }}">
+        <article class="item-box" ng-repeat="item in items">
+            <a class="item--thumb" href="/">
+                <img ng-src="{{ item.pictures[0] }}">
+            </a>
+            <div class="item--text">
+                <h3>{{ item.name }}</h3>
+                <p class="price">{{ item.price }}</p>
+                <p>{{ item.location }}</p>
+            </div>
         </article>
     </section>
 </section>

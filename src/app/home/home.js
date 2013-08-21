@@ -15,9 +15,6 @@ angular.module('bk-page-home', [
     })
 
 .controller('HomeCtrl', function HomeCtrl($scope, List) {
-
-        $scope.test = "working"
-
         $scope.type = '1st';
 
         List.all().then(

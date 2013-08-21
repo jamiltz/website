@@ -1,4 +1,4 @@
-ddescribe('List', function() {
+describe('List', function() {
     describe('get list of items', function() {
         var httpBackend;
         var List;
@@ -38,7 +38,7 @@ ddescribe('List', function() {
             var returnedPromise = List.all();
             returnedPromise.then(test.handler);
             httpBackend.flush();
-            expect(test.handler).toHaveBeenCalledWith(returnData);
+            expect(test.handler).toHaveBeenCalledWith(returnData)
         })
     })
 })

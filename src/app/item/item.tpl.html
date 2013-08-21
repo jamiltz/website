@@ -1,0 +1,39 @@
+<section>
+    Hello there, this is the item page for
+
+    {{ item.name }}
+    {{ item.price }}
+    {{ item.location }}
+    {{ item.description }}
+    <img class="thumb--medium" ng-src="{{ item.pictures[0] }}">
+
+    <br>
+    <br>
+
+    <input
+            type="text"
+            class="ipt ipt--single"
+            ng-model="message.name"
+            placeholder="Your Name">
+    <input
+            type="text"
+            class="ipt ipt--single"
+            ng-model="message.email"
+            placeholder="Your Email">
+    <input
+            type="text"
+            class="ipt ipt--single"
+            ng-model="message.phone"
+            placeholder="Phone Number">
+    <textarea cols="70" rows="5">
+        Hi, I found your listing on Benkyet and would
+        like to set up a time to see see/buy this item.
+        Please send me more information about this Soleris Bike in London.
+        Thank you.
+    </textarea>
+    <button class="btn btn--gray">
+        Send Reply
+    </button>
+
+
+</section>

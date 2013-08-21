@@ -12,11 +12,14 @@ $lightGreen             :           rgba(126, 187, 75, 1.0000);
     background-color: $backgroundColor;
   }
   .searchBox {
+    margin: 20px 0;
     padding: 15px;
-    @include span-columns(10);
+    @include span-columns(12 omega);
     background-color: $darkGreen;
     color: white;
     @include border-radius(5px);
+    position: relative;
+    left: 15px;
   }
   .searchBox .types{
     margin-bottom: 20px;
@@ -38,4 +41,30 @@ $lightGreen             :           rgba(126, 187, 75, 1.0000);
     @include span-columns(3 omega);
     background-color: yellow;
   }
+  .item-box{
+    margin: 20px 0;
+    display: block;
+  }
+  .item-box .item--thumb {
+    float: left;
+    margin-right: 10px;
+    cursor: pointer;
+    img{
+      width: 100px;
+      display: block;
+    }
+  }
+  .item--text {
+    overflow: hidden;
+    display: inline-block;
+    width: 700px;
+    h3, .price{
+      display: inline-block;
+    }
+    .price{
+      float: right;
+      margin: 0;
+    }
+  }
+
 }
