@@ -33,7 +33,7 @@
     <br>
     <section>
         <article class="item-box" ng-repeat="item in items">
-            <a class="item--thumb" href="/">
+            <a class="item--thumb" ng-href="/item/{{ item.ref }}">
                 <img ng-src="{{ item.pictures[0] }}">
             </a>
             <div class="item--text">
