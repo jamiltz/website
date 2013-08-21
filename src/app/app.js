@@ -22,7 +22,7 @@ angular.module( 'main', [
         'bk-service-item'
     ])
 
-    .config( function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider, $httpProvider ) {
+    .config( function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider ) {
         $urlRouterProvider.otherwise( '/' );
 
         $locationProvider.html5Mode(true);
