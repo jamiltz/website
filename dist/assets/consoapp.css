@@ -153,6 +153,11 @@ button {
   vertical-align: top;
 }
 
+/* line 136, ../../src/sass/base.scss */
+.thumb--large {
+  width: 300px;
+}
+
 /* A few box rules
    ========================================================================== */
 
@@ -309,6 +314,11 @@ button {
 .thumb--box {
   width: 150px;
   vertical-align: top;
+}
+
+/* line 136, ../../src/sass/base.scss */
+.thumb--large {
+  width: 300px;
 }
 
 /* A few box rules
@@ -495,6 +505,11 @@ button {
 .thumb--box {
   width: 150px;
   vertical-align: top;
+}
+
+/* line 136, ../../src/sass/base.scss */
+.thumb--large {
+  width: 300px;
 }
 
 /* A few box rules
@@ -685,6 +700,47 @@ button {
 /* line 59, ../../src/sass/page-index.scss */
 .layout {
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAALElEQVQIHWN88+LOfwYk8OXLVwYmJD6YycPDjRAEqYABuEqQChhgQlYBEwQAUMYMlj+hubwAAAAASUVORK5CYII=");
+}
+
+/* line 7, ../../src/sass/page-item.scss */
+.container {
+  *zoom: 1;
+  max-width: 59em;
+  _width: 59em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #eaeaea;
+  padding: 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 38, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 13, ../../src/sass/page-item.scss */
+.main {
+  width: 66.10169%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+
+/* line 16, ../../src/sass/page-item.scss */
+.side {
+  width: 32.20339%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
 }
 
 /* line 7, ../../src/sass/page-login.scss */
