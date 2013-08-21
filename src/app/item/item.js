@@ -12,7 +12,7 @@ angular.module('bk-page-item', [
                 }
             },
             resolve: {
-                rItem: function ($stateParams, Item) {
+                rItem: ['$stateParams', 'Item', function ($stateParams, Item) {
                     console.log($stateParams)
 
                     return Item.getItem($stateParams.ref)
@@ -22,7 +22,7 @@ angular.module('bk-page-item', [
                         }, function(err) {
                             console.log(err)
                         });
-                }
+                }]
             }
         })
     })
