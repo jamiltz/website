@@ -1,18 +1,17 @@
 <section class="home">
     <section class="searchBox">
         <div class="types">
-            <span
-                    class="type__pill"
-                    ng-class="{'is-selected': type === '1st'}"
-                    ng-click="type = '1st'">All</span>
-            <span
-                    class="type__pill"
-                    ng-class="{'is-selected': type === '2nd'}"
-                    ng-click="type = '2nd'">Textbooks</span>
-            <span
-                    class="type__pill"
-                    ng-class="{'is-selected': type === '3rd'}"
-                    ng-click="type = '3rd'">Furniture</span>
+
+                <a
+                        class="type__pill"
+                        ng-href="/"
+                        ng-class="{'is-selected': type === ''}">All</a>
+
+                <a
+                        ng-repeat="group in groups"
+                        class="type__pill"
+                        ng-href="/{{ group }}"
+                        ng-class="{'is-selected': type === group}">{{ group }}</a>
 
         </div>
         <div class="forms">
@@ -26,9 +25,9 @@
                 Furniture
             </form>
         </div>
-        <div class="actuator">
-            <button class="btn btn--gray">Search</button>
-        </div>
+        <!--<div class="actuator">-->
+            <!--<button class="btn btn--gray">Search</button>-->
+        <!--</div>-->
     </section>
     <br>
     <section>

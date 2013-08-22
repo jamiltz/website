@@ -599,31 +599,34 @@ button {
 .item-box {
   margin: 20px 0;
   display: block;
+  height: auto;
+  position: relative;
+  overflow: hidden;
 }
 
-/* line 48, ../../src/sass/page-home.scss */
+/* line 51, ../../src/sass/page-home.scss */
 .item-box .item--thumb {
   float: left;
   margin-right: 10px;
   cursor: pointer;
 }
-/* line 52, ../../src/sass/page-home.scss */
+/* line 55, ../../src/sass/page-home.scss */
 .item-box .item--thumb img {
   width: 100px;
   display: block;
 }
 
-/* line 57, ../../src/sass/page-home.scss */
+/* line 60, ../../src/sass/page-home.scss */
 .item--text {
   overflow: hidden;
   display: inline-block;
   width: 700px;
 }
-/* line 61, ../../src/sass/page-home.scss */
+/* line 64, ../../src/sass/page-home.scss */
 .item--text h3, .item--text .price {
   display: inline-block;
 }
-/* line 64, ../../src/sass/page-home.scss */
+/* line 67, ../../src/sass/page-home.scss */
 .item--text .price {
   float: right;
   margin: 0;

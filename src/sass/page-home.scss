@@ -44,6 +44,9 @@ $lightGreen             :           rgba(126, 187, 75, 1.0000);
   .item-box{
     margin: 20px 0;
     display: block;
+    height: auto;
+    position: relative;
+    overflow: hidden;
   }
   .item-box .item--thumb {
     float: left;

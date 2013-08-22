@@ -4,7 +4,7 @@ angular.module('bk-page-home', [
 
 .config(function config($stateProvider) {
         $stateProvider.state('home', {
-            url: '/',
+            url: '/:group',
             views: {
                 main: {
                     templateUrl: 'home/home.tpl.html',
@@ -14,17 +14,28 @@ angular.module('bk-page-home', [
         });
     })
 
-.controller('HomeCtrl', function HomeCtrl($scope, List) {
+.controller('HomeCtrl', function HomeCtrl($scope, List, $stateParams) {
         $scope.type = '1st';
+        console.log($stateParams)
 
-        List.all().then(
+        List.getGroupItems($stateParams.group).then(
             function(res) {
-                console.log(res)
+                $scope.type = $stateParams.group;
                 $scope.items = res.items;
             },
             function(err) {
                 console.log(err)
             }
-        )
+        );
+
+
+        $scope.groups = [
+            'IQ Shoreditch',
+            'Nido Liverpool Street',
+            'Brixton South',
+            'Westminster Uni',
+            'SciencePo'
+        ];
+
 
     })
