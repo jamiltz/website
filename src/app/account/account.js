@@ -19,20 +19,22 @@ angular.module('bk-page-account', [
         $scope.sendItem = function() {
 
 
-            var data = {
-                name: $scope.item.name,
-                price: $scope.item.price,
-                location: $scope.item.location,
-                description: $scope.item.description,
-                pictures: $scope.pictures
-            }
+//            var data = {
+//                name: $scope.item.name,
+//                price: $scope.item.price,
+//                location: $scope.item.location,
+//                description: $scope.item.description,
+//                pictures: $scope.pictures
+//            }
+
+            var str = JSON.stringify($scope.pictures);
 
             var form = new FormData();
             form.append('name', $scope.item.name)
             form.append('price', $scope.item.price)
             form.append('location', $scope.item.location)
             form.append('description', $scope.item.description)
-            form.append('pictures', $scope.pictures)
+            form.append('pictures', str)
 
 
 //            $http.post('/1.0/item', data)

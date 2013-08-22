@@ -323,7 +323,7 @@ button {
 
 /* A few box rules
    ========================================================================== */
-/* line 6, ../../src/sass/page-account.scss */
+/* line 8, ../../src/sass/page-account.scss */
 .form {
   *zoom: 1;
   max-width: 59em;
@@ -332,7 +332,7 @@ button {
   padding-right: 1em;
   margin-left: auto;
   margin-right: auto;
-  background-color: green;
+  background-color: #eaeaea;
 }
 /* line 38, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .form:after {
@@ -341,12 +341,7 @@ button {
   clear: both;
 }
 
-/* line 10, ../../src/sass/page-account.scss */
-.form input {
-  margin: 0 auto;
-}
-
-/* line 13, ../../src/sass/page-account.scss */
+/* line 15, ../../src/sass/page-account.scss */
 .thumb {
   width: 100px;
   vertical-align: middle;

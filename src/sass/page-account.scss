@@ -2,13 +2,15 @@
 @import "compass";
 @import "base";
 
+$backgroundColor        :           rgba(234, 234, 234, 1.0000);
+
 @include with-grid-settings(12, 4em, 1em, 1em) {
   .form {
     @include container;
-    background-color: green;
+    background-color: $backgroundColor;
   }
   .form input {
-    margin: 0 auto;
+
   }
   .thumb{
     width: 100px;
