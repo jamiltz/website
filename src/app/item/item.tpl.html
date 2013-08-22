@@ -16,29 +16,38 @@
     </section>
 
     <section class="side">
-        <input
-                type="text"
-                class="ipt ipt--single"
-                ng-model="message.name"
-                placeholder="Your Name">
-        <input
-                type="text"
-                class="ipt ipt--single"
-                ng-model="message.email"
-                placeholder="Your Email">
-        <input
-                type="text"
-                class="ipt ipt--single"
-                ng-model="message.phone"
-                placeholder="Phone Number">
-        <textarea cols="23" rows="10">
-            Hi, I found your listing on Benkyet and would like to set up a time to see see/buy this item. Please send me more information about it.
 
-Thank you.
-        </textarea>
-        <button class="btn btn--gray">
-            Send Reply
-        </button>
+        <aside ng-hide="success === true">
+            <input
+                    type="text"
+                    class="ipt ipt--single"
+                    ng-model="message.name"
+                    placeholder="Your Name">
+            <input
+                    type="text"
+                    class="ipt ipt--single"
+                    ng-model="message.email"
+                    placeholder="Your Email">
+            <input
+                    type="text"
+                    class="ipt ipt--single"
+                    ng-model="message.subject"
+                    placeholder="{{ item.name }}">
+            <textarea cols="23" rows="10" ng-model="message.body">
+                Hi, I found your listing on Benkyet and would like to set up a time to see see/buy this item. Please send me more information about it.
+
+                Thank you.
+            </textarea>
+            <button ng-click="sendMessage();" class="btn btn--gray">
+                Send Reply
+            </button>
+        </aside>
+        <section ng-show="success === true">
+            <h3>Message sent!</h3>
+            <a href="/">Back to home page</a>
+        </section>
+
+
     </section>
 
 

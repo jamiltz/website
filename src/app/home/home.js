@@ -4,30 +4,42 @@ angular.module('bk-page-home', [
 
 .config(function config($stateProvider) {
         $stateProvider.state('home', {
-            url: '/:group',
+            url: '/?g',
             views: {
                 main: {
                     templateUrl: 'home/home.tpl.html',
                     controller: 'HomeCtrl'
                 }
+            },
+            resolve: {
+                rList: function(List, $stateParams, $state) {
+                    var group;
+                    if($stateParams.g) {
+                        group = $stateParams.g
+                    } else {
+                        group = ''
+                    }
+                    return List.getGroupItems(group).then(
+                        function(res) {
+                            return res.items;
+
+                        },
+                        function(err) {
+                            console.log(err)
+                        }
+                    );
+                }
             }
         });
     })
 
-.controller('HomeCtrl', function HomeCtrl($scope, List, $stateParams) {
+.controller('HomeCtrl', function HomeCtrl($scope, List, $stateParams, rList) {
         $scope.type = '1st';
         console.log($stateParams)
 
-        List.getGroupItems($stateParams.group).then(
-            function(res) {
-                $scope.type = $stateParams.group;
-                $scope.items = res.items;
-            },
-            function(err) {
-                console.log(err)
-            }
-        );
+        $scope.type = $stateParams.g;
 
+        $scope.items = rList;
 
         $scope.groups = [
             'IQ Shoreditch',

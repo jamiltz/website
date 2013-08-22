@@ -30,7 +30,6 @@ angular.module('bk-directive-fileupload', [])
                                 var span = document.createElement('span');
                                 span.innerHTML = "<img class='thumb' src='"+ e.target.result +"'>" +
                                     "<button class='btn--upload' data-id='"+ id +"'data-src='"+ e.target.result.split(',')[1] +"' onclick='uploadIndividualImage(this)' >Upload individual image</button>" +
-                                    "<progress value='0' class='progress-"+id+"'></progress>" +
                                     "<br>"
                                 document.getElementById('list').insertBefore(span, null);
                             }

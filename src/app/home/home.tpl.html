@@ -5,12 +5,12 @@
                 <a
                         class="type__pill"
                         ng-href="/"
-                        ng-class="{'is-selected': type === ''}">All</a>
+                        ng-class="{'is-selected': type === null}">All</a>
 
                 <a
                         ng-repeat="group in groups"
                         class="type__pill"
-                        ng-href="/{{ group }}"
+                        ng-href="/?g={{ group }}"
                         ng-class="{'is-selected': type === group}">{{ group }}</a>
 
         </div>
