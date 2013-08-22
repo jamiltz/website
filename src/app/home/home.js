@@ -12,7 +12,7 @@ angular.module('bk-page-home', [
                 }
             },
             resolve: {
-                rList: function(List, $stateParams, $state) {
+                rList: ['List', '$stateParams', function(List, $stateParams) {
                     var group;
                     if($stateParams.g) {
                         group = $stateParams.g
@@ -28,7 +28,7 @@ angular.module('bk-page-home', [
                             console.log(err)
                         }
                     );
-                }
+                }]
             }
         });
     })
