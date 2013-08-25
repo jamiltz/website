@@ -14,14 +14,19 @@ angular.module('bk-page-login', [
         });
     })
 
-    .controller('LoginCtrl', function LoginCtrl($scope, User, $state, $http, $rootScope) {
+    .controller('LoginCtrl', function LoginCtrl($scope, User, $state, $http, $rootScope, Session) {
 
         $scope.loginUser = function() {
             User.login($scope.user.username, $scope.user.pass)
                 .then(function(res) {
-                    $http.defaults.headers.common['Authorization'] = User.getAuthHeader();
+
                     $rootScope.state = 'loggedIn';
-                    $rootScope.auth = res;
+
+                    Session.setToken(res.token);
+
+                    $http.defaults.headers.common['token'] = Session.getToken();
+
+                    $rootScope.auth = res.user;
                     $state.transitionTo('home');
                 }, function(res) {
                     $scope.error = res.data.reason;

@@ -28,6 +28,9 @@ angular.module('bk-page-home', [
                             console.log(err)
                         }
                     );
+                }],
+                user: ['User', function(User) {
+                    User.autologin('login')
                 }]
             }
         });

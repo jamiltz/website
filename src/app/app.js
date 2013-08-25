@@ -4,6 +4,7 @@
  * that contains all the templates we need
  */
 angular.module( 'main', [
+        'ngCookies',
         'templates-app',
         'templates-common',
         'bk-page-signup',
@@ -19,7 +20,8 @@ angular.module( 'main', [
         'bk-directive-fileupload',
         'bk-service-list',
         'bk-page-item',
-        'bk-service-item'
+        'bk-service-item',
+        'bk-service-session'
     ])
 
     .config( function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider ) {
