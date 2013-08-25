@@ -14,12 +14,27 @@ angular.module('bk-page-account', [
         resolve: {
             user: ['User', function(User) {
                 User.autologin('login')
+            }],
+            rGroups: ['List', function(List) {
+                return List.getGroups()
+                    .then(
+                    function(res) {
+                        return res.groups;
+                    },
+                    function(err) {
+                        console.log(err);
+                    }
+                )
             }]
         }
     });
 })
 
-.controller('AccountCtrl', function Account($scope, $http) {
+.controller('AccountCtrl', function Account($scope, List, rGroups, Session) {
+
+        $scope.groups = rGroups;
+
+
 
         $scope.sendItem = function() {
 
@@ -39,6 +54,7 @@ angular.module('bk-page-account', [
             form.append('price', $scope.item.price)
             form.append('location', $scope.item.location)
             form.append('description', $scope.item.description)
+            form.append('group', $scope.item.group)
             form.append('pictures', str)
 
 
@@ -50,6 +66,8 @@ angular.module('bk-page-account', [
 
             var xhr = new XMLHttpRequest();
             xhr.open('POST', '/1.0/item');
+
+            xhr.setRequestHeader("token", Session.getToken());
 
             xhr.upload.onprogress = function(e) {
                 qs('#progress').value = e.loaded;

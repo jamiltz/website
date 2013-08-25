@@ -2,6 +2,9 @@
 
     <form class="form">
         <h2>Upload a new item to sell in 60 seconds.</h2>
+        <select
+                ng-options="g for g in groups"
+                ng-model="item.group"></select>
         <input
                 ng-model="item.name"
                 class="ipt ipt--inline"

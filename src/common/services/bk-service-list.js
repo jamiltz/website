@@ -7,6 +7,12 @@ angular.module('bk-service-list', [])
                     .then(function(result) {
                         return result.data;
                     })
+            },
+            getGroups: function() {
+                return $http.get('/1.0/groups')
+                    .then(function(result) {
+                        return result.data
+                    });
             }
         }
     })
