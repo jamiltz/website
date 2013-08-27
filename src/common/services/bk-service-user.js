@@ -25,7 +25,12 @@ angular.module('bk-service-user', [])
                         $rootScope.auth = data.user;
                     },
                     function(err) {
-                        $state.transitionTo(redirect);
+                        if(!arguments.length) {
+
+                        } else {
+                            $state.transitionTo(redirect);
+                        }
+
                     }
                 )
         }

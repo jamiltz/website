@@ -30,7 +30,7 @@ angular.module('bk-page-home', [
                     );
                 }],
                 user: ['User', function(User) {
-                    User.autologin('login')
+                    User.autologin()
                 }]
             }
         });
