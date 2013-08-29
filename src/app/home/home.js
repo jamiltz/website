@@ -60,7 +60,7 @@ angular.module('bk-page-home', [
 
 
         $scope.type = '1st';
-        console.log($stateParams);
+        console.log($stateParams)
 
         $scope.type = $stateParams.g;
 
