@@ -30,14 +30,44 @@
         <!--</div>-->
     </section>
     <br>
+    <h4>
+        {{ filteredItems.length }} Results
+    </h4>
+
+    <section class="sort-box">
+        <div>
+            <a
+                    href=""
+                    class="label--single"
+                    ng-click="sort('price')"
+                    ng-class="{'is-selected': isSortUp('price') || isSortDown('price')}"
+                    >Price</a>
+            <i
+                    ng-class="{'icon-chevron-up': isSortUp('price'), 'icon-chevron-down': isSortDown('price')}"></i>
+            <a
+                    href=""
+                    class="label--single"
+                    ng-click="sort('name')"
+                    ng-class="{'is-selected': isSortUp('name') || isSortDown('name')}"
+                    >Name</a>
+            <i
+                    ng-class="{'icon-chevron-up': isSortUp('name'), 'icon-chevron-down': isSortDown('name')}"></i>
+        </div>
+        <label>
+            Search for: <input
+                type="text"
+                ng-model="criteria">
+        </label>
+    </section>
+
     <section>
-        <article class="item-box" ng-repeat="item in items">
+        <article class="item-box" ng-repeat="item in filteredItems = (items | filter:criteria | orderBy:sortField:reverse)">
             <a class="item--thumb" ng-href="/item/{{ item.ref }}">
                 <img ng-src="{{ item.pictures[0] }}">
             </a>
             <div class="item--text">
                 <h3>{{ item.name }}</h3>
-                <p class="price">{{ item.price }}</p>
+                <p class="price">{{ item.price | currency:'£ ' }}</p>
                 <p>{{ item.location }}</p>
             </div>
         </article>

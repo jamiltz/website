@@ -37,6 +37,28 @@ angular.module('bk-page-home', [
     })
 
 .controller('HomeCtrl', function HomeCtrl($scope, List, $stateParams, rList) {
+
+
+        $scope.sortField = undefined;
+        $scope.reverse = false;
+        $scope.sort = function (fieldName) {
+            if ($scope.sortField === fieldName) {
+                $scope.reverse = !$scope.reverse;
+            } else {
+                $scope.sortField = fieldName;
+                $scope.reverse = false;
+            }
+        };
+
+
+        $scope.isSortUp = function (fieldName) {
+            return $scope.sortField === fieldName && !$scope.reverse;
+        };
+        $scope.isSortDown = function (fieldName) {
+            return $scope.sortField === fieldName && $scope.reverse;
+        };
+
+
         $scope.type = '1st';
         console.log($stateParams)
 

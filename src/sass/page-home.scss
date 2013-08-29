@@ -41,6 +41,23 @@ $lightGreen             :           rgba(126, 187, 75, 1.0000);
     @include span-columns(3 omega);
     background-color: yellow;
   }
+
+
+  $sortBoxBackground        :       rgba(249, 249, 249, 1.0000);
+
+  .sort-box{
+    padding: 10px;
+    background-color: $sortBoxBackground;
+    @include border-radius(5px);
+
+    div{
+      display: inline-block;
+      cursor: pointer;
+    }
+    label{
+      float: right;
+    }
+  }
   .item-box{
     margin: 20px 0;
     display: block;

@@ -108,13 +108,16 @@ $buttonBottom   :       rgba(191, 191, 191, 1.0000);
 
 /* Few input base css
    ========================================================================== */
-input{
-
+input[type="text"], input[type="password"]{
+  border: none;
+  border: 1px solid gray;
 }
 .ipt{
   padding: 5px;
   margin-top: 10px;
   margin-bottom: 10px;
+
+  @include border-radius(5px);
 }
 .ipt--inline{
   display: inline-block;
@@ -139,3 +142,11 @@ input{
 
 /* A few box rules
    ========================================================================== */
+.label--single{
+  width: 50px;
+  margin-left: 10px;
+  margin-right: 19px;
+}
+.label--single.is-selected {
+  margin-right: 0px;
+}

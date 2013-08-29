@@ -122,44 +122,66 @@ button {
 
 /* Few input base css
    ========================================================================== */
-/* line 114, ../../src/sass/base.scss */
+/* line 111, ../../src/sass/base.scss */
+input[type="text"], input[type="password"] {
+  border: none;
+  border: 1px solid gray;
+}
+
+/* line 115, ../../src/sass/base.scss */
 .ipt {
   padding: 5px;
   margin-top: 10px;
   margin-bottom: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
 }
 
-/* line 119, ../../src/sass/base.scss */
+/* line 122, ../../src/sass/base.scss */
 .ipt--inline {
   display: inline-block;
 }
 
-/* line 122, ../../src/sass/base.scss */
+/* line 125, ../../src/sass/base.scss */
 .ipt--single {
   display: block;
 }
 
 /* A few css classes for images to display
    ========================================================================== */
-/* line 128, ../../src/sass/base.scss */
+/* line 131, ../../src/sass/base.scss */
 .thumb--medium {
   width: 150px;
   vertical-align: middle;
 }
 
-/* line 132, ../../src/sass/base.scss */
+/* line 135, ../../src/sass/base.scss */
 .thumb--box {
   width: 150px;
   vertical-align: top;
 }
 
-/* line 136, ../../src/sass/base.scss */
+/* line 139, ../../src/sass/base.scss */
 .thumb--large {
   width: 300px;
 }
 
 /* A few box rules
    ========================================================================== */
+/* line 145, ../../src/sass/base.scss */
+.label--single {
+  width: 50px;
+  margin-left: 10px;
+  margin-right: 19px;
+}
+
+/* line 150, ../../src/sass/base.scss */
+.label--single.is-selected {
+  margin-right: 0px;
+}
 
 /* Susy set-up
    ========================================================================== */
@@ -285,44 +307,67 @@ button {
 
 /* Few input base css
    ========================================================================== */
-/* line 114, ../../src/sass/base.scss */
+/* line 111, ../../src/sass/base.scss */
+input[type="text"], input[type="password"] {
+  border: none;
+  border: 1px solid gray;
+}
+
+/* line 115, ../../src/sass/base.scss */
 .ipt {
   padding: 5px;
   margin-top: 10px;
   margin-bottom: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
 }
 
-/* line 119, ../../src/sass/base.scss */
+/* line 122, ../../src/sass/base.scss */
 .ipt--inline {
   display: inline-block;
 }
 
-/* line 122, ../../src/sass/base.scss */
+/* line 125, ../../src/sass/base.scss */
 .ipt--single {
   display: block;
 }
 
 /* A few css classes for images to display
    ========================================================================== */
-/* line 128, ../../src/sass/base.scss */
+/* line 131, ../../src/sass/base.scss */
 .thumb--medium {
   width: 150px;
   vertical-align: middle;
 }
 
-/* line 132, ../../src/sass/base.scss */
+/* line 135, ../../src/sass/base.scss */
 .thumb--box {
   width: 150px;
   vertical-align: top;
 }
 
-/* line 136, ../../src/sass/base.scss */
+/* line 139, ../../src/sass/base.scss */
 .thumb--large {
   width: 300px;
 }
 
 /* A few box rules
    ========================================================================== */
+/* line 145, ../../src/sass/base.scss */
+.label--single {
+  width: 50px;
+  margin-left: 10px;
+  margin-right: 19px;
+}
+
+/* line 150, ../../src/sass/base.scss */
+.label--single.is-selected {
+  margin-right: 0px;
+}
+
 /* line 8, ../../src/sass/page-account.scss */
 .form {
   *zoom: 1;
@@ -471,44 +516,67 @@ button {
 
 /* Few input base css
    ========================================================================== */
-/* line 114, ../../src/sass/base.scss */
+/* line 111, ../../src/sass/base.scss */
+input[type="text"], input[type="password"] {
+  border: none;
+  border: 1px solid gray;
+}
+
+/* line 115, ../../src/sass/base.scss */
 .ipt {
   padding: 5px;
   margin-top: 10px;
   margin-bottom: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
 }
 
-/* line 119, ../../src/sass/base.scss */
+/* line 122, ../../src/sass/base.scss */
 .ipt--inline {
   display: inline-block;
 }
 
-/* line 122, ../../src/sass/base.scss */
+/* line 125, ../../src/sass/base.scss */
 .ipt--single {
   display: block;
 }
 
 /* A few css classes for images to display
    ========================================================================== */
-/* line 128, ../../src/sass/base.scss */
+/* line 131, ../../src/sass/base.scss */
 .thumb--medium {
   width: 150px;
   vertical-align: middle;
 }
 
-/* line 132, ../../src/sass/base.scss */
+/* line 135, ../../src/sass/base.scss */
 .thumb--box {
   width: 150px;
   vertical-align: top;
 }
 
-/* line 136, ../../src/sass/base.scss */
+/* line 139, ../../src/sass/base.scss */
 .thumb--large {
   width: 300px;
 }
 
 /* A few box rules
    ========================================================================== */
+/* line 145, ../../src/sass/base.scss */
+.label--single {
+  width: 50px;
+  margin-left: 10px;
+  margin-right: 19px;
+}
+
+/* line 150, ../../src/sass/base.scss */
+.label--single.is-selected {
+  margin-right: 0px;
+}
+
 /* line 10, ../../src/sass/page-home.scss */
 .home {
   *zoom: 1;
@@ -590,7 +658,27 @@ button {
   background-color: yellow;
 }
 
-/* line 44, ../../src/sass/page-home.scss */
+/* line 48, ../../src/sass/page-home.scss */
+.sort-box {
+  padding: 10px;
+  background-color: #f9f9f9;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 53, ../../src/sass/page-home.scss */
+.sort-box div {
+  display: inline-block;
+  cursor: pointer;
+}
+/* line 57, ../../src/sass/page-home.scss */
+.sort-box label {
+  float: right;
+}
+
+/* line 61, ../../src/sass/page-home.scss */
 .item-box {
   margin: 20px 0;
   display: block;
@@ -599,29 +687,29 @@ button {
   overflow: hidden;
 }
 
-/* line 51, ../../src/sass/page-home.scss */
+/* line 68, ../../src/sass/page-home.scss */
 .item-box .item--thumb {
   float: left;
   margin-right: 10px;
   cursor: pointer;
 }
-/* line 55, ../../src/sass/page-home.scss */
+/* line 72, ../../src/sass/page-home.scss */
 .item-box .item--thumb img {
   width: 100px;
   display: block;
 }
 
-/* line 60, ../../src/sass/page-home.scss */
+/* line 77, ../../src/sass/page-home.scss */
 .item--text {
   overflow: hidden;
   display: inline-block;
   width: 700px;
 }
-/* line 64, ../../src/sass/page-home.scss */
+/* line 81, ../../src/sass/page-home.scss */
 .item--text h3, .item--text .price {
   display: inline-block;
 }
-/* line 67, ../../src/sass/page-home.scss */
+/* line 84, ../../src/sass/page-home.scss */
 .item--text .price {
   float: right;
   margin: 0;
