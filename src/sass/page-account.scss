@@ -5,9 +5,14 @@
 $backgroundColor        :           rgba(234, 234, 234, 1.0000);
 
 @include with-grid-settings(12, 4em, 1em, 1em) {
-  .form {
+  .account{
     @include container;
+  }
+
+  .form {
+    @include span-columns(12);
     background-color: $backgroundColor;
+    @include border-radius(5px);
   }
   .form input {
 
@@ -15,6 +20,35 @@ $backgroundColor        :           rgba(234, 234, 234, 1.0000);
   .thumb{
     width: 100px;
     vertical-align: middle;
+  }
+
+  .item-box{
+    margin: 20px 0;
+    display: block;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+  }
+  .item-box .item--thumb {
+    float: left;
+    margin-right: 10px;
+    cursor: pointer;
+    img{
+      width: 100px;
+      display: block;
+    }
+  }
+  .item--text {
+    overflow: hidden;
+    display: inline-block;
+    width: 700px;
+    h3, .price{
+      display: inline-block;
+    }
+    .price{
+      float: right;
+      margin: 0;
+    }
   }
 
 }

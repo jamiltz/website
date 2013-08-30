@@ -30,11 +30,17 @@ angular.module('bk-page-account', [
     });
 })
 
-.controller('AccountCtrl', function Account($scope, List, rGroups, Session) {
+.controller('AccountCtrl', function Account($scope, List, rGroups, Session, User) {
 
         $scope.groups = rGroups;
 
-
+        User.items().then(
+            function(res) {
+                $scope.items = res.items;
+            },
+            function(err) {
+            }
+        )
 
         $scope.sendItem = function() {
 

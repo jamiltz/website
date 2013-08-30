@@ -369,7 +369,7 @@ input[type="text"], input[type="password"] {
 }
 
 /* line 8, ../../src/sass/page-account.scss */
-.form {
+.account {
   *zoom: 1;
   max-width: 59em;
   _width: 59em;
@@ -377,19 +377,69 @@ input[type="text"], input[type="password"] {
   padding-right: 1em;
   margin-left: auto;
   margin-right: auto;
-  background-color: #eaeaea;
 }
 /* line 38, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-.form:after {
+.account:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 15, ../../src/sass/page-account.scss */
+/* line 12, ../../src/sass/page-account.scss */
+.form {
+  width: 100%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+  background-color: #eaeaea;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 20, ../../src/sass/page-account.scss */
 .thumb {
   width: 100px;
   vertical-align: middle;
+}
+
+/* line 25, ../../src/sass/page-account.scss */
+.item-box {
+  margin: 20px 0;
+  display: block;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 32, ../../src/sass/page-account.scss */
+.item-box .item--thumb {
+  float: left;
+  margin-right: 10px;
+  cursor: pointer;
+}
+/* line 36, ../../src/sass/page-account.scss */
+.item-box .item--thumb img {
+  width: 100px;
+  display: block;
+}
+
+/* line 41, ../../src/sass/page-account.scss */
+.item--text {
+  overflow: hidden;
+  display: inline-block;
+  width: 700px;
+}
+/* line 45, ../../src/sass/page-account.scss */
+.item--text h3, .item--text .price {
+  display: inline-block;
+}
+/* line 48, ../../src/sass/page-account.scss */
+.item--text .price {
+  float: right;
+  margin: 0;
 }
 
 /* Susy set-up

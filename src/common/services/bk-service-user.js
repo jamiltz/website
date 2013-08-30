@@ -43,6 +43,12 @@ angular.module('bk-service-user', [])
                         $state.transitionTo('home', {g: null});
                     }
                 )
+        },
+        items: function() {
+            return $http.get('/1.0/user/items', {headers: {token: Session.getToken()}})
+                .then(function(result) {
+                    return result.data
+                })
         }
 
     };
