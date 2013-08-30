@@ -12,6 +12,13 @@ angular.module('bk-page-home', [
                 }
             },
             resolve: {
+                rGroups: ['List', function(List) {
+                    return List.getGroups().then(
+                        function(res) {
+                            return res.groups;
+                        }
+                    )
+                }],
                 rList: ['List', '$stateParams', function(List, $stateParams) {
                     var group;
                     if($stateParams.g) {
@@ -36,7 +43,10 @@ angular.module('bk-page-home', [
         });
     })
 
-.controller('HomeCtrl', function HomeCtrl($scope, List, $stateParams, rList) {
+.controller('HomeCtrl', function HomeCtrl($scope, List, $stateParams, rList, rGroups) {
+
+        $scope.items = rList;
+        $scope.groups = rGroups;
 
 
         $scope.sortField = undefined;
@@ -63,16 +73,5 @@ angular.module('bk-page-home', [
         console.log($stateParams);
 
         $scope.type = $stateParams.g;
-
-        $scope.items = rList;
-
-        $scope.groups = [
-            'IQ Shoreditch',
-            'Nido Liverpool Street',
-            'Brixton South',
-            'Westminster Uni',
-            'SciencePo'
-        ];
-
 
     })

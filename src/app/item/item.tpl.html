@@ -3,7 +3,7 @@
     <section class="main">
 
         <img class="thumb--large" ng-src="{{ item.pictures[0] }}">
-        <h2>{{ item.name }} - {{ item.price }}</h2>
+        <h2>{{ item.name }} - {{ item.price | currency:"£ " }}</h2>
         <h5>{{ item.location }}</h5>
         <p>
             {{ item.description }}

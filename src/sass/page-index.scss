@@ -1,3 +1,5 @@
+@import "susy";
+
 $greenTopBanner       :     rgba(93, 171, 31, 1.0000);
 $heightTopBanner      :     45px;
 $white                :     rgba(255,255,255,1);
@@ -35,6 +37,45 @@ $heightSubBanner      :     30px;
 }
 .banner .title {
   font-weight: bold;
+}
+
+.footer-banner {
+  background-color: $greenTopBanner;
+  height: 100px;
+  width: 100%;
+  min-width: 920px;
+  padding-top: 5px;
+}
+@include with-grid-settings(12, 4em, 1em, 0em) {
+  .footer{
+    @include container;
+    margin: 0 auto;
+  }
+  .footer__left{
+    @include span-columns(3);
+    margin-left: -1em;
+  }
+  .footer__right{
+    @include span-columns(3 omega);
+    margin-right: -1em;
+    text-align: right;
+  }
+}
+
+/* Social media sprites
+   ========================================================================== */
+.sprite{
+  background: url('./../assets/sprites.png');
+}
+.sprite--fb, .sprite--twitter{
+  width: 32px;
+  height: 32px;
+}
+.sprite--twitter{
+  background-position: 0px 0px;
+}
+.sprite--fb{
+  background-position: 0px -32px;
 }
 
 .menu{
