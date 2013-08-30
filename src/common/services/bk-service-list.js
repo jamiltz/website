@@ -6,7 +6,7 @@ angular.module('bk-service-list', [])
                 return $http.get('/1.0/items/?group=' + group)
                     .then(function(result) {
                         return result.data;
-                    })
+                    });
             },
             getGroups: function() {
                 return $http.get('/1.0/groups')
@@ -14,5 +14,5 @@ angular.module('bk-service-list', [])
                         return result.data
                     });
             }
-        }
-    })
+        };
+    });

@@ -63,16 +63,17 @@
 
     <header class="banner">
         <div class="nav">
-            <h2 class="title">Benkyet</h2>
+            <h2 class="title"><a href="/">Benkyet</a></h2>
             <h3 class="content">
                 Buy anything from your community
             </h3>
             <ul class="menu" ng-show="state === 'loggedOut'">
                 <li><a class="h5" href="/signup">Sign Up</a></li>
-                <button class="btn btn--gray"><a href="/login">Log In</a></button>
+                <a href="/login" class="btn btn--gray">Log In</a>
             </ul>
-            <ul class="menu" ng-show="state === 'loggedIn'">
-                <li><h5>Welcome back {{ auth.username }}</h5></li>
+            <ul class="menu" ng-show="isAuthenticated();">
+                <li><a class="h5" href="/account">Account</a></li>
+                <button class="btn btn--gray" ng-click="logoutUser();">Log Out</button>
             </ul>
         </div>
     </header>

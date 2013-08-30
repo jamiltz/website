@@ -33,6 +33,16 @@ angular.module('bk-service-user', [])
 
                     }
                 )
+        },
+        logout: function() {
+            return $http.delete('/1.0/logout', {headers: {token: Session.getToken()}})
+                .then(function(result) {return result.data})
+                .then(
+                    function(data) {
+                        $rootScope.state = 'loggedOut';
+                        $state.transitionTo('home', {g: null});
+                    }
+                )
         }
 
     };

@@ -44,9 +44,21 @@ angular.module( 'main', [
 
     })
 
-    .run( function run ( $rootScope ) {
+    .run( function run ( $rootScope, User ) {
+
+        $rootScope.isAuthenticated = function() {
+            if($rootScope.state === 'loggedIn') {
+                return true;
+            } else {
+                return false;
+            }
+        }
 
         $rootScope.state = 'loggedOut';
+
+        $rootScope.logoutUser = function() {
+            User.logout();
+        }
 
     })
 

@@ -45,6 +45,9 @@ angular.module('bk-page-home', [
 
 .controller('HomeCtrl', function HomeCtrl($scope, List, $stateParams, rList, rGroups) {
 
+
+
+
         $scope.items = rList;
         $scope.groups = rGroups;
 
