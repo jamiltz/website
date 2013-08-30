@@ -36,7 +36,7 @@ angular.module('bk-page-account', [
 
         User.items().then(
             function(res) {
-                $scope.items = res.items;
+                $scope.items = res.items
             },
             function(err) {
             }
