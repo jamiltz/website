@@ -16,11 +16,7 @@
                 Reach us on:
             </p>
         </div>
-
-
     </section>
-
-
 
 
     <section class="searchBox">
@@ -70,6 +66,8 @@
             {{ filteredItems.length }} Results
         </h4>
     </section>
+
+
 
     <section>
         <article class="item-box" ng-repeat="item in filteredItems = (items | filter:criteria | orderBy:sortField:reverse)">

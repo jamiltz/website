@@ -15,7 +15,7 @@ $lightGreen             :           rgba(126, 187, 75, 1.0000);
     @include span-columns(8);
     @include border-radius(5px);
     @include inset-border();
-    height: 100px;
+    height: 400px;
   }
   .span-single{
     @include span-columns(4 omega);

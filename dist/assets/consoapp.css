@@ -657,7 +657,7 @@ input[type="text"], input[type="password"] {
   -o-border-radius: 5px;
   border-radius: 5px;
   box-shadow: inset rgba(0, 0, 0, 0.5) 0 0 0 2px;
-  height: 100px;
+  height: 400px;
 }
 
 /* line 20, ../../src/sass/page-home.scss */
