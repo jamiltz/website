@@ -69,7 +69,7 @@
 
 
 
-    <section>
+    <section class="max-span">
         <article class="item-box" ng-repeat="item in filteredItems = (items | filter:criteria | orderBy:sortField:reverse)">
             <a class="item--thumb" ng-href="/item/{{ item.ref }}">
                 <img ng-src="{{ item.pictures[0] }}">

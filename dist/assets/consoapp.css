@@ -780,6 +780,15 @@ input[type="text"], input[type="password"] {
 }
 
 /* line 88, ../../src/sass/page-home.scss */
+.max-span {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+}
+
+/* line 91, ../../src/sass/page-home.scss */
 .item-box {
   margin: 20px 0;
   display: block;
@@ -788,30 +797,30 @@ input[type="text"], input[type="password"] {
   overflow: hidden;
 }
 
-/* line 95, ../../src/sass/page-home.scss */
+/* line 98, ../../src/sass/page-home.scss */
 .item-box .item--thumb {
   float: left;
   margin-right: 10px;
   cursor: pointer;
 }
-/* line 99, ../../src/sass/page-home.scss */
+/* line 102, ../../src/sass/page-home.scss */
 .item-box .item--thumb img {
   width: 100px;
   display: block;
 }
 
-/* line 104, ../../src/sass/page-home.scss */
+/* line 107, ../../src/sass/page-home.scss */
 .item--text {
   overflow: hidden;
   display: inline-block;
   width: 700px;
 }
-/* line 108, ../../src/sass/page-home.scss */
+/* line 111, ../../src/sass/page-home.scss */
 .item--text .price {
   cursor: pointer;
   display: inline-block;
 }
-/* line 112, ../../src/sass/page-home.scss */
+/* line 115, ../../src/sass/page-home.scss */
 .item--text .price {
   float: right;
   margin: 0;
