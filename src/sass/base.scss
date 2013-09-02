@@ -79,6 +79,13 @@ body{
   box-shadow: inset black(0.5) 0 0 0 2px;
 }
 
+/* Some css resets breaking the styling somewhere
+   ========================================================================== */
+img{
+  border: none;
+}
+
+
 /* List Styling
    ========================================================================== */
 ul{

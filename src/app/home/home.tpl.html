@@ -1,5 +1,23 @@
 <section class="home">
 
+    <section class="searchBox">
+        <div class="types">
+
+            <a
+                    class="type__pill"
+                    ng-href="/"
+                    ng-class="{'is-selected': type === null}">All</a>
+
+            <a
+                    ng-repeat="group in groups"
+                    class="type__pill"
+                    ng-href="/?g={{ group }}"
+                    ng-class="{'is-selected': type === group}">{{ group }}</a>
+
+        </div>
+    </section>
+
+
     <section class="span-double">
         Hey
     </section>
@@ -15,26 +33,28 @@
                 Contact us at any time and we'll be happy to help.
                 Reach us on:
             </p>
+            <div class="center" style="width: 200px;">
+                <a
+                        href="mailto:support@benkyet.com"
+                        class="sprite2 sprite2--mail">
+                </a>
+                <a
+                        href="http://facebook.com/benkyet"
+                        target="_blank"
+                        class="sprite2 sprite2--fb">
+                </a>
+                <a
+                        href="http://twitter.com/benkyet"
+                        target="_blank"
+                        class="sprite2 sprite2--twitter">
+                </a>
+            </div>
+
         </div>
     </section>
 
 
-    <section class="searchBox">
-        <div class="types">
 
-                <a
-                        class="type__pill"
-                        ng-href="/"
-                        ng-class="{'is-selected': type === null}">All</a>
-
-                <a
-                        ng-repeat="group in groups"
-                        class="type__pill"
-                        ng-href="/?g={{ group }}"
-                        ng-class="{'is-selected': type === group}">{{ group }}</a>
-
-        </div>
-    </section>
 
 
     <section class="sort-box">

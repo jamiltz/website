@@ -77,6 +77,22 @@ $heightSubBanner      :     30px;
 .sprite--fb{
   background-position: 0px -32px;
 }
+.sprite2 {
+  background-image: url('./../assets/sprites2.png');
+}
+.sprite2--fb, .sprite2--twitter, .sprite2--mail {
+  width: 63px;
+  height: 60px;
+}
+.sprite2--twitter {
+  background-position: 0 0;
+}
+.sprite2--fb{
+  background-position: 0 -60px;
+}
+.sprite2--mail{
+  background-position: 0 -120px;
+}
 
 .menu{
   position: absolute;
