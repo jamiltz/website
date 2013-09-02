@@ -45,14 +45,59 @@
 
     <h3>Your items for sale</h3>
 
-    <article class="item-box" ng-repeat="item in filteredItems = (items | filter:criteria | orderBy:sortField:reverse)">
+    <article class="item-box" ng-repeat="item in filteredItems = (items | filter:criteria | orderBy:sortField:reverse)" ng-controller="s-ItemCtrl">
         <a class="item--thumb" ng-href="/item/{{ item.ref }}">
             <img ng-src="{{ item.pictures[0] }}">
         </a>
-        <div class="item--text">
+        <div class="item--text" ng-switch="isEditing">
             <h3>{{ item.name }}</h3>
             <p class="price">{{ item.price | currency:"£ " }}</p>
             <p>Edit - Remove (in progress)</p>
+            <a
+                    class="btn btn--gray"
+                    href=""
+                    ng-click="isEditing = true">Edit</a>
+            <a
+                    class="btn btn--gray"
+                    href=""
+                    ng-click="removeItem(item.ref)">Remove</a>
+            <br>
+            <form
+                    class="form"
+                    ng-switch-when="true">
+                <h2>Upload a new item to sell in 60 seconds.</h2>
+                <select
+                        ng-options="g for g in groups"
+                        ng-model="item.group"></select>
+                <input
+                        ng-model="item.name"
+                        class="ipt ipt--inline"
+                        placeholder="Item Name"
+                        type="text">
+                <input
+                        ng-model="item.price"
+                        class="ipt ipt--inline"
+                        placeholder="Price of Item"
+                        type="text">
+                <input
+                        ng-model="item.location"
+                        class="ipt ipt--inline"
+                        placeholder="Location"
+                        type="text">
+                <textarea ng-model="item.description" rows="10" cols="100" placeholder="Describe the item here">
+                </textarea>
+                <br>
+                <!--<fileupload pictures="pictures"></fileupload>-->
+                <br>
+                <!--<progress id="progress" value="0"></progress>-->
+                <button
+                        class="btn btn--gray"
+                        ng-click="updateItem(item);">Save</button>
+                <button
+                        class="btn btn--gray"
+                        ng-click="$parent.isEditing = false;">Cancel</button>
+
+            </form>
         </div>
     </article>
 

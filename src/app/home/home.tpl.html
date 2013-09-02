@@ -1,4 +1,28 @@
 <section class="home">
+
+    <section class="span-double">
+        Hey
+    </section>
+    <section class="span-single">
+        <div>
+            <h3 class="text-center">
+                Your Uni's not in the list?
+            </h3>
+            <br>
+            <div class="mascot">
+            </div>
+            <p class="text-center">
+                Contact us at any time and we'll be happy to help.
+                Reach us on:
+            </p>
+        </div>
+
+
+    </section>
+
+
+
+
     <section class="searchBox">
         <div class="types">
 
@@ -15,10 +39,7 @@
 
         </div>
     </section>
-    <br>
-    <h4>
-        {{ filteredItems.length }} Results
-    </h4>
+
 
     <section class="sort-box">
         <div>
@@ -44,6 +65,10 @@
                 type="text"
                 ng-model="criteria">
         </label>
+        <br>
+        <h4>
+            {{ filteredItems.length }} Results
+        </h4>
     </section>
 
     <section>
@@ -52,8 +77,15 @@
                 <img ng-src="{{ item.pictures[0] }}">
             </a>
             <div class="item--text">
-                <h3>{{ item.name }}</h3>
-                <p class="price">{{ item.price | currency:"£ " }}</p>
+                <a
+                        class="h3"
+                        ng-href="/item/{{ item.ref }}">
+                    {{ item.name }}
+                </a>
+                <p
+                        class="price"
+                        ng-href="/item/{{ item.ref }}">
+                    {{ item.price | currency:"£ " }}</p>
                 <p>{{ item.location }}</p>
             </div>
         </article>

@@ -11,6 +11,32 @@ $lightGreen             :           rgba(126, 187, 75, 1.0000);
     @include container;
     background-color: $backgroundColor;
   }
+  .span-double{
+    @include span-columns(8);
+    @include border-radius(5px);
+    @include inset-border();
+    height: 100px;
+  }
+  .span-single{
+    @include span-columns(4 omega);
+    @include inset-border();
+    @include border-radius(5px);
+    & > div{
+      width: 90%;
+      padding: 5%;
+    }
+  }
+
+  .mascot{
+    border-radius: 50%;
+    border: 4px solid gray;
+    height: 100px;
+    width: 107px;
+    background: url('./../assets/mascot.png');
+    background-size: 107px 100px;
+    margin: 0 auto;
+  }
+
   .searchBox {
     margin: 20px 0;
     padding: 15px;
@@ -49,6 +75,7 @@ $lightGreen             :           rgba(126, 187, 75, 1.0000);
     padding: 10px;
     background-color: $sortBoxBackground;
     @include border-radius(5px);
+    @include span-columns(12 omega);
 
     div{
       display: inline-block;
@@ -78,7 +105,8 @@ $lightGreen             :           rgba(126, 187, 75, 1.0000);
     overflow: hidden;
     display: inline-block;
     width: 700px;
-    h3, .price{
+    .price{
+      cursor: pointer;
       display: inline-block;
     }
     .price{

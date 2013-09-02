@@ -30,7 +30,7 @@ angular.module('bk-page-account', [
     });
 })
 
-.controller('AccountCtrl', function Account($scope, List, rGroups, Session, User) {
+.controller('AccountCtrl', function Account($scope, List, rGroups, Session, User, Item, $state) {
 
         $scope.groups = rGroups;
 
@@ -41,6 +41,42 @@ angular.module('bk-page-account', [
             function(err) {
             }
         )
+
+        $scope.updateItem = function(item, idx) {
+            console.log(item)
+            var item_to_update = JSON.parse(JSON.stringify(item));
+            delete item_to_update.seller_id;
+            delete item_to_update.pictures;
+            delete item_to_update.ref;
+
+            Item.updateItem(item_to_update).then(
+                function(res) {
+                    //console.log(res);
+                    console.log(idx)
+                    console.log('isEditing' + idx)
+                    $scope.isEditing0 = false;
+                }
+            )
+
+        }
+
+        $scope.removeItem = function(ref, idx) {
+            Item.removeItem(ref).then(
+                function(res) {
+                    if(res.status === 204) {
+
+                        User.items().then(
+                            function(res) {
+                                $scope.items = res.items
+                            },
+                            function(err) {
+                            }
+                        )
+
+                    }
+                }
+            )
+        }
 
         $scope.sendItem = function() {
 
@@ -88,5 +124,23 @@ angular.module('bk-page-account', [
 
 
         }
+
+    })
+.controller('s-ItemCtrl', function($scope, Item) {
+        $scope.updateItem = function(item) {
+            console.log(item)
+            var item_to_update = JSON.parse(JSON.stringify(item));
+            delete item_to_update.seller_id;
+            delete item_to_update.pictures;
+            delete item_to_update.ref;
+
+            Item.updateItem(item_to_update).then(
+                function(res) {
+                    $scope.isEditing = false;
+                }
+            )
+
+        }
+
 
     })

@@ -72,6 +72,12 @@ body{
 @function white($opacity) {
   @return rgba(255,255,255,$opacity);
 }
+@mixin box-emboss($opacity, $opacity2){
+  box-shadow: white($opacity) 0 1px 0, inset black($opacity2) 0 1px 0;
+}
+@mixin inset-border(){
+  box-shadow: inset black(0.5) 0 0 0 2px;
+}
 
 /* List Styling
    ========================================================================== */
