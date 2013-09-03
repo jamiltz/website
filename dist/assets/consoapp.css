@@ -6,53 +6,58 @@
 }
 
 /* line 15, ../../src/sass/base.scss */
+.text-light {
+  font-weight: normal;
+}
+
+/* line 19, ../../src/sass/base.scss */
 .center {
   margin: 0 auto;
   display: block;
 }
 
-/* line 20, ../../src/sass/base.scss */
+/* line 24, ../../src/sass/base.scss */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-/* line 24, ../../src/sass/base.scss */
+/* line 28, ../../src/sass/base.scss */
 h1,
 .h1 {
   font-size: 38px;
 }
 
-/* line 29, ../../src/sass/base.scss */
+/* line 33, ../../src/sass/base.scss */
 h2,
 .h2 {
   font-size: 32px;
 }
 
-/* line 34, ../../src/sass/base.scss */
+/* line 38, ../../src/sass/base.scss */
 h3,
 .h3 {
   font-size: 24px;
 }
 
-/* line 39, ../../src/sass/base.scss */
+/* line 43, ../../src/sass/base.scss */
 h4,
 .h4 {
   font-size: 18px;
 }
 
-/* line 44, ../../src/sass/base.scss */
+/* line 48, ../../src/sass/base.scss */
 h5,
 .h5 {
   font-size: 14px;
 }
 
-/* line 49, ../../src/sass/base.scss */
+/* line 53, ../../src/sass/base.scss */
 h6,
 .h6 {
   font-size: 12px;
 }
 
-/* line 54, ../../src/sass/base.scss */
+/* line 58, ../../src/sass/base.scss */
 a {
   display: inline-block;
   font-style: none;
@@ -61,7 +66,7 @@ a {
   text-decoration: none;
 }
 
-/* line 62, ../../src/sass/base.scss */
+/* line 66, ../../src/sass/base.scss */
 body {
   font-family: "OpenSans", sans-serif;
   margin: 0;
@@ -71,20 +76,20 @@ body {
    ========================================================================== */
 /* Some css resets breaking the styling somewhere
    ========================================================================== */
-/* line 85, ../../src/sass/base.scss */
+/* line 89, ../../src/sass/base.scss */
 img {
   border: none;
 }
 
 /* List Styling
    ========================================================================== */
-/* line 92, ../../src/sass/base.scss */
+/* line 96, ../../src/sass/base.scss */
 ul {
   margin: 0;
   display: inline-block;
 }
 
-/* line 96, ../../src/sass/base.scss */
+/* line 100, ../../src/sass/base.scss */
 ul li {
   list-style: none;
   display: inline-block;
@@ -93,19 +98,19 @@ ul li {
 
 /* Few button base css
    ========================================================================== */
-/* line 104, ../../src/sass/base.scss */
+/* line 108, ../../src/sass/base.scss */
 button {
   border: none;
 }
 
-/* line 107, ../../src/sass/base.scss */
+/* line 111, ../../src/sass/base.scss */
 .btn {
   padding: 7px 15px;
   font-weight: bolder;
   cursor: pointer;
 }
 
-/* line 114, ../../src/sass/base.scss */
+/* line 118, ../../src/sass/base.scss */
 .btn--gray {
   border: 1px solid rgba(0, 0, 0, 0.5);
   -webkit-border-radius: 5px;
@@ -119,7 +124,7 @@ button {
   background: -o-linear-gradient(top, #fcfcfc 0%, #bfbfbf 100%);
   background: linear-gradient(top, #fcfcfc 0%, #bfbfbf 100%);
 }
-/* line 118, ../../src/sass/base.scss */
+/* line 122, ../../src/sass/base.scss */
 .btn--gray:hover {
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #fcfcfc), color-stop(100%, #bfbfbf));
   background: -webkit-linear-gradient(bottom, #fcfcfc 0%, #bfbfbf 100%);
@@ -130,13 +135,13 @@ button {
 
 /* Few input base css
    ========================================================================== */
-/* line 125, ../../src/sass/base.scss */
+/* line 129, ../../src/sass/base.scss */
 input[type="text"], input[type="password"] {
   border: none;
   border: 1px solid gray;
 }
 
-/* line 129, ../../src/sass/base.scss */
+/* line 133, ../../src/sass/base.scss */
 .ipt {
   padding: 5px;
   margin-top: 10px;
@@ -148,45 +153,45 @@ input[type="text"], input[type="password"] {
   border-radius: 5px;
 }
 
-/* line 136, ../../src/sass/base.scss */
+/* line 140, ../../src/sass/base.scss */
 .ipt--inline {
   display: inline-block;
 }
 
-/* line 139, ../../src/sass/base.scss */
+/* line 143, ../../src/sass/base.scss */
 .ipt--single {
   display: block;
 }
 
 /* A few css classes for images to display
    ========================================================================== */
-/* line 145, ../../src/sass/base.scss */
+/* line 149, ../../src/sass/base.scss */
 .thumb--medium {
   width: 150px;
   vertical-align: middle;
 }
 
-/* line 149, ../../src/sass/base.scss */
+/* line 153, ../../src/sass/base.scss */
 .thumb--box {
   width: 150px;
   vertical-align: top;
 }
 
-/* line 153, ../../src/sass/base.scss */
+/* line 157, ../../src/sass/base.scss */
 .thumb--large {
   width: 300px;
 }
 
 /* A few box rules
    ========================================================================== */
-/* line 159, ../../src/sass/base.scss */
+/* line 163, ../../src/sass/base.scss */
 .label--single {
   width: 50px;
   margin-left: 10px;
   margin-right: 19px;
 }
 
-/* line 164, ../../src/sass/base.scss */
+/* line 168, ../../src/sass/base.scss */
 .label--single.is-selected {
   margin-right: 0px;
 }
@@ -199,53 +204,58 @@ input[type="text"], input[type="password"] {
 }
 
 /* line 15, ../../src/sass/base.scss */
+.text-light {
+  font-weight: normal;
+}
+
+/* line 19, ../../src/sass/base.scss */
 .center {
   margin: 0 auto;
   display: block;
 }
 
-/* line 20, ../../src/sass/base.scss */
+/* line 24, ../../src/sass/base.scss */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-/* line 24, ../../src/sass/base.scss */
+/* line 28, ../../src/sass/base.scss */
 h1,
 .h1 {
   font-size: 38px;
 }
 
-/* line 29, ../../src/sass/base.scss */
+/* line 33, ../../src/sass/base.scss */
 h2,
 .h2 {
   font-size: 32px;
 }
 
-/* line 34, ../../src/sass/base.scss */
+/* line 38, ../../src/sass/base.scss */
 h3,
 .h3 {
   font-size: 24px;
 }
 
-/* line 39, ../../src/sass/base.scss */
+/* line 43, ../../src/sass/base.scss */
 h4,
 .h4 {
   font-size: 18px;
 }
 
-/* line 44, ../../src/sass/base.scss */
+/* line 48, ../../src/sass/base.scss */
 h5,
 .h5 {
   font-size: 14px;
 }
 
-/* line 49, ../../src/sass/base.scss */
+/* line 53, ../../src/sass/base.scss */
 h6,
 .h6 {
   font-size: 12px;
 }
 
-/* line 54, ../../src/sass/base.scss */
+/* line 58, ../../src/sass/base.scss */
 a {
   display: inline-block;
   font-style: none;
@@ -254,7 +264,7 @@ a {
   text-decoration: none;
 }
 
-/* line 62, ../../src/sass/base.scss */
+/* line 66, ../../src/sass/base.scss */
 body {
   font-family: "OpenSans", sans-serif;
   margin: 0;
@@ -264,20 +274,20 @@ body {
    ========================================================================== */
 /* Some css resets breaking the styling somewhere
    ========================================================================== */
-/* line 85, ../../src/sass/base.scss */
+/* line 89, ../../src/sass/base.scss */
 img {
   border: none;
 }
 
 /* List Styling
    ========================================================================== */
-/* line 92, ../../src/sass/base.scss */
+/* line 96, ../../src/sass/base.scss */
 ul {
   margin: 0;
   display: inline-block;
 }
 
-/* line 96, ../../src/sass/base.scss */
+/* line 100, ../../src/sass/base.scss */
 ul li {
   list-style: none;
   display: inline-block;
@@ -286,19 +296,19 @@ ul li {
 
 /* Few button base css
    ========================================================================== */
-/* line 104, ../../src/sass/base.scss */
+/* line 108, ../../src/sass/base.scss */
 button {
   border: none;
 }
 
-/* line 107, ../../src/sass/base.scss */
+/* line 111, ../../src/sass/base.scss */
 .btn {
   padding: 7px 15px;
   font-weight: bolder;
   cursor: pointer;
 }
 
-/* line 114, ../../src/sass/base.scss */
+/* line 118, ../../src/sass/base.scss */
 .btn--gray {
   border: 1px solid rgba(0, 0, 0, 0.5);
   -webkit-border-radius: 5px;
@@ -312,7 +322,7 @@ button {
   background: -o-linear-gradient(top, #fcfcfc 0%, #bfbfbf 100%);
   background: linear-gradient(top, #fcfcfc 0%, #bfbfbf 100%);
 }
-/* line 118, ../../src/sass/base.scss */
+/* line 122, ../../src/sass/base.scss */
 .btn--gray:hover {
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #fcfcfc), color-stop(100%, #bfbfbf));
   background: -webkit-linear-gradient(bottom, #fcfcfc 0%, #bfbfbf 100%);
@@ -323,13 +333,13 @@ button {
 
 /* Few input base css
    ========================================================================== */
-/* line 125, ../../src/sass/base.scss */
+/* line 129, ../../src/sass/base.scss */
 input[type="text"], input[type="password"] {
   border: none;
   border: 1px solid gray;
 }
 
-/* line 129, ../../src/sass/base.scss */
+/* line 133, ../../src/sass/base.scss */
 .ipt {
   padding: 5px;
   margin-top: 10px;
@@ -341,45 +351,45 @@ input[type="text"], input[type="password"] {
   border-radius: 5px;
 }
 
-/* line 136, ../../src/sass/base.scss */
+/* line 140, ../../src/sass/base.scss */
 .ipt--inline {
   display: inline-block;
 }
 
-/* line 139, ../../src/sass/base.scss */
+/* line 143, ../../src/sass/base.scss */
 .ipt--single {
   display: block;
 }
 
 /* A few css classes for images to display
    ========================================================================== */
-/* line 145, ../../src/sass/base.scss */
+/* line 149, ../../src/sass/base.scss */
 .thumb--medium {
   width: 150px;
   vertical-align: middle;
 }
 
-/* line 149, ../../src/sass/base.scss */
+/* line 153, ../../src/sass/base.scss */
 .thumb--box {
   width: 150px;
   vertical-align: top;
 }
 
-/* line 153, ../../src/sass/base.scss */
+/* line 157, ../../src/sass/base.scss */
 .thumb--large {
   width: 300px;
 }
 
 /* A few box rules
    ========================================================================== */
-/* line 159, ../../src/sass/base.scss */
+/* line 163, ../../src/sass/base.scss */
 .label--single {
   width: 50px;
   margin-left: 10px;
   margin-right: 19px;
 }
 
-/* line 164, ../../src/sass/base.scss */
+/* line 168, ../../src/sass/base.scss */
 .label--single.is-selected {
   margin-right: 0px;
 }
@@ -466,53 +476,58 @@ input[type="text"], input[type="password"] {
 }
 
 /* line 15, ../../src/sass/base.scss */
+.text-light {
+  font-weight: normal;
+}
+
+/* line 19, ../../src/sass/base.scss */
 .center {
   margin: 0 auto;
   display: block;
 }
 
-/* line 20, ../../src/sass/base.scss */
+/* line 24, ../../src/sass/base.scss */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-/* line 24, ../../src/sass/base.scss */
+/* line 28, ../../src/sass/base.scss */
 h1,
 .h1 {
   font-size: 38px;
 }
 
-/* line 29, ../../src/sass/base.scss */
+/* line 33, ../../src/sass/base.scss */
 h2,
 .h2 {
   font-size: 32px;
 }
 
-/* line 34, ../../src/sass/base.scss */
+/* line 38, ../../src/sass/base.scss */
 h3,
 .h3 {
   font-size: 24px;
 }
 
-/* line 39, ../../src/sass/base.scss */
+/* line 43, ../../src/sass/base.scss */
 h4,
 .h4 {
   font-size: 18px;
 }
 
-/* line 44, ../../src/sass/base.scss */
+/* line 48, ../../src/sass/base.scss */
 h5,
 .h5 {
   font-size: 14px;
 }
 
-/* line 49, ../../src/sass/base.scss */
+/* line 53, ../../src/sass/base.scss */
 h6,
 .h6 {
   font-size: 12px;
 }
 
-/* line 54, ../../src/sass/base.scss */
+/* line 58, ../../src/sass/base.scss */
 a {
   display: inline-block;
   font-style: none;
@@ -521,7 +536,7 @@ a {
   text-decoration: none;
 }
 
-/* line 62, ../../src/sass/base.scss */
+/* line 66, ../../src/sass/base.scss */
 body {
   font-family: "OpenSans", sans-serif;
   margin: 0;
@@ -531,20 +546,20 @@ body {
    ========================================================================== */
 /* Some css resets breaking the styling somewhere
    ========================================================================== */
-/* line 85, ../../src/sass/base.scss */
+/* line 89, ../../src/sass/base.scss */
 img {
   border: none;
 }
 
 /* List Styling
    ========================================================================== */
-/* line 92, ../../src/sass/base.scss */
+/* line 96, ../../src/sass/base.scss */
 ul {
   margin: 0;
   display: inline-block;
 }
 
-/* line 96, ../../src/sass/base.scss */
+/* line 100, ../../src/sass/base.scss */
 ul li {
   list-style: none;
   display: inline-block;
@@ -553,19 +568,19 @@ ul li {
 
 /* Few button base css
    ========================================================================== */
-/* line 104, ../../src/sass/base.scss */
+/* line 108, ../../src/sass/base.scss */
 button {
   border: none;
 }
 
-/* line 107, ../../src/sass/base.scss */
+/* line 111, ../../src/sass/base.scss */
 .btn {
   padding: 7px 15px;
   font-weight: bolder;
   cursor: pointer;
 }
 
-/* line 114, ../../src/sass/base.scss */
+/* line 118, ../../src/sass/base.scss */
 .btn--gray {
   border: 1px solid rgba(0, 0, 0, 0.5);
   -webkit-border-radius: 5px;
@@ -579,7 +594,7 @@ button {
   background: -o-linear-gradient(top, #fcfcfc 0%, #bfbfbf 100%);
   background: linear-gradient(top, #fcfcfc 0%, #bfbfbf 100%);
 }
-/* line 118, ../../src/sass/base.scss */
+/* line 122, ../../src/sass/base.scss */
 .btn--gray:hover {
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #fcfcfc), color-stop(100%, #bfbfbf));
   background: -webkit-linear-gradient(bottom, #fcfcfc 0%, #bfbfbf 100%);
@@ -590,13 +605,13 @@ button {
 
 /* Few input base css
    ========================================================================== */
-/* line 125, ../../src/sass/base.scss */
+/* line 129, ../../src/sass/base.scss */
 input[type="text"], input[type="password"] {
   border: none;
   border: 1px solid gray;
 }
 
-/* line 129, ../../src/sass/base.scss */
+/* line 133, ../../src/sass/base.scss */
 .ipt {
   padding: 5px;
   margin-top: 10px;
@@ -608,45 +623,45 @@ input[type="text"], input[type="password"] {
   border-radius: 5px;
 }
 
-/* line 136, ../../src/sass/base.scss */
+/* line 140, ../../src/sass/base.scss */
 .ipt--inline {
   display: inline-block;
 }
 
-/* line 139, ../../src/sass/base.scss */
+/* line 143, ../../src/sass/base.scss */
 .ipt--single {
   display: block;
 }
 
 /* A few css classes for images to display
    ========================================================================== */
-/* line 145, ../../src/sass/base.scss */
+/* line 149, ../../src/sass/base.scss */
 .thumb--medium {
   width: 150px;
   vertical-align: middle;
 }
 
-/* line 149, ../../src/sass/base.scss */
+/* line 153, ../../src/sass/base.scss */
 .thumb--box {
   width: 150px;
   vertical-align: top;
 }
 
-/* line 153, ../../src/sass/base.scss */
+/* line 157, ../../src/sass/base.scss */
 .thumb--large {
   width: 300px;
 }
 
 /* A few box rules
    ========================================================================== */
-/* line 159, ../../src/sass/base.scss */
+/* line 163, ../../src/sass/base.scss */
 .label--single {
   width: 50px;
   margin-left: 10px;
   margin-right: 19px;
 }
 
-/* line 164, ../../src/sass/base.scss */
+/* line 168, ../../src/sass/base.scss */
 .label--single.is-selected {
   margin-right: 0px;
 }
@@ -897,7 +912,7 @@ input[type="text"], input[type="password"] {
 .sub-banner .content {
   width: 1000px;
   margin: 0 auto;
-  padding-left: 20px;
+  text-align: center;
 }
 
 /* line 20, ../../src/sass/page-index.scss */

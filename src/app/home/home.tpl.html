@@ -59,9 +59,10 @@
 
     <section class="sort-box">
         <div class="sort-box__filters">
+            <b style="margin-left: 20px;">Sort: </b>
             <a
                     href=""
-                    class="label--single"
+                    class="label--single text-light"
                     ng-click="sort('price')"
                     ng-class="{'is-selected': isSortUp('price') || isSortDown('price')}"
                     >Price</a>
@@ -69,7 +70,7 @@
                     ng-class="{'icon-chevron-up': isSortUp('price'), 'icon-chevron-down': isSortDown('price')}"></i>
             <a
                     href=""
-                    class="label--single"
+                    class="label--single text-light"
                     ng-click="sort('name')"
                     ng-class="{'is-selected': isSortUp('name') || isSortDown('name')}"
                     >Name</a>
