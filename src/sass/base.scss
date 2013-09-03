@@ -65,7 +65,7 @@ body{
 
 }
 
-/* Few useful mixins
+/* Useful mixins
    ========================================================================== */
 @function black($opacity) {
   @return rgba(0,0,0,$opacity);
