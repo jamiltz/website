@@ -19,7 +19,7 @@
 
 
     <section class="span-double">
-        Hey
+        <img src="./assets/freshers.png">
     </section>
     <section class="span-single">
         <div>
@@ -58,7 +58,7 @@
 
 
     <section class="sort-box">
-        <div>
+        <div class="sort-box__filters">
             <a
                     href=""
                     class="label--single"
@@ -76,20 +76,19 @@
             <i
                     ng-class="{'icon-chevron-up': isSortUp('name'), 'icon-chevron-down': isSortDown('name')}"></i>
         </div>
-        <label>
+        <label class="sort-box__search">
             Search for: <input
                 type="text"
                 ng-model="criteria">
         </label>
-        <br>
-        <h4>
-            {{ filteredItems.length }} Results
-        </h4>
     </section>
 
 
 
     <section class="max-span">
+        <h4>
+            {{ filteredItems.length }} Results
+        </h4>
         <article class="item-box" ng-repeat="item in filteredItems = (items | filter:criteria | orderBy:sortField:reverse)">
             <a class="item--thumb" ng-href="/item/{{ item.ref }}">
                 <img ng-src="{{ item.pictures[0] }}">
