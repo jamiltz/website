@@ -12,8 +12,10 @@ angular.module('bk-page-account', [
             }
         },
         resolve: {
-            user: ['User', function(User) {
-                User.autologin('login')
+            rUser: ['User', function(User) {
+
+                return User.autologin('login');
+
             }],
             rGroups: ['List', function(List) {
                 return List.getGroups()
@@ -30,7 +32,29 @@ angular.module('bk-page-account', [
     });
 })
 
-.controller('AccountCtrl', function Account($scope, List, rGroups, Session, User, Item, $state) {
+.controller('AccountCtrl', function Account($scope, List, rGroups, Session, User, Item, rUser) {
+
+        //This line is necessary because I noticed a weird behaviour.
+        //The user info is published on the rootScope in the autologin method of the User service.
+        //On the account page, we get the user info on the scope. But it didn't work every time.
+        //Seems like sometimes, the view a local scope would loaded before the rootscope had time
+        //to transfer its data to the local scope
+        $scope.user = rUser;
+
+        $scope.isUpdatingAccount = function() {
+            $scope.isUpdatingAccount = true;
+        }
+
+        $scope.updateUser = function() {
+
+            delete $scope.user._id;
+
+            User.update($scope.user)
+                .then(function(res) {
+                    console.log(res)
+                })
+        };
+
 
         $scope.groups = rGroups;
 
@@ -40,7 +64,7 @@ angular.module('bk-page-account', [
             },
             function(err) {
             }
-        )
+        );
 
         $scope.updateItem = function(item, idx) {
             console.log(item)
@@ -78,8 +102,8 @@ angular.module('bk-page-account', [
             )
         }
 
-        $scope.canSave = function() {
-            return $scope.newItemForm.$dirty && $scope.newItemForm.$valid;
+        $scope.canSave = function(form_name) {
+            return $scope[form_name].$dirty && $scope[form_name].$valid;
         }
 
         $scope.sendItem = function() {

@@ -4,6 +4,50 @@
     <button
             class="btn btn--gray"
             ng-click="isAddingItem = true;">Add Item</button>
+    <button
+            class="btn btn--gray"
+            ng-click="isUpdatingAccount();">Update Account</button>
+
+        <form
+                name="updateAccountForm"
+                class="form"
+                ng-submit="updateUser();"
+                ng-show="isUpdatingAccount === true;">
+
+            <input
+                    required
+                    ng-model="user.username"
+                    type="text"
+                    placeholder="Username"
+                    class="ipt ipt--single center">
+            <input
+                    required
+                    ng-init="user.email"
+                    ng-model="user.email"
+                    type="text"
+                    placeholder="Email"
+                    class="ipt ipt--single center">
+            <input
+                    required
+                    ng-init="user.pass = ''"
+                    ng-model="user.pass"
+                    type="password"
+                    placeholder="Change password"
+                    class="ipt ipt--single center">
+            <input
+                    required
+                    ng-init="user.confirm = ''"
+                    ng-model="user.confirm"
+                    type="password"
+                    placeholder="Confirm New Password"
+                    class="ipt ipt--single center">
+            <button
+                    class="btn btn--gray center"
+                    ng-disabled="!canSave('updateAccountForm');">Save</button>
+            <button
+                    class="btn btn--gray center"
+                    ng-click="isUpdatingAccount = false;">Cancel</button>
+        </form>
 
         <form
                 name="newItemForm"
@@ -46,7 +90,7 @@
             <!--<progress id="progress" value="0"></progress>-->
             <button
                     class="btn btn--gray"
-                    ng-disabled="!canSave();">
+                    ng-disabled="!canSave('newItemForm');">
                 Send</button>
             <button
                     class="btn btn--gray"

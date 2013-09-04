@@ -1,6 +1,6 @@
 angular.module('bk-service-user', [])
 
-.factory('User', function($http, Session, $rootScope, $state) {
+.factory('User', function($http, Session, $rootScope, $state, $timeout) {
 
     return {
         signup: function(data) {
@@ -22,7 +22,11 @@ angular.module('bk-service-user', [])
                     function(data) {
                         $http.defaults.headers.common['token'] = Session.getToken();
                         $rootScope.state = 'loggedIn';
-                        $rootScope.auth = data.user;
+                        $rootScope.user = data.user;
+
+                        return data.user;
+
+
                     },
                     function(err) {
                         if(!arguments.length) {
@@ -35,6 +39,7 @@ angular.module('bk-service-user', [])
                 )
         },
         logout: function() {
+            $rootScope.user = {};
             return $http.delete('/1.0/logout', {headers: {token: Session.getToken()}})
                 .then(function(result) {return result.data})
                 .then(
@@ -43,6 +48,12 @@ angular.module('bk-service-user', [])
                         $state.transitionTo('home', {g: null});
                     }
                 )
+        },
+        update: function(user) {
+            return $http.put('/1.0/user', user)
+                .then(function(result) {
+                    return result.data;
+                });
         },
         items: function() {
             return $http.get('/1.0/user/items', {headers: {token: Session.getToken()}})
