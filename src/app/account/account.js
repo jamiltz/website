@@ -52,6 +52,9 @@ angular.module('bk-page-account', [
             User.update($scope.user)
                 .then(function(res) {
                     console.log(res)
+                    if(res.status === 200) {
+                        $scope.isUpdatingAccount = false;
+                    }
                 })
         };
 
@@ -134,18 +137,19 @@ angular.module('bk-page-account', [
 
             var qs = document.querySelector.bind(document);
 
-            var xhr = new XMLHttpRequest();
+            var xhr = new XMLHttpRequest()
             xhr.open('POST', '/1.0/item');
 
             xhr.setRequestHeader("token", Session.getToken());
 
-            xhr.upload.onprogress = function(e) {
-                qs('#progress').value = e.loaded;
-                qs('#progress').max = e.total;
-            }
+//            xhr.upload.onprogress = function(e) {
+////                qs('#progress').value = e.loaded;
+////                qs('#progress').max = e.total;
+//            }
 
             xhr.onload = function() {
-                isAddingItem = false;
+                console.log('uploaded')
+                $scope.$apply($scope.isAddingItem = false);
             }
 
             xhr.send(form);
