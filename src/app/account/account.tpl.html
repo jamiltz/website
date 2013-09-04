@@ -3,45 +3,56 @@
 
     <button
             class="btn btn--gray"
-            ng-click="addItem = true;">Add Item</button>
+            ng-click="isAddingItem = true;">Add Item</button>
 
-    <section ng-show="addItem">
-
-        <form class="form">
-            <h2>Upload a new item to sell in 60 seconds.</h2>
+        <form
+                name="newItemForm"
+                ng-submit="sendItem();"
+                ng-show="isAddingItem === true"
+                class="form">
+            <h2>Upload a new item to sell.</h2>
             <select
+                    required
                     ng-options="g for g in groups"
                     ng-model="item.group"></select>
             <input
+                    required
                     ng-model="item.name"
                     class="ipt ipt--inline"
                     placeholder="Item Name"
                     type="text">
             <input
+                    required
                     ng-model="item.price"
                     class="ipt ipt--inline"
                     placeholder="Price of Item"
                     type="text">
             <input
+                    required
                     ng-model="item.location"
                     class="ipt ipt--inline"
                     placeholder="Location"
                     type="text">
-            <textarea ng-model="item.description" rows="10" cols="100" placeholder="Describe the item here">
+            <textarea
+                    required
+                    ng-model="item.description"
+                    rows="10"
+                    cols="100"
+                    placeholder="Describe the item here">
             </textarea>
             <br>
             <fileupload pictures="pictures"></fileupload>
             <br>
-            <progress id="progress" value="0"></progress>
+            <!--<progress id="progress" value="0"></progress>-->
             <button
                     class="btn btn--gray"
-                    ng-click="sendItem();">Send</button>
+                    ng-disabled="!canSave();">
+                Send</button>
             <button
                     class="btn btn--gray"
-                    ng-click="addItem = false;">Cancel</button>
+                    ng-click="isAddingItem = false;">Cancel</button>
 
         </form>
-    </section>
 
     <h3>Your items for sale</h3>
 
@@ -52,7 +63,7 @@
         <div class="item--text" ng-switch="isEditing">
             <h3>{{ item.name }}</h3>
             <p class="price">{{ item.price | currency:"£ " }}</p>
-            <p>Edit - Remove (in progress)</p>
+            <br>
             <a
                     class="btn btn--gray"
                     href=""

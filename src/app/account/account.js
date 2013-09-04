@@ -78,6 +78,10 @@ angular.module('bk-page-account', [
             )
         }
 
+        $scope.canSave = function() {
+            return $scope.newItemForm.$dirty && $scope.newItemForm.$valid;
+        }
+
         $scope.sendItem = function() {
 
 
@@ -117,7 +121,7 @@ angular.module('bk-page-account', [
             }
 
             xhr.onload = function() {
-                console.log("Upload completed");
+                isAddingItem = false;
             }
 
             xhr.send(form);

@@ -45,6 +45,10 @@ angular.module('bk-page-item', [
                     }
                 })
                 .error(function(err, res) {console.log(err, res)});
+        };
+
+        $scope.canSave = function() {
+            return $scope.replyForm.$dirty && $scope.replyForm.$valid;
         }
 
 
