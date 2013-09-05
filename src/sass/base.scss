@@ -200,3 +200,10 @@ $formBlueBottom   :         rgba(24, 119, 207, 1.0000);
   @include background(linear-gradient(top, $formBlueTop 0, $formBlueBottom 100%));
   @include box-emboss(0.8, 0.2);
 }
+
+/* Few alert styles
+   ========================================================================== */
+
+.alert--error{
+  color: rgba(249, 147, 2, 1.0000);
+}
