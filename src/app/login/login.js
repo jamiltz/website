@@ -26,7 +26,7 @@ angular.module('bk-page-login', [
 
                     $http.defaults.headers.common['token'] = Session.getToken();
 
-                    $rootScope.auth = res.user;
+                    $rootScope.current = res.user;
                     $state.transitionTo('home');
                 }, function(res) {
                     $scope.error = res.data.reason;

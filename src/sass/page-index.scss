@@ -21,6 +21,16 @@ $heightSubBanner      :     38px;
   font-size: 24px;
   margin: 5px auto;
 }
+.banr{
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+$gmailYellow      :       rgba(255, 215, 111, 1.0000);
+.banr--small{
+  height: 20px;
+  background-color: $gmailYellow;
+}
 
 .banner {
   background-color: $greenTopBanner;

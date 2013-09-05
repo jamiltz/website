@@ -9,11 +9,6 @@ $backgroundColor        :           rgba(234, 234, 234, 1.0000);
     @include container;
   }
 
-  .form {
-    @include span-columns(12);
-    background-color: $backgroundColor;
-    @include border-radius(5px);
-  }
   .form input {
 
   }
@@ -48,6 +43,21 @@ $backgroundColor        :           rgba(234, 234, 234, 1.0000);
     .price{
       float: right;
       margin: 0;
+    }
+  }
+
+  .lyt--new-item-form{
+    p{
+      color: white;
+      @include letterpress(0.4);
+    }
+    div{
+      margin: 20px 20px;
+    }
+  }
+  .lyt--update-account-form{
+    div{
+      margin: 20px 20px;
     }
   }
 

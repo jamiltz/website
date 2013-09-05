@@ -39,17 +39,15 @@ angular.module('bk-page-account', [
         //On the account page, we get the user info on the scope. But it didn't work every time.
         //Seems like sometimes, the view a local scope would loaded before the rootscope had time
         //to transfer its data to the local scope
-        $scope.user = rUser;
+        $scope.current = rUser;
 
-        $scope.isUpdatingAccount = function() {
-            $scope.isUpdatingAccount = true;
-        }
+
 
         $scope.updateUser = function() {
 
-            delete $scope.user._id;
+            delete $scope.current._id;
 
-            User.update($scope.user)
+            User.update($scope.current)
                 .then(function(res) {
                     console.log(res)
                     if(res.status === 200) {
@@ -98,7 +96,7 @@ angular.module('bk-page-account', [
                             },
                             function(err) {
                             }
-                        )
+                        );
 
                     }
                 }
@@ -148,7 +146,16 @@ angular.module('bk-page-account', [
 //            }
 
             xhr.onload = function() {
-                console.log('uploaded')
+                console.log('uploaded');
+
+                User.items().then(
+                    function(res) {
+                        $scope.items = res.items
+                    },
+                    function(err) {
+                    }
+                );
+
                 $scope.$apply($scope.isAddingItem = false);
             }
 

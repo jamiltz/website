@@ -79,6 +79,14 @@
             Start selling to your community <a href="/signup" class="btn--orange">today</a>
         </p>
     </section>
+    <section
+            ng-show="isAuthenticated();"
+            class="banr banr--small">
+        <p class="usr--status">
+            Replies to your ads are sent to <b class="usr--email">{{ current.email }}</b>
+        </p>
+    </section>
+
 
     <div ui-view="main" class="layout"></div>
 

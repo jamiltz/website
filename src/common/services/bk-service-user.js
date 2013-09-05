@@ -1,6 +1,6 @@
 angular.module('bk-service-user', [])
 
-.factory('User', function($http, Session, $rootScope, $state, $timeout) {
+.factory('User', function($http, Session, $rootScope, $state) {
 
     return {
         signup: function(data) {
@@ -22,7 +22,7 @@ angular.module('bk-service-user', [])
                     function(data) {
                         $http.defaults.headers.common['token'] = Session.getToken();
                         $rootScope.state = 'loggedIn';
-                        $rootScope.user = data.user;
+                        $rootScope.current = data.user;
 
                         return data.user;
 

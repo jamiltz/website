@@ -3,98 +3,112 @@
 
     <button
             class="btn btn--gray"
-            ng-click="isAddingItem = true;">Add Item</button>
+            ng-click="isAddingItem = true; isUpdatingAccount = false;">Add Item</button>
     <button
             class="btn btn--gray"
-            ng-click="isUpdatingAccount();">Update Account</button>
+            ng-click="isUpdatingAccount = true; isAddingItem = false;">Update Account</button>
 
         <form
                 name="updateAccountForm"
-                class="form"
+                class="form form--blue lyt--update-account-form"
                 ng-submit="updateUser();"
                 ng-show="isUpdatingAccount === true;">
-
-            <input
-                    required
-                    ng-model="user.username"
-                    type="text"
-                    placeholder="Username"
-                    class="ipt ipt--single center">
-            <input
-                    required
-                    ng-init="user.email"
-                    ng-model="user.email"
-                    type="text"
-                    placeholder="Email"
-                    class="ipt ipt--single center">
-            <input
-                    required
-                    ng-init="user.pass = ''"
-                    ng-model="user.pass"
-                    type="password"
-                    placeholder="Change password"
-                    class="ipt ipt--single center">
-            <input
-                    required
-                    ng-init="user.confirm = ''"
-                    ng-model="user.confirm"
-                    type="password"
-                    placeholder="Confirm New Password"
-                    class="ipt ipt--single center">
-            <button
-                    class="btn btn--gray center"
-                    ng-disabled="!canSave('updateAccountForm');">Save</button>
-            <button
-                    class="btn btn--gray center"
-                    ng-click="isUpdatingAccount = false;">Cancel</button>
+            <div>
+                <input
+                        required
+                        ng-model="current.username"
+                        type="text"
+                        placeholder="Username"
+                        class="ipt ipt--single center">
+                <input
+                        required
+                        ng-model="current.email"
+                        type="text"
+                        placeholder="Email"
+                        class="ipt ipt--single center">
+                <input
+                        required
+                        ng-init="current.pass = ''"
+                        ng-model="current.pass"
+                        type="password"
+                        placeholder="Change password"
+                        class="ipt ipt--single center">
+                <input
+                        required
+                        ng-init="current.confirm = ''"
+                        ng-model="current.confirm"
+                        type="password"
+                        placeholder="Confirm New Password"
+                        class="ipt ipt--single center">
+                <button
+                        class="btn btn--gray center"
+                        ng-disabled="!canSave('updateAccountForm');">Save</button>
+                <button
+                        class="btn btn--gray center"
+                        ng-click="isUpdatingAccount = false;">Cancel</button>
+            </div>
         </form>
 
         <form
                 name="newItemForm"
                 ng-submit="sendItem();"
                 ng-show="isAddingItem === true"
-                class="form">
-            <h2>Upload a new item to sell.</h2>
-            <select
-                    required
-                    ng-options="g for g in groups"
-                    ng-model="item.group"></select>
-            <input
-                    required
-                    ng-model="item.name"
-                    class="ipt ipt--inline"
-                    placeholder="Item Name"
-                    type="text">
-            <input
-                    required
-                    ng-model="item.price"
-                    class="ipt ipt--inline"
-                    placeholder="Price of Item"
-                    type="text">
-            <input
-                    required
-                    ng-model="item.location"
-                    class="ipt ipt--inline"
-                    placeholder="Location"
-                    type="text">
-            <textarea
-                    required
-                    ng-model="item.description"
-                    rows="10"
-                    cols="100"
-                    placeholder="Describe the item here">
-            </textarea>
-            <br>
-            <fileupload pictures="pictures"></fileupload>
-            <br>
-            <!--<progress id="progress" value="0"></progress>-->
-            <button
-                    class="btn btn--gray"
-                    ng-disabled="!canSave('newItemForm');">
-                Send</button>
-            <button
-                    class="btn btn--gray"
-                    ng-click="isAddingItem = false;">Cancel</button>
+                class="form form--blue lyt--new-item-form">
+            <div>
+                <p class="h3">
+                    Item details
+                </p>
+                <input
+                        required
+                        ng-model="item.name"
+                        class="ipt ipt--inline"
+                        placeholder="Name"
+                        type="text">
+                <input
+                        required
+                        ng-model="item.price"
+                        class="ipt ipt--inline"
+                        placeholder="Item"
+                        type="text">
+                <input
+                        required
+                        ng-model="item.location"
+                        class="ipt ipt--inline"
+                        placeholder="Location"
+                        type="text">
+                <p class="h4">
+                    DESCRIPTION
+                </p>
+                <textarea
+                        required
+                        ng-model="item.description"
+                        rows="10"
+                        cols="98"
+                        placeholder="Describe the item here">
+                </textarea>
+                <br>
+                <p class="h4">
+                    COMMUNITY
+                </p>
+                <select
+                        required
+                        ng-options="g for g in groups"
+                        ng-model="item.group"></select>
+                <p class="h4">
+                    PICTURES
+                </p>
+                <fileupload pictures="pictures"></fileupload>
+                <br>
+                <!--<progress id="progress" value="0"></progress>-->
+                <button
+                        class="btn btn--gray"
+                        ng-disabled="!canSave('newItemForm');">
+                    Send</button>
+                <button
+                        class="btn btn--gray"
+                        ng-click="isAddingItem = false;">Cancel</button>
+            </div>
+
 
         </form>
 
