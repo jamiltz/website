@@ -124,6 +124,15 @@ $buttonBottom   :       rgba(191, 191, 191, 1.0000);
   }
 }
 
+$buttonOrangeBackgroundTop       :     rgba(255, 152, 2, 1.0000);
+$buttonOrangeBackgroundBottom    :     rgba(197, 118, 1, 1.0000);
+.btn--orange{
+  padding: 1px 5px;
+  border: 1px solid $buttonOrangeBackgroundBottom;
+  @include border-radius(5px);
+  @include background(linear-gradient(top, $buttonOrangeBackgroundTop 0%, $buttonOrangeBackgroundBottom 100%));
+}
+
 /* Few input base css
    ========================================================================== */
 input[type="text"], input[type="password"]{

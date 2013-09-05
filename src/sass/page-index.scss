@@ -3,7 +3,7 @@
 $greenTopBanner       :     rgba(93, 171, 31, 1.0000);
 $heightTopBanner      :     45px;
 $white                :     rgba(255,255,255,1);
-$heightSubBanner      :     30px;
+$heightSubBanner      :     38px;
 
 .sub-banner{
   background-color: $white;
@@ -11,7 +11,7 @@ $heightSubBanner      :     30px;
   width: 100%;
   min-width: 900px;
 }
-.sub-banner .content {
+.sub-banner {
   width: 1000px;
   margin: 0 auto;
   text-align: center;
@@ -19,6 +19,7 @@ $heightSubBanner      :     30px;
 }
 .sub-banner__tagline {
   font-size: 24px;
+  margin: 5px auto;
 }
 
 .banner {
