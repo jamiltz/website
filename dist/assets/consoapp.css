@@ -1000,19 +1000,17 @@ input[type="text"], input[type="password"] {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
-  box-shadow: inset #e1e501 0 0 0 4px;
   height: 344px;
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* line 21, ../../src/sass/page-home.scss */
+/* line 20, ../../src/sass/page-home.scss */
 .span-single {
   width: 32.20339%;
-  float: right;
-  margin-right: 0;
-  *margin-left: -1em;
+  float: left;
+  margin-right: 1.69492%;
   display: inline;
-  box-shadow: inset black 0 0 0 4px;
+  box-shadow: inset black 0 0 0 1px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -1020,12 +1018,51 @@ input[type="text"], input[type="password"] {
   border-radius: 5px;
 }
 /* line 25, ../../src/sass/page-home.scss */
-.span-single > div {
-  width: 90%;
-  padding: 5%;
+.span-single img {
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 304px;
+}
+/* line 29, ../../src/sass/page-home.scss */
+.span-single a:after {
+  content: "\232a";
+  float: right;
+}
+/* line 33, ../../src/sass/page-home.scss */
+.span-single ul {
+  padding: 0;
+}
+/* line 35, ../../src/sass/page-home.scss */
+.span-single ul li {
+  width: 100%;
+  text-align: left;
+}
+/* line 38, ../../src/sass/page-home.scss */
+.span-single ul li a {
+  padding-left: 5px;
+  width: 98%;
 }
 
-/* line 31, ../../src/sass/page-home.scss */
+/* line 45, ../../src/sass/page-home.scss */
+.span-single-last {
+  width: 32.20339%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+  box-shadow: inset black 0 0 0 1px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 52, ../../src/sass/page-home.scss */
 .mascot {
   border-radius: 50%;
   border: 4px solid gray;
@@ -1036,7 +1073,7 @@ input[type="text"], input[type="password"] {
   margin: 0 auto;
 }
 
-/* line 41, ../../src/sass/page-home.scss */
+/* line 62, ../../src/sass/page-home.scss */
 .searchBox {
   margin: 20px 70px;
   width: 83.05085%;
@@ -1053,7 +1090,7 @@ input[type="text"], input[type="password"] {
   position: relative;
 }
 
-/* line 49, ../../src/sass/page-home.scss */
+/* line 70, ../../src/sass/page-home.scss */
 .searchBox__left {
   width: 6.77966%;
   float: left;
@@ -1061,7 +1098,7 @@ input[type="text"], input[type="password"] {
   display: inline;
 }
 
-/* line 52, ../../src/sass/page-home.scss */
+/* line 73, ../../src/sass/page-home.scss */
 .searchBox__right {
   width: 6.77966%;
   float: right;
@@ -1070,12 +1107,12 @@ input[type="text"], input[type="password"] {
   display: inline;
 }
 
-/* line 56, ../../src/sass/page-home.scss */
+/* line 77, ../../src/sass/page-home.scss */
 .searchBox .types {
   margin: 10px 25px;
 }
 
-/* line 59, ../../src/sass/page-home.scss */
+/* line 80, ../../src/sass/page-home.scss */
 .searchBox .type__pill {
   padding: 5px 10px;
   -webkit-border-radius: 5px;
@@ -1086,7 +1123,7 @@ input[type="text"], input[type="password"] {
   cursor: pointer;
 }
 
-/* line 64, ../../src/sass/page-home.scss */
+/* line 85, ../../src/sass/page-home.scss */
 .type__pill.is-selected {
   background-color: #7ebb4b;
   -webkit-box-shadow: white 0 0 2px;
@@ -1094,7 +1131,7 @@ input[type="text"], input[type="password"] {
   box-shadow: white 0 0 2px;
 }
 
-/* line 68, ../../src/sass/page-home.scss */
+/* line 89, ../../src/sass/page-home.scss */
 .searchBox .forms {
   width: 74.57627%;
   float: left;
@@ -1103,7 +1140,7 @@ input[type="text"], input[type="password"] {
   background-color: red;
 }
 
-/* line 72, ../../src/sass/page-home.scss */
+/* line 93, ../../src/sass/page-home.scss */
 .searchBox .actuator {
   width: 23.72881%;
   float: right;
@@ -1113,7 +1150,7 @@ input[type="text"], input[type="password"] {
   background-color: yellow;
 }
 
-/* line 80, ../../src/sass/page-home.scss */
+/* line 101, ../../src/sass/page-home.scss */
 .sort-box {
   background-color: #f9f9f9;
   -webkit-border-radius: 5px;
@@ -1129,12 +1166,12 @@ input[type="text"], input[type="password"] {
   margin: 20px 0;
 }
 
-/* line 86, ../../src/sass/page-home.scss */
+/* line 107, ../../src/sass/page-home.scss */
 .sort-box__filters, .sort-box__search {
   margin: 10px 0;
 }
 
-/* line 89, ../../src/sass/page-home.scss */
+/* line 110, ../../src/sass/page-home.scss */
 .sort-box__filters {
   width: 32.20339%;
   float: left;
@@ -1142,7 +1179,7 @@ input[type="text"], input[type="password"] {
   display: inline;
 }
 
-/* line 92, ../../src/sass/page-home.scss */
+/* line 113, ../../src/sass/page-home.scss */
 .sort-box__search {
   width: 32.20339%;
   float: right;
@@ -1151,7 +1188,7 @@ input[type="text"], input[type="password"] {
   display: inline;
 }
 
-/* line 96, ../../src/sass/page-home.scss */
+/* line 117, ../../src/sass/page-home.scss */
 .max-span {
   width: 100%;
   float: right;
@@ -1160,7 +1197,7 @@ input[type="text"], input[type="password"] {
   display: inline;
 }
 
-/* line 99, ../../src/sass/page-home.scss */
+/* line 120, ../../src/sass/page-home.scss */
 .item-box {
   margin: 20px 0;
   display: block;
@@ -1169,7 +1206,7 @@ input[type="text"], input[type="password"] {
   overflow: hidden;
 }
 
-/* line 106, ../../src/sass/page-home.scss */
+/* line 127, ../../src/sass/page-home.scss */
 .item-box .item--thumb {
   float: left;
   margin-right: 10px;
@@ -1179,13 +1216,13 @@ input[type="text"], input[type="password"] {
   margin-right: 1.69492%;
   display: inline;
 }
-/* line 111, ../../src/sass/page-home.scss */
+/* line 132, ../../src/sass/page-home.scss */
 .item-box .item--thumb img {
   width: 120px;
   display: block;
 }
 
-/* line 116, ../../src/sass/page-home.scss */
+/* line 137, ../../src/sass/page-home.scss */
 .item--text {
   overflow: hidden;
   display: inline-block;
@@ -1194,23 +1231,23 @@ input[type="text"], input[type="password"] {
   margin-right: 1.69492%;
   display: inline;
 }
-/* line 120, ../../src/sass/page-home.scss */
+/* line 141, ../../src/sass/page-home.scss */
 .item--text .price {
   cursor: pointer;
   display: inline-block;
 }
-/* line 124, ../../src/sass/page-home.scss */
+/* line 145, ../../src/sass/page-home.scss */
 .item--text .price {
   float: right;
   margin: 0;
 }
 
-/* line 132, ../../src/sass/page-home.scss */
+/* line 153, ../../src/sass/page-home.scss */
 .usr--status {
   margin: 1px auto;
 }
 
-/* line 136, ../../src/sass/page-home.scss */
+/* line 157, ../../src/sass/page-home.scss */
 .usr--email {
   color: #284ea8;
   text-decoration: underline;
