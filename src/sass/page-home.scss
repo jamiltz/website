@@ -12,7 +12,7 @@ $lightGreen             :           rgba(126, 187, 75, 1.0000);
     background-color: $backgroundColor;
   }
   .span-double{
-    @include span-columns(8);
+    @include span-columns(8 omega);
     @include border-radius(5px);
     height: 344px;
     background-color: black(0.7);
@@ -21,6 +21,8 @@ $lightGreen             :           rgba(126, 187, 75, 1.0000);
     @include span-columns(4);
     @include inset-border(black(1));
     @include border-radius(5px);
+
+    height: 320px;
 
     img{
       @include border-top-radius(5px);
