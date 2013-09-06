@@ -63,7 +63,7 @@
 
     <header class="banner">
         <div class="nav">
-            <h2 class="title"><a href="/">Benkyet</a></h2>
+            <h2 class="title"><a href="/" class="brand">Benkyet</a></h2>
             <ul class="menu" ng-show="state === 'loggedOut'">
                 <li><a class="h5" href="/signup">Sign Up</a></li>
                 <a href="/login" class="btn btn--gray">Log In</a>
@@ -86,6 +86,13 @@
             Replies to your ads are sent to <b class="usr--email">{{ current.email }}</b>
         </p>
     </section>
+    <section
+            ng-show="itemUploaded === true;"
+            class="banr banr--green-small">
+        <p class="usr--status">
+            Item successfully added to your list.
+        </p>
+    </section>
 
 
     <div ui-view="main" class="layout"></div>
@@ -104,7 +111,7 @@
             </section>
             <hr width="975" style="margin-left: -1em;">
             <section class="footer__left">
-                <h2>Benkyet</h2>
+                <h2 class="brand">Benkyet</h2>
             </section>
             <section class="footer__right">
                 Make your community a beautiful marketplace<br>

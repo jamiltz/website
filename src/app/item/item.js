@@ -27,7 +27,7 @@ angular.module('bk-page-item', [
         })
     })
 
-.controller('ItemCtrl', function ItemCtrl($scope, rItem, $http) {
+.controller('ItemCtrl', function ItemCtrl($scope, rItem, $http, $window) {
         console.log(rItem)
         $scope.item = rItem;
 
@@ -49,6 +49,10 @@ angular.module('bk-page-item', [
 
         $scope.canSave = function() {
             return $scope.replyForm.$dirty && $scope.replyForm.$valid;
+        }
+
+        $scope.backButton = function() {
+            return $window.history.back()
         }
 
 

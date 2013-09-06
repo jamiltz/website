@@ -10,6 +10,11 @@ angular.module('bk-page-login', [
                     templateUrl: 'login/login.tpl.html',
                     controller: 'LoginCtrl'
                 }
+            },
+            resolve: {
+                rUser: ['User', function(User) {
+                    return User.autologin('account', true);
+                }]
             }
         });
     })

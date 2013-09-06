@@ -40,12 +40,20 @@
                         type="password"
                         placeholder="Confirm New Password"
                         class="ipt ipt--single center">
-                <button
-                        class="btn btn--gray center"
-                        ng-disabled="!canSave('updateAccountForm');">Save</button>
-                <button
-                        class="btn btn--gray center"
-                        ng-click="isUpdatingAccount = false;">Cancel</button>
+
+                <div class="position-button-middle">
+                    <button
+                            class="btn btn--gray center--inline"
+                            ng-disabled="!canSave('updateAccountForm') || isProgressing;">Save</button>
+                    <button
+                            class="btn btn--gray center--inline"
+                            ng-click="isUpdatingAccount = false;">Cancel</button>
+                    <img
+                            ng-show="isProgressing"
+                            src="./../assets/spinner.gif"
+                            style="vertical-align: middle;">
+                </div>
+
             </div>
         </form>
 
@@ -62,13 +70,13 @@
                         required
                         ng-model="item.name"
                         class="ipt ipt--inline"
-                        placeholder="Name"
+                        placeholder="Name of item"
                         type="text">
                 <input
                         required
                         ng-model="item.price"
                         class="ipt ipt--inline"
-                        placeholder="Item"
+                        placeholder="Price"
                         type="text">
                 <input
                         required
@@ -102,16 +110,22 @@
                 <!--<progress id="progress" value="0"></progress>-->
                 <button
                         class="btn btn--gray"
-                        ng-disabled="!canSave('newItemForm');">
+                        ng-disabled="!canSave('newItemForm') || isProgressing;">
                     Send</button>
                 <button
                         class="btn btn--gray"
                         ng-click="isAddingItem = false;">Cancel</button>
+                <img
+                        ng-show="isProgressing"
+                        src="./../assets/spinner.gif"
+                        style="vertical-align: middle;">
             </div>
 
 
         </form>
 
+    <br>
+    <br>
     <h3>Your items for sale</h3>
 
     <article class="item-box" ng-repeat="item in filteredItems = (items | filter:criteria | orderBy:sortField:reverse)" ng-controller="s-ItemCtrl">
@@ -132,40 +146,61 @@
                     ng-click="removeItem(item.ref)">Remove</a>
             <br>
             <form
-                    class="form"
+                    name="updateItemForm"
+                    class="form form--blue lyt--update-item-form"
                     ng-switch-when="true">
-                <h2>Upload a new item to sell in 60 seconds.</h2>
-                <select
-                        ng-options="g for g in groups"
-                        ng-model="item.group"></select>
-                <input
-                        ng-model="item.name"
-                        class="ipt ipt--inline"
-                        placeholder="Item Name"
-                        type="text">
-                <input
-                        ng-model="item.price"
-                        class="ipt ipt--inline"
-                        placeholder="Price of Item"
-                        type="text">
-                <input
-                        ng-model="item.location"
-                        class="ipt ipt--inline"
-                        placeholder="Location"
-                        type="text">
-                <textarea ng-model="item.description" rows="10" cols="100" placeholder="Describe the item here">
-                </textarea>
-                <br>
-                <!--<fileupload pictures="pictures"></fileupload>-->
-                <br>
-                <!--<progress id="progress" value="0"></progress>-->
-                <button
-                        class="btn btn--gray"
-                        ng-click="updateItem(item);">Save</button>
-                <button
-                        class="btn btn--gray"
-                        ng-click="$parent.isEditing = false;">Cancel</button>
+                <div>
+                    <p class="h3">
+                        Item details
+                    </p>
+                    <input
+                            required
+                            ng-model="item.name"
+                            class="ipt ipt--inline"
+                            placeholder="Name of item"
+                            type="text">
+                    <input
+                            required
+                            ng-model="item.price"
+                            class="ipt ipt--inline"
+                            placeholder="Price"
+                            type="text">
+                    <input
+                            required
+                            ng-model="item.location"
+                            class="ipt ipt--inline"
+                            placeholder="Location"
+                            type="text">
 
+                    <p class="h4">
+                        DESCRIPTION
+                    </p>
+                    <textarea
+                            required
+                            ng-model="item.description"
+                            rows="10"
+                            cols="72"
+                            placeholder="Describe the item here">
+                    </textarea>
+                    <br>
+                    <p class="h4">
+                        COMMUNITY
+                    </p>
+                    <select
+                            required
+                            ng-options="g for g in groups"
+                            ng-model="item.group"></select>
+
+                    <!--<progress id="progress" value="0"></progress>-->
+                    <br>
+                    <br>
+                    <button
+                            class="btn btn--gray"
+                            ng-click="updateItem(item);">Save</button>
+                    <button
+                            class="btn btn--gray"
+                            ng-click="$parent.isEditing = false;">Cancel</button>
+                </div>
             </form>
         </div>
     </article>

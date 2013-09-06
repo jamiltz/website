@@ -17,7 +17,7 @@ $heightSubBanner      :     38px;
 
 }
 .sub-banner__tagline {
-  font-size: 24px;
+ font-size: 24px;
   margin: 5px auto;
 }
 .banr{
@@ -29,6 +29,11 @@ $gmailYellow      :       rgba(255, 215, 111, 1.0000);
 .banr--small{
   height: 20px;
   background-color: $gmailYellow;
+}
+$greenVisualSuccess       :       rgba(122, 189, 0, 0.5);
+.banr--green-small {
+  height: 20px;
+  background-color: $greenVisualSuccess;
 }
 
 .banner {
@@ -128,4 +133,9 @@ $hoverColor         :         rgba(255, 255, 255, 1.0000);
 
 .layout{
   background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAALElEQVQIHWN88+LOfwYk8OXLVwYmJD6YycPDjRAEqYABuEqQChhgQlYBEwQAUMYMlj+hubwAAAAASUVORK5CYII=');
+}
+
+.brand{
+  font-family: lostart;
+  color: black;
 }

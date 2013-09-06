@@ -10,6 +10,11 @@ angular.module('bk-page-signup', [
                     templateUrl: 'signup/signup.tpl.html',
                     controller: 'SignupCtrl'
                 }
+            },
+            resolve: {
+                rUser: ['User', function(User) {
+                    User.autologin('account', true);
+                }]
             }
         });
     })

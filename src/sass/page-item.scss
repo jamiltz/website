@@ -16,4 +16,31 @@ $backgroundColor      :       rgba(234, 234, 234, 1.0000);
   .side{
     @include span-columns(4 omega);
   }
+
+  .lyt--reply-to-ad-form {
+    div{
+      margin: 40px;
+    }
+  }
+
+  $greenTopBanner       :     rgba(93, 171, 31, 0.8);
+  .lyt--message-sent{
+    margin: 0 auto;
+    text-align: center;
+
+    .img-bg{
+      @include border-radius(50%);
+      background-color: $greenTopBanner;
+      width: 190px;
+      height: 190px;
+      margin: 30px auto 10px auto;
+      img{
+        position: relative;
+        top: 25px;
+        right: 12px;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+  }
 }

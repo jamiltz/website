@@ -15,10 +15,16 @@ angular.module('bk-service-user', [])
                     return result.data;
                 });
         },
-        autologin: function(redirect) {
-            return $http.get('/1.0/autologin', {headers: {token: Session.getToken()}})
-                .then(function(result) {return result.data})
-                .then(
+        autologin: function(redirect, bool_should_redirect_if_logged_in) {
+
+            if(!arguments[1]) {
+                bool_should_redirect_if_logged_in = false;
+            }
+
+            if(!bool_should_redirect_if_logged_in) {
+                return $http.get('/1.0/autologin', {headers: {token: Session.getToken()}})
+                    .then(function(result) {return result.data})
+                    .then(
                     function(data) {
                         $http.defaults.headers.common['token'] = Session.getToken();
                         $rootScope.state = 'loggedIn';
@@ -34,9 +40,32 @@ angular.module('bk-service-user', [])
                         } else {
                             $state.transitionTo(redirect);
                         }
-
                     }
                 )
+            } else {
+                return $http.get('/1.0/autologin', {headers: {token: Session.getToken()}})
+                    .then(function(result) {return result.data})
+                    .then(
+                    function(data) {
+                        $http.defaults.headers.common['token'] = Session.getToken();
+                        $rootScope.state = 'loggedIn';
+                        $rootScope.current = data.user;
+
+                        $state.transitionTo(redirect);
+
+                        return data.user;
+
+
+                    },
+                    function(err) {
+
+                        if(!arguments.length) {
+
+                        } else {
+                        }
+                    }
+                )
+            }
         },
         logout: function() {
             $rootScope.user = {};

@@ -21,6 +21,11 @@ $gutter-width       :       1em;
   display: block;
 }
 
+.center--inline{
+  margin: 0 auto;
+  display: inline;
+}
+
 h1,h2,h3,h4,h5,h6 {
   margin: 0;
 }
@@ -138,6 +143,17 @@ $buttonOrangeBackgroundBottom    :     rgba(197, 118, 1, 1.0000);
   @include background(linear-gradient(top, $buttonOrangeBackgroundTop 0%, $buttonOrangeBackgroundBottom 100%));
 }
 
+$buttonBlueBgTop        :         rgba(0, 181, 228, 1.0000);
+$buttonBlueBgBottom     :         rgba(24, 119, 207, 1.0000);
+.btn--blue{
+  border: 1px solid black(0.5);
+  @include border-radius(5px);
+  @include background(linear-gradient(top, $buttonBlueBgTop 0%, $buttonBlueBgBottom 100%));
+  &:hover {
+    @include background(linear-gradient(bottom, $buttonBlueBgTop 0%, $buttonBlueBgBottom 100%));
+  }
+}
+
 /* Few input base css
    ========================================================================== */
 input[type="text"], input[type="password"]{
@@ -206,4 +222,11 @@ $formBlueBottom   :         rgba(24, 119, 207, 1.0000);
 
 .alert--error{
   color: rgba(249, 147, 2, 1.0000);
+}
+
+/* Few font declaration
+   ========================================================================== */
+@font-face {
+  font-family: "lostart";
+  src: url("./../assets/lost-art-font.woff");
 }

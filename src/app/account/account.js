@@ -32,7 +32,7 @@ angular.module('bk-page-account', [
     });
 })
 
-.controller('AccountCtrl', function Account($scope, List, rGroups, Session, User, Item, rUser) {
+.controller('AccountCtrl', function Account($scope, List, rGroups, Session, User, Item, rUser, $rootScope) {
 
         //This line is necessary because I noticed a weird behaviour.
         //The user info is published on the rootScope in the autologin method of the User service.
@@ -44,13 +44,16 @@ angular.module('bk-page-account', [
 
 
         $scope.updateUser = function() {
-
+            $scope.isProgressing = true;
             delete $scope.current._id;
 
             User.update($scope.current)
                 .then(function(res) {
                     console.log(res)
                     if(res.status === 200) {
+                        $scope.current.pass = '';
+                        $scope.current.confirm = '';
+                        $scope.isProgressing = false;
                         $scope.isUpdatingAccount = false;
                     }
                 })
@@ -108,7 +111,7 @@ angular.module('bk-page-account', [
         }
 
         $scope.sendItem = function() {
-
+                $scope.isProgressing = true;
 
 //            var data = {
 //                name: $scope.item.name,
@@ -148,15 +151,20 @@ angular.module('bk-page-account', [
             xhr.onload = function() {
                 console.log('uploaded');
 
-                User.items().then(
-                    function(res) {
-                        $scope.items = res.items
-                    },
-                    function(err) {
-                    }
-                );
+                $scope.$apply(function() {
+                    User.items().then(
+                        function(res) {
+                            $scope.isProgressing = false;
+                            $scope.items = res.items;
+                            $rootScope.itemUploaded = true;
+                        },
+                        function(err) {
+                        }
+                    );
 
-                $scope.$apply($scope.isAddingItem = false);
+                    $scope.$apply($scope.isAddingItem = false);
+                })
+                ;
             }
 
             xhr.send(form);
