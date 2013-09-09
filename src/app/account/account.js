@@ -32,7 +32,7 @@ angular.module('bk-page-account', [
     });
 })
 
-.controller('AccountCtrl', function Account($scope, List, rGroups, Session, User, Item, rUser, $rootScope) {
+.controller('AccountCtrl', function Account($scope, List, rGroups, Session, User, Item, rUser, $rootScope, $timeout) {
 
         //This line is necessary because I noticed a weird behaviour.
         //The user info is published on the rootScope in the autologin method of the User service.
@@ -157,6 +157,9 @@ angular.module('bk-page-account', [
                             $scope.isProgressing = false;
                             $scope.items = res.items;
                             $rootScope.itemUploaded = true;
+                            $timeout(function() {
+                                $rootScope.itemUploaded = false;
+                            }, 5000);
                         },
                         function(err) {
                         }

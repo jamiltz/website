@@ -14,15 +14,27 @@ $lightGreen             :           rgba(126, 187, 75, 1.0000);
   .span-double{
     @include span-columns(8 omega);
     @include border-radius(5px);
-    height: 344px;
+    height: 200px;
     background-color: black(0.7);
+    overflow: hidden;
   }
+  .bkt-card{
+    @include transition(bottom 0.2s ease);
+    &:hover{
+      position: relative;
+      bottom: 20px;
+    }
+  }
+
   .span-single{
     @include span-columns(4);
     @include inset-border(black(0.5));
     @include border-radius(5px);
 
-    height: 320px;
+    height: 200px;
+    overflow: hidden;
+
+
 
     img{
       @include border-top-radius(5px);
@@ -35,11 +47,26 @@ $lightGreen             :           rgba(126, 187, 75, 1.0000);
     ul{
       padding: 0;
       li{
+        padding: 3px 0;
         width: 100%;
         text-align: left;
+        position: relative;
+        &:before{
+          content: "";
+          position: absolute;
+          top: -1px;
+          left: 0px;
+          width: 100%;
+          height: 1px;
+          @include background(linear-gradient(left, $backgroundColor 0%, #d2d2d2 25%, #d2d2d2 75%, $backgroundColor 100%));
+        }
         a{
           padding-left: 5px;
           width: 98%;
+          color: black(0.80);
+          &:hover{
+            color: black(1);
+          }
         }
       }
     }
