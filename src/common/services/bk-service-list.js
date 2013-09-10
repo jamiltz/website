@@ -13,6 +13,12 @@ angular.module('bk-service-list', [])
                     .then(function(result) {
                         return result.data
                     });
+            },
+            getEvents: function(group) {
+                return $http.get('/1.0/events/' + group)
+                    .then(function(result) {
+                        return result.data;
+                    })
             }
         };
     });

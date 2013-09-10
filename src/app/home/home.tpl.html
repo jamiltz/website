@@ -19,25 +19,25 @@
 
     <section class="span-single">
 
-        <img src="./../assets/events/lse-img.png">
+        <img ng-src="{{ group.img }}">
 
         <ul>
-            <li>
+            <li ng-repeat="event in events">
                 <a
-                        href="https://www.facebook.com/events/160174270855260/?ref=23"
-                        target="_blank">Crush - Freshers week</a>
+                        ng-href="{{ event.link }}"
+                        target="_blank">{{ event.name }}</a>
             </li>
             <!--<hr width="100%">-->
-            <li>
-                <a
-                        href="https://www.facebook.com/events/157407171126712/?ref=23"
-                        target="_blank">CARNIVALE - Undergraduate event</a>
-            </li>
-            <li>
-                <a
-                        href="https://www.facebook.com/events/660443697307829/?ref=22"
-                        target="_blank">☠ CHAOS @ fabriclondon ☠</a>
-            </li>
+            <!--<li>-->
+                <!--<a-->
+                        <!--href="https://www.facebook.com/events/157407171126712/?ref=23"-->
+                        <!--target="_blank">CARNIVALE - Undergraduate event</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a-->
+                        <!--href="https://www.facebook.com/events/660443697307829/?ref=22"-->
+                        <!--target="_blank">☠ CHAOS @ fabriclondon ☠</a>-->
+            <!--</li>-->
         </ul>
 
     </section>

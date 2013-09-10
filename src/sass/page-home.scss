@@ -39,6 +39,8 @@ $lightGreen             :           rgba(126, 187, 75, 1.0000);
     img{
       @include border-top-radius(5px);
       width: 304px;
+      height: 117px;
+      overflow: hidden;
     }
     a:after{
       content: "\232a";
@@ -46,6 +48,7 @@ $lightGreen             :           rgba(126, 187, 75, 1.0000);
     }
     ul{
       padding: 0;
+      width: 100%;
       li{
         padding: 3px 0;
         width: 100%;

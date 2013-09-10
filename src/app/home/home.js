@@ -36,6 +36,17 @@ angular.module('bk-page-home', [
                         }
                     );
                 }],
+                rEvents: ['List', '$stateParams', function(List, $stateParams) {
+                    return List.getEvents($stateParams.g).then(
+                        function(res) {
+                            console.log(res.group)
+                            return res.group
+                        },
+                        function(err) {
+                            console.log(err);
+                        }
+                    )
+                }],
                 user: ['User', function(User) {
                     User.autologin()
                 }]
@@ -43,13 +54,23 @@ angular.module('bk-page-home', [
         });
     })
 
-.controller('HomeCtrl', function HomeCtrl($scope, List, $stateParams, rList, rGroups) {
+.controller('HomeCtrl', function HomeCtrl($scope, List, $stateParams, rList, rGroups, rEvents) {
 
 
 
 
         $scope.items = rList;
         $scope.groups = rGroups;
+
+        if(rEvents === null) {
+
+        } else {
+            $scope.group = rEvents;
+            $scope.events = rEvents.events;
+        }
+
+
+        console.log($scope.events)
 
 
         $scope.sortField = undefined;
