@@ -66,7 +66,7 @@ angular.module('bk-page-home', [
 
         } else {
             $scope.group = rEvents;
-            $scope.events = rEvents.events;
+            $scope.events = rEvents.events
         }
 
 
