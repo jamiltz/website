@@ -39,7 +39,6 @@ angular.module('bk-page-home', [
                 rEvents: ['List', '$stateParams', function(List, $stateParams) {
                     return List.getEvents($stateParams.g).then(
                         function(res) {
-                            console.log(res.group)
                             return res.group
                         },
                         function(err) {
@@ -70,9 +69,6 @@ angular.module('bk-page-home', [
         }
 
 
-        console.log($scope.events)
-
-
         $scope.sortField = undefined;
         $scope.reverse = false;
         $scope.sort = function (fieldName) {
@@ -94,7 +90,6 @@ angular.module('bk-page-home', [
 
 
         $scope.type = '1st';
-        console.log($stateParams);
 
         $scope.type = $stateParams.g;
 
