@@ -21,6 +21,10 @@ angular.module('bk-page-login', [
 
     .controller('LoginCtrl', function LoginCtrl($scope, User, $state, $http, $rootScope, Session) {
 
+        $scope.loginFB = function() {
+            $http.get('/1.0/auth/facebook').then(function() {})
+        }
+
         $scope.loginUser = function() {
             User.login($scope.user.username, $scope.user.pass)
                 .then(function(res) {
