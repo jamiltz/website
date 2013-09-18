@@ -47,7 +47,7 @@ angular.module('bk-page-home', [
                     )
                 }],
                 user: ['User', function(User) {
-                    User.autologin()
+                    User.autologin();
                 }]
             }
         });
@@ -55,7 +55,13 @@ angular.module('bk-page-home', [
 
 .controller('HomeCtrl', function HomeCtrl($scope, List, $stateParams, rList, rGroups, rEvents) {
 
-
+        $scope.requestFriends = function() {
+            FB.ui({method: 'apprequests',
+                message: 'My Great Request'
+            }, function() {
+                console.log(arguments)
+            });
+        }
 
 
         $scope.items = rList;
