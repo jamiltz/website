@@ -56,9 +56,10 @@ angular.module('bk-page-home', [
 .controller('HomeCtrl', function HomeCtrl($scope, List, $stateParams, rList, rGroups, rEvents) {
 
         $scope.requestFriends = function() {
-            FB.ui({method: 'apprequests',
+            FB.ui({
+                method: 'apprequests',
                 message: 'My Great Request',
-                link: 'http://google.com'
+                title: 'Hello there'
             }, function() {
                 console.log(arguments)
             });
