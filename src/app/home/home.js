@@ -59,8 +59,8 @@ angular.module('bk-page-home', [
             FB.ui({
                 method: 'apprequests',
                 message: 'My Great Request',
-                title: 'Hello there',
-                redirect_uri: 'http://google.com'
+                new_style_message: true,
+                title: 'Hello there'
             }, function() {
                 console.log(arguments)
             });
