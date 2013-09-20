@@ -59,7 +59,7 @@ angular.module('bk-page-home', [
             FB.ui({
                 method: 'apprequests',
                 message: 'My Great Request',
-                filters: {name: 'Ben'},
+                filters: [{name: 'Ben'}],
                 title: 'Hello there'
             }, function() {
                 console.log(arguments)
