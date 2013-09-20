@@ -17,43 +17,88 @@
         </div>
     </section>
 
-    <section class="span-single">
+    <section ng-hide="nogroup">
+        <section class="span-single">
+            <h4 class="events">
+                Events
+            </h4>
 
-        <img ng-src="{{ group.img }}">
+            <ul>
+                <li ng-repeat="event in events">
+                    <a
+                            ng-href="{{ event.link }}"
+                            target="_blank">{{ event.name }}</a>
+                </li>
+                <!--<hr width="100%">-->
+                <!--<li>-->
+                <!--<a-->
+                <!--href="https://www.facebook.com/events/157407171126712/?ref=23"-->
+                <!--target="_blank">CARNIVALE - Undergraduate event</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a-->
+                <!--href="https://www.facebook.com/events/660443697307829/?ref=22"-->
+                <!--target="_blank">☠ CHAOS @ fabriclondon ☠</a>-->
+                <!--</li>-->
+            </ul>
+        </section>
 
-        <ul>
-            <li ng-repeat="event in events">
-                <a
-                        ng-href="{{ event.link }}"
-                        target="_blank">{{ event.name }}</a>
-            </li>
-            <!--<hr width="100%">-->
-            <!--<li>-->
-                <!--<a-->
-                        <!--href="https://www.facebook.com/events/157407171126712/?ref=23"-->
-                        <!--target="_blank">CARNIVALE - Undergraduate event</a>-->
-            <!--</li>-->
-            <!--<li>-->
-                <!--<a-->
-                        <!--href="https://www.facebook.com/events/660443697307829/?ref=22"-->
-                        <!--target="_blank">☠ CHAOS @ fabriclondon ☠</a>-->
-            <!--</li>-->
-        </ul>
+        <span class="span-single">
+            <br>
+                <h4
+                        class="text-center">
+                    Can't sell your items?
+                    <br>
+                    We have your back:
+                </h4>
+            <br>
+                <img
+                        class="center"
+                        style="cursor: pointer;"
+                        ng-click="requestFriends();"
+                        src="https://lh3.googleusercontent.com/-ESoug2foJBs/T-ntmH-Vs3I/AAAAAAAAGIM/FUQoD54w1oQ/s267/bringfriends.png">
+        </span>
+
+        <span
+                class="span-single--last more-things">
+            <h3
+                    style="top: 18px;position: relative;"
+                    class="text-center">
+                More awesome things to come on Benkyet!
+            </h3>
+
+        </span>
+    </section>
+
+    <section ng-show="nogroup">
+        <span class="span-single">
+            <img style="vertical-align: bottom;" src="./assets/arrow_top.png">
+            <h5 class="center--inline">Select your University</h5>
+        </span>
+
+        <span class="span-single">
+
+            <h5 class="center--inline">Sell your textbooks...<br>to people around campus</h5>
+            <img style="vertical-align: top;" src="./assets/arrow_bottom.png">
+        </span>
+
+        <span class="span-single--last">
+            <h5 class="text-center">Still feel the pain?</h5>
+            <img
+                    style="margin: 7px auto;"
+                    class="center"
+                    src="./assets/arrow_spiral.png">
+            <h5 class="text-center">Ask for <b>help</b></h5>
+        </span>
 
     </section>
 
 
-
-    <section class="span-double">
-        <a href="/signup">
-            <img class="bkt-card" src="./../assets/card.jpg">
-        </a>
-    </section>
-
-    <button ng-click="requestFriends();">
-        Invite Friends
-    </button>
-
+    <!--<section class="span-double">-->
+        <!--<a href="/signup">-->
+            <!--<img class="bkt-card" src="./../assets/card.jpg">-->
+        <!--</a>-->
+    <!--</section>-->
 
     <section class="sort-box">
         <div class="sort-box__filters">

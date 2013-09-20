@@ -93,6 +93,9 @@ body{
 @mixin letterpress($opacity){
   text-shadow: black($opacity) 0 1px 0;
 }
+@mixin letterpress-white($opacity){
+  text-shadow: white($opacity) 0 1px 0;
+}
 
 /* Some css resets breaking the styling somewhere
    ========================================================================== */
@@ -229,4 +232,9 @@ $formBlueBottom   :         rgba(24, 119, 207, 1.0000);
 @font-face {
   font-family: "lostart";
   src: url("./../assets/lost-art-font.woff");
+}
+
+@font-face{
+  font-family: "Happy Monkey";
+  src: url("http://fonts.googleapis.com/css?family=Happy+Monkey");
 }

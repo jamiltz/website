@@ -28,24 +28,21 @@ $lightGreen             :           rgba(126, 187, 75, 1.0000);
 
   .span-single{
     @include span-columns(4);
-    @include inset-border(black(0.5));
     @include border-radius(5px);
 
-    height: 200px;
+    height: 120px;
     overflow: hidden;
 
-
-
-    img{
-      @include border-top-radius(5px);
-      width: 304px;
-      height: 117px;
-      overflow: hidden;
+    .events{
+      margin-left: 5px;
+      padding: 5px 0;
     }
+
     a:after{
       content: "\232a";
       float: right;
     }
+
     ul{
       padding: 0;
       width: 100%;
@@ -74,10 +71,22 @@ $lightGreen             :           rgba(126, 187, 75, 1.0000);
       }
     }
   }
-  .span-single-last{
+  .span-single--last{
     @include span-columns(4 omega);
-    @include inset-border(black(1));
     @include border-radius(5px);
+
+    height: 120px;
+    overflow: hidden;
+  }
+
+  .span-border{
+    @include inset-border(black(0.5));
+  }
+
+  .more-things{
+    @include  letterpress-white(1);
+    color: rgba(96, 151, 175, 1.0000);
+    font-family: Happy Monkey, cursive;
   }
 
 

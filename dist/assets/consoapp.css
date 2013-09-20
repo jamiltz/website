@@ -87,20 +87,20 @@ body {
    ========================================================================== */
 /* Some css resets breaking the styling somewhere
    ========================================================================== */
-/* line 99, ../../src/sass/base.scss */
+/* line 102, ../../src/sass/base.scss */
 img {
   border: none;
 }
 
 /* List Styling
    ========================================================================== */
-/* line 106, ../../src/sass/base.scss */
+/* line 109, ../../src/sass/base.scss */
 ul {
   margin: 0;
   display: inline-block;
 }
 
-/* line 110, ../../src/sass/base.scss */
+/* line 113, ../../src/sass/base.scss */
 ul li {
   list-style: none;
   display: inline-block;
@@ -109,19 +109,19 @@ ul li {
 
 /* Few button base css
    ========================================================================== */
-/* line 118, ../../src/sass/base.scss */
+/* line 121, ../../src/sass/base.scss */
 button {
   border: none;
 }
 
-/* line 121, ../../src/sass/base.scss */
+/* line 124, ../../src/sass/base.scss */
 .btn {
   padding: 7px 15px;
   font-weight: bolder;
   cursor: pointer;
 }
 
-/* line 128, ../../src/sass/base.scss */
+/* line 131, ../../src/sass/base.scss */
 .btn--gray {
   border: 1px solid rgba(0, 0, 0, 0.5);
   -webkit-border-radius: 5px;
@@ -135,7 +135,7 @@ button {
   background: -o-linear-gradient(top, #fcfcfc 0%, #bfbfbf 100%);
   background: linear-gradient(top, #fcfcfc 0%, #bfbfbf 100%);
 }
-/* line 132, ../../src/sass/base.scss */
+/* line 135, ../../src/sass/base.scss */
 .btn--gray:hover {
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #fcfcfc), color-stop(100%, #bfbfbf));
   background: -webkit-linear-gradient(bottom, #fcfcfc 0%, #bfbfbf 100%);
@@ -144,7 +144,7 @@ button {
   background: linear-gradient(bottom, #fcfcfc 0%, #bfbfbf 100%);
 }
 
-/* line 139, ../../src/sass/base.scss */
+/* line 142, ../../src/sass/base.scss */
 .btn--orange {
   padding: 1px 5px;
   border: 1px solid #c57601;
@@ -160,7 +160,7 @@ button {
   background: linear-gradient(top, #ff9802 0%, #c57601 100%);
 }
 
-/* line 148, ../../src/sass/base.scss */
+/* line 151, ../../src/sass/base.scss */
 .btn--blue {
   border: 1px solid rgba(0, 0, 0, 0.5);
   -webkit-border-radius: 5px;
@@ -174,7 +174,7 @@ button {
   background: -o-linear-gradient(top, #00b5e4 0%, #1877cf 100%);
   background: linear-gradient(top, #00b5e4 0%, #1877cf 100%);
 }
-/* line 152, ../../src/sass/base.scss */
+/* line 155, ../../src/sass/base.scss */
 .btn--blue:hover {
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #00b5e4), color-stop(100%, #1877cf));
   background: -webkit-linear-gradient(bottom, #00b5e4 0%, #1877cf 100%);
@@ -185,13 +185,13 @@ button {
 
 /* Few input base css
    ========================================================================== */
-/* line 159, ../../src/sass/base.scss */
+/* line 162, ../../src/sass/base.scss */
 input[type="text"], input[type="password"] {
   border: none;
   border: 1px solid gray;
 }
 
-/* line 163, ../../src/sass/base.scss */
+/* line 166, ../../src/sass/base.scss */
 .ipt {
   padding: 5px;
   margin-top: 10px;
@@ -203,52 +203,52 @@ input[type="text"], input[type="password"] {
   border-radius: 5px;
 }
 
-/* line 170, ../../src/sass/base.scss */
+/* line 173, ../../src/sass/base.scss */
 .ipt--inline {
   display: inline-block;
 }
 
-/* line 173, ../../src/sass/base.scss */
+/* line 176, ../../src/sass/base.scss */
 .ipt--single {
   display: block;
 }
 
 /* A few css classes for images to display
    ========================================================================== */
-/* line 179, ../../src/sass/base.scss */
+/* line 182, ../../src/sass/base.scss */
 .thumb--medium {
   width: 150px;
   vertical-align: middle;
 }
 
-/* line 183, ../../src/sass/base.scss */
+/* line 186, ../../src/sass/base.scss */
 .thumb--box {
   width: 150px;
   vertical-align: top;
 }
 
-/* line 187, ../../src/sass/base.scss */
+/* line 190, ../../src/sass/base.scss */
 .thumb--large {
   width: 300px;
 }
 
 /* A few box rules
    ========================================================================== */
-/* line 193, ../../src/sass/base.scss */
+/* line 196, ../../src/sass/base.scss */
 .label--single {
   width: 50px;
   margin-left: 10px;
   margin-right: 19px;
 }
 
-/* line 198, ../../src/sass/base.scss */
+/* line 201, ../../src/sass/base.scss */
 .label--single.is-selected {
   margin-right: 0px;
 }
 
 /* A few form rules
    ========================================================================== */
-/* line 205, ../../src/sass/base.scss */
+/* line 208, ../../src/sass/base.scss */
 .form {
   width: 100%;
   float: left;
@@ -261,12 +261,12 @@ input[type="text"], input[type="password"] {
   border-radius: 5px;
 }
 
-/* line 210, ../../src/sass/base.scss */
+/* line 213, ../../src/sass/base.scss */
 .form--gray {
   background-color: #eaeaea;
 }
 
-/* line 215, ../../src/sass/base.scss */
+/* line 218, ../../src/sass/base.scss */
 .form--blue {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #00b5e4), color-stop(100%, #1877cf));
   background: -webkit-linear-gradient(top, #00b5e4 0%, #1877cf 100%);
@@ -278,7 +278,7 @@ input[type="text"], input[type="password"] {
 
 /* Few alert styles
    ========================================================================== */
-/* line 223, ../../src/sass/base.scss */
+/* line 226, ../../src/sass/base.scss */
 .alert--error {
   color: #f99302;
 }
@@ -288,6 +288,11 @@ input[type="text"], input[type="password"] {
 @font-face {
   font-family: "lostart";
   src: url("./../assets/lost-art-font.woff");
+}
+
+@font-face {
+  font-family: "Happy Monkey";
+  src: url("http://fonts.googleapis.com/css?family=Happy+Monkey");
 }
 
 /* Susy set-up
@@ -379,20 +384,20 @@ body {
    ========================================================================== */
 /* Some css resets breaking the styling somewhere
    ========================================================================== */
-/* line 99, ../../src/sass/base.scss */
+/* line 102, ../../src/sass/base.scss */
 img {
   border: none;
 }
 
 /* List Styling
    ========================================================================== */
-/* line 106, ../../src/sass/base.scss */
+/* line 109, ../../src/sass/base.scss */
 ul {
   margin: 0;
   display: inline-block;
 }
 
-/* line 110, ../../src/sass/base.scss */
+/* line 113, ../../src/sass/base.scss */
 ul li {
   list-style: none;
   display: inline-block;
@@ -401,19 +406,19 @@ ul li {
 
 /* Few button base css
    ========================================================================== */
-/* line 118, ../../src/sass/base.scss */
+/* line 121, ../../src/sass/base.scss */
 button {
   border: none;
 }
 
-/* line 121, ../../src/sass/base.scss */
+/* line 124, ../../src/sass/base.scss */
 .btn {
   padding: 7px 15px;
   font-weight: bolder;
   cursor: pointer;
 }
 
-/* line 128, ../../src/sass/base.scss */
+/* line 131, ../../src/sass/base.scss */
 .btn--gray {
   border: 1px solid rgba(0, 0, 0, 0.5);
   -webkit-border-radius: 5px;
@@ -427,7 +432,7 @@ button {
   background: -o-linear-gradient(top, #fcfcfc 0%, #bfbfbf 100%);
   background: linear-gradient(top, #fcfcfc 0%, #bfbfbf 100%);
 }
-/* line 132, ../../src/sass/base.scss */
+/* line 135, ../../src/sass/base.scss */
 .btn--gray:hover {
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #fcfcfc), color-stop(100%, #bfbfbf));
   background: -webkit-linear-gradient(bottom, #fcfcfc 0%, #bfbfbf 100%);
@@ -436,7 +441,7 @@ button {
   background: linear-gradient(bottom, #fcfcfc 0%, #bfbfbf 100%);
 }
 
-/* line 139, ../../src/sass/base.scss */
+/* line 142, ../../src/sass/base.scss */
 .btn--orange {
   padding: 1px 5px;
   border: 1px solid #c57601;
@@ -452,7 +457,7 @@ button {
   background: linear-gradient(top, #ff9802 0%, #c57601 100%);
 }
 
-/* line 148, ../../src/sass/base.scss */
+/* line 151, ../../src/sass/base.scss */
 .btn--blue {
   border: 1px solid rgba(0, 0, 0, 0.5);
   -webkit-border-radius: 5px;
@@ -466,7 +471,7 @@ button {
   background: -o-linear-gradient(top, #00b5e4 0%, #1877cf 100%);
   background: linear-gradient(top, #00b5e4 0%, #1877cf 100%);
 }
-/* line 152, ../../src/sass/base.scss */
+/* line 155, ../../src/sass/base.scss */
 .btn--blue:hover {
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #00b5e4), color-stop(100%, #1877cf));
   background: -webkit-linear-gradient(bottom, #00b5e4 0%, #1877cf 100%);
@@ -477,13 +482,13 @@ button {
 
 /* Few input base css
    ========================================================================== */
-/* line 159, ../../src/sass/base.scss */
+/* line 162, ../../src/sass/base.scss */
 input[type="text"], input[type="password"] {
   border: none;
   border: 1px solid gray;
 }
 
-/* line 163, ../../src/sass/base.scss */
+/* line 166, ../../src/sass/base.scss */
 .ipt {
   padding: 5px;
   margin-top: 10px;
@@ -495,52 +500,52 @@ input[type="text"], input[type="password"] {
   border-radius: 5px;
 }
 
-/* line 170, ../../src/sass/base.scss */
+/* line 173, ../../src/sass/base.scss */
 .ipt--inline {
   display: inline-block;
 }
 
-/* line 173, ../../src/sass/base.scss */
+/* line 176, ../../src/sass/base.scss */
 .ipt--single {
   display: block;
 }
 
 /* A few css classes for images to display
    ========================================================================== */
-/* line 179, ../../src/sass/base.scss */
+/* line 182, ../../src/sass/base.scss */
 .thumb--medium {
   width: 150px;
   vertical-align: middle;
 }
 
-/* line 183, ../../src/sass/base.scss */
+/* line 186, ../../src/sass/base.scss */
 .thumb--box {
   width: 150px;
   vertical-align: top;
 }
 
-/* line 187, ../../src/sass/base.scss */
+/* line 190, ../../src/sass/base.scss */
 .thumb--large {
   width: 300px;
 }
 
 /* A few box rules
    ========================================================================== */
-/* line 193, ../../src/sass/base.scss */
+/* line 196, ../../src/sass/base.scss */
 .label--single {
   width: 50px;
   margin-left: 10px;
   margin-right: 19px;
 }
 
-/* line 198, ../../src/sass/base.scss */
+/* line 201, ../../src/sass/base.scss */
 .label--single.is-selected {
   margin-right: 0px;
 }
 
 /* A few form rules
    ========================================================================== */
-/* line 205, ../../src/sass/base.scss */
+/* line 208, ../../src/sass/base.scss */
 .form {
   width: 100%;
   float: left;
@@ -553,12 +558,12 @@ input[type="text"], input[type="password"] {
   border-radius: 5px;
 }
 
-/* line 210, ../../src/sass/base.scss */
+/* line 213, ../../src/sass/base.scss */
 .form--gray {
   background-color: #eaeaea;
 }
 
-/* line 215, ../../src/sass/base.scss */
+/* line 218, ../../src/sass/base.scss */
 .form--blue {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #00b5e4), color-stop(100%, #1877cf));
   background: -webkit-linear-gradient(top, #00b5e4 0%, #1877cf 100%);
@@ -570,7 +575,7 @@ input[type="text"], input[type="password"] {
 
 /* Few alert styles
    ========================================================================== */
-/* line 223, ../../src/sass/base.scss */
+/* line 226, ../../src/sass/base.scss */
 .alert--error {
   color: #f99302;
 }
@@ -580,6 +585,11 @@ input[type="text"], input[type="password"] {
 @font-face {
   font-family: "lostart";
   src: url("./../assets/lost-art-font.woff");
+}
+
+@font-face {
+  font-family: "Happy Monkey";
+  src: url("http://fonts.googleapis.com/css?family=Happy+Monkey");
 }
 
 /* line 8, ../../src/sass/page-account.scss */
@@ -768,20 +778,20 @@ body {
    ========================================================================== */
 /* Some css resets breaking the styling somewhere
    ========================================================================== */
-/* line 99, ../../src/sass/base.scss */
+/* line 102, ../../src/sass/base.scss */
 img {
   border: none;
 }
 
 /* List Styling
    ========================================================================== */
-/* line 106, ../../src/sass/base.scss */
+/* line 109, ../../src/sass/base.scss */
 ul {
   margin: 0;
   display: inline-block;
 }
 
-/* line 110, ../../src/sass/base.scss */
+/* line 113, ../../src/sass/base.scss */
 ul li {
   list-style: none;
   display: inline-block;
@@ -790,19 +800,19 @@ ul li {
 
 /* Few button base css
    ========================================================================== */
-/* line 118, ../../src/sass/base.scss */
+/* line 121, ../../src/sass/base.scss */
 button {
   border: none;
 }
 
-/* line 121, ../../src/sass/base.scss */
+/* line 124, ../../src/sass/base.scss */
 .btn {
   padding: 7px 15px;
   font-weight: bolder;
   cursor: pointer;
 }
 
-/* line 128, ../../src/sass/base.scss */
+/* line 131, ../../src/sass/base.scss */
 .btn--gray {
   border: 1px solid rgba(0, 0, 0, 0.5);
   -webkit-border-radius: 5px;
@@ -816,7 +826,7 @@ button {
   background: -o-linear-gradient(top, #fcfcfc 0%, #bfbfbf 100%);
   background: linear-gradient(top, #fcfcfc 0%, #bfbfbf 100%);
 }
-/* line 132, ../../src/sass/base.scss */
+/* line 135, ../../src/sass/base.scss */
 .btn--gray:hover {
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #fcfcfc), color-stop(100%, #bfbfbf));
   background: -webkit-linear-gradient(bottom, #fcfcfc 0%, #bfbfbf 100%);
@@ -825,7 +835,7 @@ button {
   background: linear-gradient(bottom, #fcfcfc 0%, #bfbfbf 100%);
 }
 
-/* line 139, ../../src/sass/base.scss */
+/* line 142, ../../src/sass/base.scss */
 .btn--orange {
   padding: 1px 5px;
   border: 1px solid #c57601;
@@ -841,7 +851,7 @@ button {
   background: linear-gradient(top, #ff9802 0%, #c57601 100%);
 }
 
-/* line 148, ../../src/sass/base.scss */
+/* line 151, ../../src/sass/base.scss */
 .btn--blue {
   border: 1px solid rgba(0, 0, 0, 0.5);
   -webkit-border-radius: 5px;
@@ -855,7 +865,7 @@ button {
   background: -o-linear-gradient(top, #00b5e4 0%, #1877cf 100%);
   background: linear-gradient(top, #00b5e4 0%, #1877cf 100%);
 }
-/* line 152, ../../src/sass/base.scss */
+/* line 155, ../../src/sass/base.scss */
 .btn--blue:hover {
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #00b5e4), color-stop(100%, #1877cf));
   background: -webkit-linear-gradient(bottom, #00b5e4 0%, #1877cf 100%);
@@ -866,13 +876,13 @@ button {
 
 /* Few input base css
    ========================================================================== */
-/* line 159, ../../src/sass/base.scss */
+/* line 162, ../../src/sass/base.scss */
 input[type="text"], input[type="password"] {
   border: none;
   border: 1px solid gray;
 }
 
-/* line 163, ../../src/sass/base.scss */
+/* line 166, ../../src/sass/base.scss */
 .ipt {
   padding: 5px;
   margin-top: 10px;
@@ -884,52 +894,52 @@ input[type="text"], input[type="password"] {
   border-radius: 5px;
 }
 
-/* line 170, ../../src/sass/base.scss */
+/* line 173, ../../src/sass/base.scss */
 .ipt--inline {
   display: inline-block;
 }
 
-/* line 173, ../../src/sass/base.scss */
+/* line 176, ../../src/sass/base.scss */
 .ipt--single {
   display: block;
 }
 
 /* A few css classes for images to display
    ========================================================================== */
-/* line 179, ../../src/sass/base.scss */
+/* line 182, ../../src/sass/base.scss */
 .thumb--medium {
   width: 150px;
   vertical-align: middle;
 }
 
-/* line 183, ../../src/sass/base.scss */
+/* line 186, ../../src/sass/base.scss */
 .thumb--box {
   width: 150px;
   vertical-align: top;
 }
 
-/* line 187, ../../src/sass/base.scss */
+/* line 190, ../../src/sass/base.scss */
 .thumb--large {
   width: 300px;
 }
 
 /* A few box rules
    ========================================================================== */
-/* line 193, ../../src/sass/base.scss */
+/* line 196, ../../src/sass/base.scss */
 .label--single {
   width: 50px;
   margin-left: 10px;
   margin-right: 19px;
 }
 
-/* line 198, ../../src/sass/base.scss */
+/* line 201, ../../src/sass/base.scss */
 .label--single.is-selected {
   margin-right: 0px;
 }
 
 /* A few form rules
    ========================================================================== */
-/* line 205, ../../src/sass/base.scss */
+/* line 208, ../../src/sass/base.scss */
 .form {
   width: 100%;
   float: left;
@@ -942,12 +952,12 @@ input[type="text"], input[type="password"] {
   border-radius: 5px;
 }
 
-/* line 210, ../../src/sass/base.scss */
+/* line 213, ../../src/sass/base.scss */
 .form--gray {
   background-color: #eaeaea;
 }
 
-/* line 215, ../../src/sass/base.scss */
+/* line 218, ../../src/sass/base.scss */
 .form--blue {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #00b5e4), color-stop(100%, #1877cf));
   background: -webkit-linear-gradient(top, #00b5e4 0%, #1877cf 100%);
@@ -959,7 +969,7 @@ input[type="text"], input[type="password"] {
 
 /* Few alert styles
    ========================================================================== */
-/* line 223, ../../src/sass/base.scss */
+/* line 226, ../../src/sass/base.scss */
 .alert--error {
   color: #f99302;
 }
@@ -969,6 +979,11 @@ input[type="text"], input[type="password"] {
 @font-face {
   font-family: "lostart";
   src: url("./../assets/lost-art-font.woff");
+}
+
+@font-face {
+  font-family: "Happy Monkey";
+  src: url("http://fonts.googleapis.com/css?family=Happy+Monkey");
 }
 
 /* line 10, ../../src/sass/page-home.scss */
@@ -1025,45 +1040,37 @@ input[type="text"], input[type="password"] {
   float: left;
   margin-right: 1.69492%;
   display: inline;
-  box-shadow: inset rgba(0, 0, 0, 0.5) 0 0 0 1px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
-  height: 200px;
+  height: 120px;
   overflow: hidden;
 }
-/* line 39, ../../src/sass/page-home.scss */
-.span-single img {
-  -moz-border-radius-topleft: 5px;
-  -webkit-border-top-left-radius: 5px;
-  border-top-left-radius: 5px;
-  -moz-border-radius-topright: 5px;
-  -webkit-border-top-right-radius: 5px;
-  border-top-right-radius: 5px;
-  width: 304px;
-  height: 117px;
-  overflow: hidden;
+/* line 36, ../../src/sass/page-home.scss */
+.span-single .events {
+  margin-left: 5px;
+  padding: 5px 0;
 }
-/* line 45, ../../src/sass/page-home.scss */
+/* line 41, ../../src/sass/page-home.scss */
 .span-single a:after {
   content: "\232a";
   float: right;
 }
-/* line 49, ../../src/sass/page-home.scss */
+/* line 46, ../../src/sass/page-home.scss */
 .span-single ul {
   padding: 0;
   width: 100%;
 }
-/* line 52, ../../src/sass/page-home.scss */
+/* line 49, ../../src/sass/page-home.scss */
 .span-single ul li {
   padding: 3px 0;
   width: 100%;
   text-align: left;
   position: relative;
 }
-/* line 57, ../../src/sass/page-home.scss */
+/* line 54, ../../src/sass/page-home.scss */
 .span-single ul li:before {
   content: "";
   position: absolute;
@@ -1077,33 +1084,46 @@ input[type="text"], input[type="password"] {
   background: -o-linear-gradient(left, #eaeaea 0%, #d2d2d2 25%, #d2d2d2 75%, #eaeaea 100%);
   background: linear-gradient(left, #eaeaea 0%, #d2d2d2 25%, #d2d2d2 75%, #eaeaea 100%);
 }
-/* line 66, ../../src/sass/page-home.scss */
+/* line 63, ../../src/sass/page-home.scss */
 .span-single ul li a {
   padding-left: 5px;
   width: 98%;
   color: rgba(0, 0, 0, 0.8);
 }
-/* line 70, ../../src/sass/page-home.scss */
+/* line 67, ../../src/sass/page-home.scss */
 .span-single ul li a:hover {
   color: black;
 }
 
-/* line 77, ../../src/sass/page-home.scss */
-.span-single-last {
+/* line 74, ../../src/sass/page-home.scss */
+.span-single--last {
   width: 32.20339%;
   float: right;
   margin-right: 0;
   *margin-left: -1em;
   display: inline;
-  box-shadow: inset black 0 0 0 1px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
+  height: 120px;
+  overflow: hidden;
 }
 
-/* line 84, ../../src/sass/page-home.scss */
+/* line 82, ../../src/sass/page-home.scss */
+.span-border {
+  box-shadow: inset rgba(0, 0, 0, 0.5) 0 0 0 1px;
+}
+
+/* line 86, ../../src/sass/page-home.scss */
+.more-things {
+  text-shadow: white 0 1px 0;
+  color: #6097af;
+  font-family: Happy Monkey, cursive;
+}
+
+/* line 93, ../../src/sass/page-home.scss */
 .mascot {
   border-radius: 50%;
   border: 4px solid gray;
@@ -1114,7 +1134,7 @@ input[type="text"], input[type="password"] {
   margin: 0 auto;
 }
 
-/* line 94, ../../src/sass/page-home.scss */
+/* line 103, ../../src/sass/page-home.scss */
 .searchBox {
   margin: 20px 70px;
   width: 83.05085%;
@@ -1131,7 +1151,7 @@ input[type="text"], input[type="password"] {
   position: relative;
 }
 
-/* line 102, ../../src/sass/page-home.scss */
+/* line 111, ../../src/sass/page-home.scss */
 .searchBox__left {
   width: 6.77966%;
   float: left;
@@ -1139,7 +1159,7 @@ input[type="text"], input[type="password"] {
   display: inline;
 }
 
-/* line 105, ../../src/sass/page-home.scss */
+/* line 114, ../../src/sass/page-home.scss */
 .searchBox__right {
   width: 6.77966%;
   float: right;
@@ -1148,12 +1168,12 @@ input[type="text"], input[type="password"] {
   display: inline;
 }
 
-/* line 109, ../../src/sass/page-home.scss */
+/* line 118, ../../src/sass/page-home.scss */
 .searchBox .types {
   margin: 10px 25px;
 }
 
-/* line 112, ../../src/sass/page-home.scss */
+/* line 121, ../../src/sass/page-home.scss */
 .searchBox .type__pill {
   padding: 5px 10px;
   -webkit-border-radius: 5px;
@@ -1164,7 +1184,7 @@ input[type="text"], input[type="password"] {
   cursor: pointer;
 }
 
-/* line 117, ../../src/sass/page-home.scss */
+/* line 126, ../../src/sass/page-home.scss */
 .type__pill.is-selected {
   background-color: #7ebb4b;
   -webkit-box-shadow: white 0 0 2px;
@@ -1172,7 +1192,7 @@ input[type="text"], input[type="password"] {
   box-shadow: white 0 0 2px;
 }
 
-/* line 121, ../../src/sass/page-home.scss */
+/* line 130, ../../src/sass/page-home.scss */
 .searchBox .forms {
   width: 74.57627%;
   float: left;
@@ -1181,7 +1201,7 @@ input[type="text"], input[type="password"] {
   background-color: red;
 }
 
-/* line 125, ../../src/sass/page-home.scss */
+/* line 134, ../../src/sass/page-home.scss */
 .searchBox .actuator {
   width: 23.72881%;
   float: right;
@@ -1191,7 +1211,7 @@ input[type="text"], input[type="password"] {
   background-color: yellow;
 }
 
-/* line 133, ../../src/sass/page-home.scss */
+/* line 142, ../../src/sass/page-home.scss */
 .sort-box {
   background-color: #f9f9f9;
   -webkit-border-radius: 5px;
@@ -1207,12 +1227,12 @@ input[type="text"], input[type="password"] {
   margin: 20px 0;
 }
 
-/* line 139, ../../src/sass/page-home.scss */
+/* line 148, ../../src/sass/page-home.scss */
 .sort-box__filters, .sort-box__search {
   margin: 10px 0;
 }
 
-/* line 142, ../../src/sass/page-home.scss */
+/* line 151, ../../src/sass/page-home.scss */
 .sort-box__filters {
   width: 32.20339%;
   float: left;
@@ -1220,7 +1240,7 @@ input[type="text"], input[type="password"] {
   display: inline;
 }
 
-/* line 145, ../../src/sass/page-home.scss */
+/* line 154, ../../src/sass/page-home.scss */
 .sort-box__search {
   width: 32.20339%;
   float: right;
@@ -1229,7 +1249,7 @@ input[type="text"], input[type="password"] {
   display: inline;
 }
 
-/* line 149, ../../src/sass/page-home.scss */
+/* line 158, ../../src/sass/page-home.scss */
 .max-span {
   width: 100%;
   float: right;
@@ -1238,7 +1258,7 @@ input[type="text"], input[type="password"] {
   display: inline;
 }
 
-/* line 152, ../../src/sass/page-home.scss */
+/* line 161, ../../src/sass/page-home.scss */
 .item-box {
   margin: 20px 0;
   display: block;
@@ -1247,7 +1267,7 @@ input[type="text"], input[type="password"] {
   overflow: hidden;
 }
 
-/* line 159, ../../src/sass/page-home.scss */
+/* line 168, ../../src/sass/page-home.scss */
 .item-box .item--thumb {
   float: left;
   margin-right: 10px;
@@ -1257,13 +1277,13 @@ input[type="text"], input[type="password"] {
   margin-right: 1.69492%;
   display: inline;
 }
-/* line 164, ../../src/sass/page-home.scss */
+/* line 173, ../../src/sass/page-home.scss */
 .item-box .item--thumb img {
   width: 120px;
   display: block;
 }
 
-/* line 169, ../../src/sass/page-home.scss */
+/* line 178, ../../src/sass/page-home.scss */
 .item--text {
   overflow: hidden;
   display: inline-block;
@@ -1272,23 +1292,23 @@ input[type="text"], input[type="password"] {
   margin-right: 1.69492%;
   display: inline;
 }
-/* line 173, ../../src/sass/page-home.scss */
+/* line 182, ../../src/sass/page-home.scss */
 .item--text .price {
   cursor: pointer;
   display: inline-block;
 }
-/* line 177, ../../src/sass/page-home.scss */
+/* line 186, ../../src/sass/page-home.scss */
 .item--text .price {
   float: right;
   margin: 0;
 }
 
-/* line 185, ../../src/sass/page-home.scss */
+/* line 194, ../../src/sass/page-home.scss */
 .usr--status {
   margin: 1px auto;
 }
 
-/* line 189, ../../src/sass/page-home.scss */
+/* line 198, ../../src/sass/page-home.scss */
 .usr--email {
   color: #284ea8;
   text-decoration: underline;

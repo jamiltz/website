@@ -22,13 +22,13 @@ angular.module('bk-page-home', [
                 rList: ['List', '$stateParams', function(List, $stateParams) {
                     var group;
                     if($stateParams.g) {
-                        group = $stateParams.g
+                        group = $stateParams.g;
                     } else {
-                        group = ''
+                        group = '';
                     }
                     return List.getGroupItems(group).then(
                         function(res) {
-                            return res.items;
+                            return {items: res.items, group: group};
 
                         },
                         function(err) {
@@ -66,7 +66,11 @@ angular.module('bk-page-home', [
         }
 
 
-        $scope.items = rList;
+        $scope.items = rList.items;
+        if(rList.group === '') {
+            $scope.nogroup = true;
+        }
+
         $scope.groups = rGroups;
 
         if(rEvents === null) {
