@@ -57,7 +57,8 @@ angular.module('bk-page-home', [
 
         $scope.requestFriends = function() {
             FB.ui({method: 'apprequests',
-                message: 'My Great Request'
+                message: 'My Great Request',
+                link: 'http://google.com'
             }, function() {
                 console.log(arguments)
             });
