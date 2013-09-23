@@ -151,6 +151,7 @@ $lightGreen             :           rgba(126, 187, 75, 1.0000);
   }
   .sort-box__filters{
     @include span-columns(4);
+    margin: 16px 0;
   }
   .sort-box__search{
     @include span-columns(4 omega);

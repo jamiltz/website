@@ -1,4 +1,5 @@
 @import "susy";
+@import "compass";
 
 $greenTopBanner       :     rgba(93, 171, 31, 1.0000);
 $heightTopBanner      :     65px;
@@ -97,19 +98,22 @@ $greenVisualSuccess       :       rgba(122, 189, 0, 0.5);
 }
 .sprite2 {
   background-image: url('./../assets/sprites2.png');
+  cursor: pointer;
+  @include transition(all 0.2s ease);
+  &:hover{
+    @include transform(scale(1.2));
+  }
 }
 .sprite2--fb, .sprite2--twitter, .sprite2--mail {
-  width: 63px;
-  height: 60px;
+  width: 88px;
+  height: 70px;
 }
-.sprite2--twitter {
+.sprite2--fb {
   background-position: 0 0;
 }
-.sprite2--fb{
-  background-position: 0 -60px;
-}
-.sprite2--mail{
-  background-position: 0 -120px;
+.sprite2--twitter{
+  margin-left: 60px;
+  background-position: 0 -90px;
 }
 
 .menu{

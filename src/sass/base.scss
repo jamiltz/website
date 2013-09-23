@@ -177,6 +177,12 @@ input[type="text"], input[type="password"]{
   display: block;
 }
 
+.ipt-padding{
+  padding: 5px;
+  @include border-radius(3px);
+  border: 1px solid black(0.1);
+}
+
 /* A few css classes for images to display
    ========================================================================== */
 .thumb--medium {
