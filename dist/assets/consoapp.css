@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Happy+Monkey);
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
 /* Susy set-up
    ========================================================================== */
 /* line 11, ../../src/sass/base.scss */
@@ -213,42 +215,53 @@ input[type="text"], input[type="password"] {
   display: block;
 }
 
+/* line 180, ../../src/sass/base.scss */
+.ipt-padding {
+  padding: 5px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 /* A few css classes for images to display
    ========================================================================== */
-/* line 182, ../../src/sass/base.scss */
+/* line 188, ../../src/sass/base.scss */
 .thumb--medium {
   width: 150px;
   vertical-align: middle;
 }
 
-/* line 186, ../../src/sass/base.scss */
+/* line 192, ../../src/sass/base.scss */
 .thumb--box {
   width: 150px;
   vertical-align: top;
 }
 
-/* line 190, ../../src/sass/base.scss */
+/* line 196, ../../src/sass/base.scss */
 .thumb--large {
   width: 300px;
 }
 
 /* A few box rules
    ========================================================================== */
-/* line 196, ../../src/sass/base.scss */
+/* line 202, ../../src/sass/base.scss */
 .label--single {
   width: 50px;
   margin-left: 10px;
   margin-right: 19px;
 }
 
-/* line 201, ../../src/sass/base.scss */
+/* line 207, ../../src/sass/base.scss */
 .label--single.is-selected {
   margin-right: 0px;
 }
 
 /* A few form rules
    ========================================================================== */
-/* line 208, ../../src/sass/base.scss */
+/* line 214, ../../src/sass/base.scss */
 .form {
   width: 100%;
   float: left;
@@ -261,12 +274,12 @@ input[type="text"], input[type="password"] {
   border-radius: 5px;
 }
 
-/* line 213, ../../src/sass/base.scss */
+/* line 219, ../../src/sass/base.scss */
 .form--gray {
   background-color: #eaeaea;
 }
 
-/* line 218, ../../src/sass/base.scss */
+/* line 224, ../../src/sass/base.scss */
 .form--blue {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #00b5e4), color-stop(100%, #1877cf));
   background: -webkit-linear-gradient(top, #00b5e4 0%, #1877cf 100%);
@@ -278,7 +291,7 @@ input[type="text"], input[type="password"] {
 
 /* Few alert styles
    ========================================================================== */
-/* line 226, ../../src/sass/base.scss */
+/* line 232, ../../src/sass/base.scss */
 .alert--error {
   color: #f99302;
 }
@@ -290,11 +303,26 @@ input[type="text"], input[type="password"] {
   src: url("./../assets/lost-art-font.woff");
 }
 
-@font-face {
-  font-family: "Happy Monkey";
-  src: url("http://fonts.googleapis.com/css?family=Happy+Monkey");
+/* Few font classes based on these web fonts
+   ========================================================================== */
+/* line 248, ../../src/sass/base.scss */
+.font-indie {
+  font-family: "Indie Flower";
+  font-size: 19px;
+  color: #3a6275;
+  text-shadow: white 0 1px 0;
 }
 
+/* line 255, ../../src/sass/base.scss */
+.font-monkey {
+  font-family: "Happy Monkey";
+  font-size: 19px;
+  color: #3a6275;
+  text-shadow: white 0 1px 0;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Happy+Monkey);
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
 /* Susy set-up
    ========================================================================== */
 /* line 11, ../../src/sass/base.scss */
@@ -510,42 +538,53 @@ input[type="text"], input[type="password"] {
   display: block;
 }
 
+/* line 180, ../../src/sass/base.scss */
+.ipt-padding {
+  padding: 5px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 /* A few css classes for images to display
    ========================================================================== */
-/* line 182, ../../src/sass/base.scss */
+/* line 188, ../../src/sass/base.scss */
 .thumb--medium {
   width: 150px;
   vertical-align: middle;
 }
 
-/* line 186, ../../src/sass/base.scss */
+/* line 192, ../../src/sass/base.scss */
 .thumb--box {
   width: 150px;
   vertical-align: top;
 }
 
-/* line 190, ../../src/sass/base.scss */
+/* line 196, ../../src/sass/base.scss */
 .thumb--large {
   width: 300px;
 }
 
 /* A few box rules
    ========================================================================== */
-/* line 196, ../../src/sass/base.scss */
+/* line 202, ../../src/sass/base.scss */
 .label--single {
   width: 50px;
   margin-left: 10px;
   margin-right: 19px;
 }
 
-/* line 201, ../../src/sass/base.scss */
+/* line 207, ../../src/sass/base.scss */
 .label--single.is-selected {
   margin-right: 0px;
 }
 
 /* A few form rules
    ========================================================================== */
-/* line 208, ../../src/sass/base.scss */
+/* line 214, ../../src/sass/base.scss */
 .form {
   width: 100%;
   float: left;
@@ -558,12 +597,12 @@ input[type="text"], input[type="password"] {
   border-radius: 5px;
 }
 
-/* line 213, ../../src/sass/base.scss */
+/* line 219, ../../src/sass/base.scss */
 .form--gray {
   background-color: #eaeaea;
 }
 
-/* line 218, ../../src/sass/base.scss */
+/* line 224, ../../src/sass/base.scss */
 .form--blue {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #00b5e4), color-stop(100%, #1877cf));
   background: -webkit-linear-gradient(top, #00b5e4 0%, #1877cf 100%);
@@ -575,7 +614,7 @@ input[type="text"], input[type="password"] {
 
 /* Few alert styles
    ========================================================================== */
-/* line 226, ../../src/sass/base.scss */
+/* line 232, ../../src/sass/base.scss */
 .alert--error {
   color: #f99302;
 }
@@ -587,9 +626,22 @@ input[type="text"], input[type="password"] {
   src: url("./../assets/lost-art-font.woff");
 }
 
-@font-face {
+/* Few font classes based on these web fonts
+   ========================================================================== */
+/* line 248, ../../src/sass/base.scss */
+.font-indie {
+  font-family: "Indie Flower";
+  font-size: 19px;
+  color: #3a6275;
+  text-shadow: white 0 1px 0;
+}
+
+/* line 255, ../../src/sass/base.scss */
+.font-monkey {
   font-family: "Happy Monkey";
-  src: url("http://fonts.googleapis.com/css?family=Happy+Monkey");
+  font-size: 19px;
+  color: #3a6275;
+  text-shadow: white 0 1px 0;
 }
 
 /* line 8, ../../src/sass/page-account.scss */
@@ -689,6 +741,8 @@ input[type="text"], input[type="password"] {
   margin: 15px;
 }
 
+@import url(http://fonts.googleapis.com/css?family=Happy+Monkey);
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
 /* Susy set-up
    ========================================================================== */
 /* line 11, ../../src/sass/base.scss */
@@ -904,42 +958,53 @@ input[type="text"], input[type="password"] {
   display: block;
 }
 
+/* line 180, ../../src/sass/base.scss */
+.ipt-padding {
+  padding: 5px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 /* A few css classes for images to display
    ========================================================================== */
-/* line 182, ../../src/sass/base.scss */
+/* line 188, ../../src/sass/base.scss */
 .thumb--medium {
   width: 150px;
   vertical-align: middle;
 }
 
-/* line 186, ../../src/sass/base.scss */
+/* line 192, ../../src/sass/base.scss */
 .thumb--box {
   width: 150px;
   vertical-align: top;
 }
 
-/* line 190, ../../src/sass/base.scss */
+/* line 196, ../../src/sass/base.scss */
 .thumb--large {
   width: 300px;
 }
 
 /* A few box rules
    ========================================================================== */
-/* line 196, ../../src/sass/base.scss */
+/* line 202, ../../src/sass/base.scss */
 .label--single {
   width: 50px;
   margin-left: 10px;
   margin-right: 19px;
 }
 
-/* line 201, ../../src/sass/base.scss */
+/* line 207, ../../src/sass/base.scss */
 .label--single.is-selected {
   margin-right: 0px;
 }
 
 /* A few form rules
    ========================================================================== */
-/* line 208, ../../src/sass/base.scss */
+/* line 214, ../../src/sass/base.scss */
 .form {
   width: 100%;
   float: left;
@@ -952,12 +1017,12 @@ input[type="text"], input[type="password"] {
   border-radius: 5px;
 }
 
-/* line 213, ../../src/sass/base.scss */
+/* line 219, ../../src/sass/base.scss */
 .form--gray {
   background-color: #eaeaea;
 }
 
-/* line 218, ../../src/sass/base.scss */
+/* line 224, ../../src/sass/base.scss */
 .form--blue {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #00b5e4), color-stop(100%, #1877cf));
   background: -webkit-linear-gradient(top, #00b5e4 0%, #1877cf 100%);
@@ -969,7 +1034,7 @@ input[type="text"], input[type="password"] {
 
 /* Few alert styles
    ========================================================================== */
-/* line 226, ../../src/sass/base.scss */
+/* line 232, ../../src/sass/base.scss */
 .alert--error {
   color: #f99302;
 }
@@ -981,9 +1046,22 @@ input[type="text"], input[type="password"] {
   src: url("./../assets/lost-art-font.woff");
 }
 
-@font-face {
+/* Few font classes based on these web fonts
+   ========================================================================== */
+/* line 248, ../../src/sass/base.scss */
+.font-indie {
+  font-family: "Indie Flower";
+  font-size: 19px;
+  color: #3a6275;
+  text-shadow: white 0 1px 0;
+}
+
+/* line 255, ../../src/sass/base.scss */
+.font-monkey {
   font-family: "Happy Monkey";
-  src: url("http://fonts.googleapis.com/css?family=Happy+Monkey");
+  font-size: 19px;
+  color: #3a6275;
+  text-shadow: white 0 1px 0;
 }
 
 /* line 10, ../../src/sass/page-home.scss */
@@ -1111,19 +1189,18 @@ input[type="text"], input[type="password"] {
   overflow: hidden;
 }
 
-/* line 82, ../../src/sass/page-home.scss */
+/* line 84, ../../src/sass/page-home.scss */
 .span-border {
   box-shadow: inset rgba(0, 0, 0, 0.5) 0 0 0 1px;
 }
 
-/* line 86, ../../src/sass/page-home.scss */
+/* line 88, ../../src/sass/page-home.scss */
 .more-things {
   text-shadow: white 0 1px 0;
   color: #6097af;
-  font-family: Happy Monkey, cursive;
 }
 
-/* line 93, ../../src/sass/page-home.scss */
+/* line 94, ../../src/sass/page-home.scss */
 .mascot {
   border-radius: 50%;
   border: 4px solid gray;
@@ -1134,7 +1211,7 @@ input[type="text"], input[type="password"] {
   margin: 0 auto;
 }
 
-/* line 103, ../../src/sass/page-home.scss */
+/* line 104, ../../src/sass/page-home.scss */
 .searchBox {
   margin: 20px 70px;
   width: 83.05085%;
@@ -1151,7 +1228,7 @@ input[type="text"], input[type="password"] {
   position: relative;
 }
 
-/* line 111, ../../src/sass/page-home.scss */
+/* line 112, ../../src/sass/page-home.scss */
 .searchBox__left {
   width: 6.77966%;
   float: left;
@@ -1159,7 +1236,7 @@ input[type="text"], input[type="password"] {
   display: inline;
 }
 
-/* line 114, ../../src/sass/page-home.scss */
+/* line 115, ../../src/sass/page-home.scss */
 .searchBox__right {
   width: 6.77966%;
   float: right;
@@ -1168,12 +1245,12 @@ input[type="text"], input[type="password"] {
   display: inline;
 }
 
-/* line 118, ../../src/sass/page-home.scss */
+/* line 119, ../../src/sass/page-home.scss */
 .searchBox .types {
   margin: 10px 25px;
 }
 
-/* line 121, ../../src/sass/page-home.scss */
+/* line 122, ../../src/sass/page-home.scss */
 .searchBox .type__pill {
   padding: 5px 10px;
   -webkit-border-radius: 5px;
@@ -1184,7 +1261,7 @@ input[type="text"], input[type="password"] {
   cursor: pointer;
 }
 
-/* line 126, ../../src/sass/page-home.scss */
+/* line 127, ../../src/sass/page-home.scss */
 .type__pill.is-selected {
   background-color: #7ebb4b;
   -webkit-box-shadow: white 0 0 2px;
@@ -1192,7 +1269,7 @@ input[type="text"], input[type="password"] {
   box-shadow: white 0 0 2px;
 }
 
-/* line 130, ../../src/sass/page-home.scss */
+/* line 131, ../../src/sass/page-home.scss */
 .searchBox .forms {
   width: 74.57627%;
   float: left;
@@ -1201,7 +1278,7 @@ input[type="text"], input[type="password"] {
   background-color: red;
 }
 
-/* line 134, ../../src/sass/page-home.scss */
+/* line 135, ../../src/sass/page-home.scss */
 .searchBox .actuator {
   width: 23.72881%;
   float: right;
@@ -1211,7 +1288,7 @@ input[type="text"], input[type="password"] {
   background-color: yellow;
 }
 
-/* line 142, ../../src/sass/page-home.scss */
+/* line 143, ../../src/sass/page-home.scss */
 .sort-box {
   background-color: #f9f9f9;
   -webkit-border-radius: 5px;
@@ -1227,20 +1304,21 @@ input[type="text"], input[type="password"] {
   margin: 20px 0;
 }
 
-/* line 148, ../../src/sass/page-home.scss */
+/* line 149, ../../src/sass/page-home.scss */
 .sort-box__filters, .sort-box__search {
   margin: 10px 0;
 }
 
-/* line 151, ../../src/sass/page-home.scss */
+/* line 152, ../../src/sass/page-home.scss */
 .sort-box__filters {
   width: 32.20339%;
   float: left;
   margin-right: 1.69492%;
   display: inline;
+  margin: 16px 0;
 }
 
-/* line 154, ../../src/sass/page-home.scss */
+/* line 156, ../../src/sass/page-home.scss */
 .sort-box__search {
   width: 32.20339%;
   float: right;
@@ -1249,7 +1327,7 @@ input[type="text"], input[type="password"] {
   display: inline;
 }
 
-/* line 158, ../../src/sass/page-home.scss */
+/* line 160, ../../src/sass/page-home.scss */
 .max-span {
   width: 100%;
   float: right;
@@ -1258,7 +1336,7 @@ input[type="text"], input[type="password"] {
   display: inline;
 }
 
-/* line 161, ../../src/sass/page-home.scss */
+/* line 163, ../../src/sass/page-home.scss */
 .item-box {
   margin: 20px 0;
   display: block;
@@ -1267,7 +1345,7 @@ input[type="text"], input[type="password"] {
   overflow: hidden;
 }
 
-/* line 168, ../../src/sass/page-home.scss */
+/* line 170, ../../src/sass/page-home.scss */
 .item-box .item--thumb {
   float: left;
   margin-right: 10px;
@@ -1277,13 +1355,13 @@ input[type="text"], input[type="password"] {
   margin-right: 1.69492%;
   display: inline;
 }
-/* line 173, ../../src/sass/page-home.scss */
+/* line 175, ../../src/sass/page-home.scss */
 .item-box .item--thumb img {
   width: 120px;
   display: block;
 }
 
-/* line 178, ../../src/sass/page-home.scss */
+/* line 180, ../../src/sass/page-home.scss */
 .item--text {
   overflow: hidden;
   display: inline-block;
@@ -1292,29 +1370,29 @@ input[type="text"], input[type="password"] {
   margin-right: 1.69492%;
   display: inline;
 }
-/* line 182, ../../src/sass/page-home.scss */
+/* line 184, ../../src/sass/page-home.scss */
 .item--text .price {
   cursor: pointer;
   display: inline-block;
 }
-/* line 186, ../../src/sass/page-home.scss */
+/* line 188, ../../src/sass/page-home.scss */
 .item--text .price {
   float: right;
   margin: 0;
 }
 
-/* line 194, ../../src/sass/page-home.scss */
+/* line 196, ../../src/sass/page-home.scss */
 .usr--status {
   margin: 1px auto;
 }
 
-/* line 198, ../../src/sass/page-home.scss */
+/* line 200, ../../src/sass/page-home.scss */
 .usr--email {
   color: #284ea8;
   text-decoration: underline;
 }
 
-/* line 8, ../../src/sass/page-index.scss */
+/* line 9, ../../src/sass/page-index.scss */
 .sub-banner {
   background-color: white;
   height: 38px;
@@ -1322,52 +1400,52 @@ input[type="text"], input[type="password"] {
   min-width: 900px;
 }
 
-/* line 14, ../../src/sass/page-index.scss */
+/* line 15, ../../src/sass/page-index.scss */
 .sub-banner {
   margin: 0 auto;
   text-align: center;
 }
 
-/* line 19, ../../src/sass/page-index.scss */
+/* line 20, ../../src/sass/page-index.scss */
 .sub-banner__tagline {
   font-size: 24px;
   margin: 5px auto;
 }
 
-/* line 23, ../../src/sass/page-index.scss */
+/* line 24, ../../src/sass/page-index.scss */
 .banr {
   width: 100%;
   margin: 0 auto;
   text-align: center;
 }
 
-/* line 29, ../../src/sass/page-index.scss */
+/* line 30, ../../src/sass/page-index.scss */
 .banr--small {
   height: 20px;
   background-color: #ffd76f;
 }
 
-/* line 34, ../../src/sass/page-index.scss */
+/* line 35, ../../src/sass/page-index.scss */
 .banr--green-small {
   height: 20px;
   background-color: rgba(122, 189, 0, 0.5);
 }
 
-/* line 39, ../../src/sass/page-index.scss */
+/* line 40, ../../src/sass/page-index.scss */
 .banner {
   background-color: #5dab1f;
-  height: 45px;
+  height: 65px;
   width: 100%;
   min-width: 900px;
 }
 
-/* line 45, ../../src/sass/page-index.scss */
+/* line 46, ../../src/sass/page-index.scss */
 .banner .nav {
   margin: 0 auto;
   position: relative;
 }
 
-/* line 49, ../../src/sass/page-index.scss */
+/* line 50, ../../src/sass/page-index.scss */
 .banner .content, .banner .title {
   background-color: #5dab1f;
   margin: 0 auto;
@@ -1376,12 +1454,12 @@ input[type="text"], input[type="password"] {
   font-weight: normal;
 }
 
-/* line 56, ../../src/sass/page-index.scss */
+/* line 57, ../../src/sass/page-index.scss */
 .banner .title {
-  font-weight: bold;
+  padding-top: 12px;
 }
 
-/* line 60, ../../src/sass/page-index.scss */
+/* line 61, ../../src/sass/page-index.scss */
 .footer-banner {
   background-color: #5dab1f;
   height: 110px;
@@ -1390,7 +1468,7 @@ input[type="text"], input[type="password"] {
   padding-top: 5px;
 }
 
-/* line 68, ../../src/sass/page-index.scss */
+/* line 69, ../../src/sass/page-index.scss */
 .footer {
   *zoom: 1;
   max-width: 59em;
@@ -1408,7 +1486,7 @@ input[type="text"], input[type="password"] {
   clear: both;
 }
 
-/* line 72, ../../src/sass/page-index.scss */
+/* line 73, ../../src/sass/page-index.scss */
 .footer__left {
   width: 23.72881%;
   float: left;
@@ -1417,7 +1495,7 @@ input[type="text"], input[type="password"] {
   margin-left: -1em;
 }
 
-/* line 76, ../../src/sass/page-index.scss */
+/* line 77, ../../src/sass/page-index.scss */
 .footer__right {
   width: 23.72881%;
   float: right;
@@ -1430,86 +1508,98 @@ input[type="text"], input[type="password"] {
 
 /* Social media sprites
    ========================================================================== */
-/* line 85, ../../src/sass/page-index.scss */
+/* line 86, ../../src/sass/page-index.scss */
 .sprite {
   background: url("./../assets/sprites.png");
 }
 
-/* line 88, ../../src/sass/page-index.scss */
+/* line 89, ../../src/sass/page-index.scss */
 .sprite--fb, .sprite--twitter {
   width: 32px;
   height: 32px;
 }
 
-/* line 92, ../../src/sass/page-index.scss */
+/* line 93, ../../src/sass/page-index.scss */
 .sprite--twitter {
   background-position: 0px 0px;
 }
 
-/* line 95, ../../src/sass/page-index.scss */
+/* line 96, ../../src/sass/page-index.scss */
 .sprite--fb {
   background-position: 0px -32px;
 }
 
-/* line 98, ../../src/sass/page-index.scss */
+/* line 99, ../../src/sass/page-index.scss */
 .sprite2 {
   background-image: url("./../assets/sprites2.png");
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+/* line 103, ../../src/sass/page-index.scss */
+.sprite2:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
-/* line 101, ../../src/sass/page-index.scss */
+/* line 107, ../../src/sass/page-index.scss */
 .sprite2--fb, .sprite2--twitter, .sprite2--mail {
-  width: 63px;
-  height: 60px;
-}
-
-/* line 105, ../../src/sass/page-index.scss */
-.sprite2--twitter {
-  background-position: 0 0;
-}
-
-/* line 108, ../../src/sass/page-index.scss */
-.sprite2--fb {
-  background-position: 0 -60px;
+  width: 88px;
+  height: 70px;
 }
 
 /* line 111, ../../src/sass/page-index.scss */
-.sprite2--mail {
-  background-position: 0 -120px;
+.sprite2--fb {
+  background-position: 0 0;
 }
 
-/* line 115, ../../src/sass/page-index.scss */
+/* line 114, ../../src/sass/page-index.scss */
+.sprite2--twitter {
+  margin-left: 60px;
+  background-position: 0 -90px;
+}
+
+/* line 119, ../../src/sass/page-index.scss */
 .menu {
   position: absolute;
   top: 0;
   right: 20px;
 }
 
-/* line 121, ../../src/sass/page-index.scss */
+/* line 125, ../../src/sass/page-index.scss */
 .menu li {
+  padding-top: 12px;
   width: 100px;
   height: 40px;
   cursor: pointer;
   border-top: 3px solid transparent;
 }
-/* line 126, ../../src/sass/page-index.scss */
+/* line 132, ../../src/sass/page-index.scss */
 .menu li:hover {
   border-top: 3px solid white;
 }
 
-/* line 130, ../../src/sass/page-index.scss */
+/* line 136, ../../src/sass/page-index.scss */
 .menu li a {
   margin-top: 10px;
 }
 
-/* line 134, ../../src/sass/page-index.scss */
+/* line 140, ../../src/sass/page-index.scss */
 .layout {
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAALElEQVQIHWN88+LOfwYk8OXLVwYmJD6YycPDjRAEqYABuEqQChhgQlYBEwQAUMYMlj+hubwAAAAASUVORK5CYII=");
 }
 
-/* line 138, ../../src/sass/page-index.scss */
+/* line 144, ../../src/sass/page-index.scss */
 .brand {
   font-family: lostart;
   color: black;
+  font-weight: normal;
+  font-size: 40px;
 }
 
 /* line 7, ../../src/sass/page-item.scss */

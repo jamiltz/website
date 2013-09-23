@@ -61,7 +61,7 @@ angular.module('bk-page-home', [
                 message: 'My Great Request',
                 title: 'Hello there'
             }, function() {
-                console.log(arguments)
+                console.log(arguments);
             });
         }
 

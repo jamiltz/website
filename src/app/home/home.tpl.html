@@ -61,11 +61,25 @@
 
         <span
                 class="span-single--last more-things">
-            <h3
-                    style="top: 18px;position: relative;"
-                    class="text-center">
+            <h5
+                    style="top: 5px;position: relative;"
+                    class="text-center font-monkey">
                 More awesome things to come on Benkyet!
-            </h3>
+            </h5>
+            <div class="center">
+                <a
+                        href="https://twitter.com/benkyet"
+                        target="_blank"
+                        class="sprite2 sprite2--twitter">
+                </a>
+                <a
+                        href="https://facebook.com/benkyet"
+                        target="_blank"
+                        class="sprite2 sprite2--fb">
+                </a>
+            </div>
+
+
 
         </span>
     </section>
@@ -73,22 +87,22 @@
     <section ng-show="nogroup">
         <span class="span-single">
             <img style="vertical-align: bottom;" src="./assets/arrow_top.png">
-            <h5 class="center--inline">Select your University</h5>
+            <h5 class="center--inline font-indie">Select your University</h5>
         </span>
 
         <span class="span-single">
 
-            <h5 class="center--inline">Sell your textbooks...<br>to people around campus</h5>
+            <h5 class="center--inline font-indie">Sell your textbooks...<br>to people around campus</h5>
             <img style="vertical-align: top;" src="./assets/arrow_bottom.png">
         </span>
 
         <span class="span-single--last">
-            <h5 class="text-center">Still feel the pain?</h5>
+            <h5 class="text-center font-indie">Still feel the pain?</h5>
             <img
                     style="margin: 7px auto;"
                     class="center"
                     src="./assets/arrow_spiral.png">
-            <h5 class="text-center">Ask for <b>help</b></h5>
+            <h5 class="text-center font-indie">Ask for <b><a style="color: inherit; text-decoration: underline;" href="mailto:contact@benkyet.com">help</a></b></h5>
         </span>
 
     </section>
@@ -102,7 +116,7 @@
 
     <section class="sort-box">
         <div class="sort-box__filters">
-            <b style="margin-left: 20px;">Sort: </b>
+            <b style="margin-left: 20px;">Sort </b>
             <a
                     href=""
                     class="label--single text-light"
@@ -122,6 +136,8 @@
         </div>
         <label class="sort-box__search">
             Search for: <input
+                class="ipt-padding"
+                placeholder="e.g. Financial Accounting"
                 type="text"
                 ng-model="criteria">
         </label>
@@ -147,7 +163,6 @@
                         class="price"
                         ng-href="/item/{{ item.ref }}">
                     {{ item.price | currency:"£ " }}</p>
-                <p>{{ item.location }}</p>
             </div>
         </article>
     </section>

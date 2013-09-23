@@ -1,7 +1,8 @@
 @import "susy";
+@import "compass";
 
 $greenTopBanner       :     rgba(93, 171, 31, 1.0000);
-$heightTopBanner      :     45px;
+$heightTopBanner      :     65px;
 $white                :     rgba(255,255,255,1);
 $heightSubBanner      :     38px;
 
@@ -54,7 +55,7 @@ $greenVisualSuccess       :       rgba(122, 189, 0, 0.5);
   font-weight: normal;
 }
 .banner .title {
-  font-weight: bold;
+  padding-top: 12px;
 }
 
 .footer-banner {
@@ -97,19 +98,22 @@ $greenVisualSuccess       :       rgba(122, 189, 0, 0.5);
 }
 .sprite2 {
   background-image: url('./../assets/sprites2.png');
+  cursor: pointer;
+  @include transition(all 0.2s ease);
+  &:hover{
+    @include transform(scale(1.2));
+  }
 }
 .sprite2--fb, .sprite2--twitter, .sprite2--mail {
-  width: 63px;
-  height: 60px;
+  width: 88px;
+  height: 70px;
 }
-.sprite2--twitter {
+.sprite2--fb {
   background-position: 0 0;
 }
-.sprite2--fb{
-  background-position: 0 -60px;
-}
-.sprite2--mail{
-  background-position: 0 -120px;
+.sprite2--twitter{
+  margin-left: 60px;
+  background-position: 0 -90px;
 }
 
 .menu{
@@ -119,6 +123,8 @@ $greenVisualSuccess       :       rgba(122, 189, 0, 0.5);
 }
 $hoverColor         :         rgba(255, 255, 255, 1.0000);
 .menu li{
+  padding-top: 12px;
+
   width: 100px;
   height: 40px;
   cursor: pointer;
@@ -138,4 +144,6 @@ $hoverColor         :         rgba(255, 255, 255, 1.0000);
 .brand{
   font-family: lostart;
   color: black;
+  font-weight: normal;
+  font-size: 40px;
 }

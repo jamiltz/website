@@ -177,6 +177,12 @@ input[type="text"], input[type="password"]{
   display: block;
 }
 
+.ipt-padding{
+  padding: 5px;
+  @include border-radius(3px);
+  border: 1px solid black(0.1);
+}
+
 /* A few css classes for images to display
    ========================================================================== */
 .thumb--medium {
@@ -234,7 +240,21 @@ $formBlueBottom   :         rgba(24, 119, 207, 1.0000);
   src: url("./../assets/lost-art-font.woff");
 }
 
-@font-face{
+@import url(http://fonts.googleapis.com/css?family=Happy+Monkey);
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+
+/* Few font classes based on these web fonts
+   ========================================================================== */
+.font-indie{
+  font-family: "Indie Flower";
+  font-size: 19px;
+  color: rgba(58, 98, 117, 1.0000);
+  @include letterpress-white(1);
+}
+
+.font-monkey{
   font-family: "Happy Monkey";
-  src: url("http://fonts.googleapis.com/css?family=Happy+Monkey");
+  font-size: 19px;
+  color: rgba(58, 98, 117, 1.0000);
+  @include letterpress-white(1);
 }
