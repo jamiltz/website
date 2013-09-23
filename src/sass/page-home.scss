@@ -79,6 +79,8 @@ $lightGreen             :           rgba(126, 187, 75, 1.0000);
     overflow: hidden;
   }
 
+
+
   .span-border{
     @include inset-border(black(0.5));
   }
@@ -86,7 +88,6 @@ $lightGreen             :           rgba(126, 187, 75, 1.0000);
   .more-things{
     @include  letterpress-white(1);
     color: rgba(96, 151, 175, 1.0000);
-    font-family: Happy Monkey, cursive;
   }
 
 

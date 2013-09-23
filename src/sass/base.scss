@@ -234,7 +234,21 @@ $formBlueBottom   :         rgba(24, 119, 207, 1.0000);
   src: url("./../assets/lost-art-font.woff");
 }
 
-@font-face{
+@import url(http://fonts.googleapis.com/css?family=Happy+Monkey);
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+
+/* Few font classes based on these web fonts
+   ========================================================================== */
+.font-indie{
+  font-family: "Indie Flower";
+  font-size: 19px;
+  color: rgba(58, 98, 117, 1.0000);
+  @include letterpress-white(1);
+}
+
+.font-monkey{
   font-family: "Happy Monkey";
-  src: url("http://fonts.googleapis.com/css?family=Happy+Monkey");
+  font-size: 19px;
+  color: rgba(58, 98, 117, 1.0000);
+  @include letterpress-white(1);
 }

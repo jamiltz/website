@@ -1,7 +1,7 @@
 @import "susy";
 
 $greenTopBanner       :     rgba(93, 171, 31, 1.0000);
-$heightTopBanner      :     45px;
+$heightTopBanner      :     65px;
 $white                :     rgba(255,255,255,1);
 $heightSubBanner      :     38px;
 
@@ -54,7 +54,7 @@ $greenVisualSuccess       :       rgba(122, 189, 0, 0.5);
   font-weight: normal;
 }
 .banner .title {
-  font-weight: bold;
+  padding-top: 12px;
 }
 
 .footer-banner {
@@ -119,6 +119,8 @@ $greenVisualSuccess       :       rgba(122, 189, 0, 0.5);
 }
 $hoverColor         :         rgba(255, 255, 255, 1.0000);
 .menu li{
+  padding-top: 12px;
+
   width: 100px;
   height: 40px;
   cursor: pointer;
@@ -138,4 +140,6 @@ $hoverColor         :         rgba(255, 255, 255, 1.0000);
 .brand{
   font-family: lostart;
   color: black;
+  font-weight: normal;
+  font-size: 40px;
 }
