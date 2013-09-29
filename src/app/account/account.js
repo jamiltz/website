@@ -1,7 +1,11 @@
 angular.module('bk-page-account', [
     'ui.state'
 ])
-
+    /*
+To define a route, we use the .config method, just like normal,
+but instead of setting our routes on $routeProvider, we set our
+states on $stateProvider
+ */
 .config(function config( $stateProvider ) {
     $stateProvider.state('account', {
         url: '/account',

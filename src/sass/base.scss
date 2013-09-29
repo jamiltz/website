@@ -8,53 +8,45 @@ $column-width       :       4em;
 $grid-padding       :       1em;
 $gutter-width       :       1em;
 
+/* Positioning classes
+   ========================================================================== */
 .text-center {
   text-align: center;
 }
-
-.text-light {
-  font-weight: normal;
-}
-
 .center{
   margin: 0 auto;
   display: block;
 }
-
 .center--inline{
   margin: 0 auto;
   display: inline;
 }
 
+/* Few header declarations
+   ========================================================================== */
 h1,h2,h3,h4,h5,h6 {
   margin: 0;
 }
-
 h1,
 .h1 {
   font-size: 38px;
 }
-
 h2,
 .h2 {
   font-size: 32px;
 }
-
 h3,
 .h3 {
   font-size: 24px;
 }
-
 h4,
 .h4 {
   font-size: 18px;
 }
-
 h5,
 .h5 {
   font-size: 14px;
 }
-
 h6,
 .h6 {
   font-size: 12px;
@@ -73,10 +65,9 @@ p{
 body{
   font-family: "OpenSans", sans-serif;
   margin: 0;
-
 }
 
-/* Useful mixins
+/* Always use these functions for black and white
    ========================================================================== */
 @function black($opacity) {
   @return rgba(0,0,0,$opacity);
@@ -84,6 +75,9 @@ body{
 @function white($opacity) {
   @return rgba(255,255,255,$opacity);
 }
+
+/* Mixins for box/font effects
+   ========================================================================== */
 @mixin box-emboss($opacity, $opacity2){
   box-shadow: white($opacity) 0 1px 0, inset black($opacity2) 0 1px 0;
 }
@@ -162,6 +156,7 @@ $buttonBlueBgBottom     :         rgba(24, 119, 207, 1.0000);
 input[type="text"], input[type="password"]{
   border: none;
   border: 1px solid gray;
+  width: 170px;
 }
 .ipt{
   padding: 5px;
@@ -176,7 +171,6 @@ input[type="text"], input[type="password"]{
 .ipt--single{
   display: block;
 }
-
 .ipt-padding{
   padding: 5px;
   @include border-radius(3px);
@@ -210,7 +204,6 @@ input[type="text"], input[type="password"]{
 
 /* A few form rules
    ========================================================================== */
-
 .form {
   @include span-columns(12);
   @include border-radius(5px);
@@ -228,22 +221,20 @@ $formBlueBottom   :         rgba(24, 119, 207, 1.0000);
 
 /* Few alert styles
    ========================================================================== */
-
 .alert--error{
   color: rgba(249, 147, 2, 1.0000);
 }
 
-/* Few font declaration
+/* Font declarations
    ========================================================================== */
 @font-face {
   font-family: "lostart";
   src: url("./../assets/lost-art-font.woff");
 }
-
 @import url(https://fonts.googleapis.com/css?family=Happy+Monkey);
 @import url(https://fonts.googleapis.com/css?family=Indie+Flower);
 
-/* Few font classes based on these web fonts
+/* Font classes based on these web fonts
    ========================================================================== */
 .font-indie{
   font-family: "Indie Flower";
@@ -251,10 +242,12 @@ $formBlueBottom   :         rgba(24, 119, 207, 1.0000);
   color: rgba(58, 98, 117, 1.0000);
   @include letterpress-white(1);
 }
-
 .font-monkey{
   font-family: "Happy Monkey";
   font-size: 19px;
   color: rgba(58, 98, 117, 1.0000);
   @include letterpress-white(1);
+}
+.text-light {
+  font-weight: normal;
 }

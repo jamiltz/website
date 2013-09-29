@@ -8,11 +8,8 @@ angular.module( 'main', [
         'templates-app',
         'templates-common',
         'bk-page-signup',
-        'da-users',
-        'da-admin',
         'ui.state',
         'ui.router',
-        'da-service',
         'bk-service-user',
         'bk-page-login',
         'bk-page-home',
@@ -46,6 +43,10 @@ angular.module( 'main', [
 
     .run( function run ( $rootScope, User ) {
 
+        /*
+        We should only show some menu items if the user
+        is logged in (authenticated)
+         */
         $rootScope.isAuthenticated = function() {
             if($rootScope.state === 'loggedIn') {
                 return true;
@@ -56,6 +57,9 @@ angular.module( 'main', [
 
         $rootScope.state = 'loggedOut';
 
+        /*
+        Gets called when user clicks on log out button
+         */
         $rootScope.logoutUser = function() {
             User.logout();
         }
@@ -63,11 +67,6 @@ angular.module( 'main', [
     })
 
     .controller( 'AppCtrl', function AppCtrl ( $scope, $location ) {
-
-//        d3.select('body')
-//            .append('h1')
-//            .text('Hey Thet')
-//            .style('color', 'red');
 
     })
 ;
