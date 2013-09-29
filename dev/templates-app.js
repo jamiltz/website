@@ -1,4 +1,4 @@
-angular.module('templates-app', ['account/account.tpl.html', 'admin/admin.tpl.html', 'admin/users.tpl.html', 'home/home.tpl.html', 'item/item.tpl.html', 'login/login.tpl.html', 'signup/signup.tpl.html']);
+angular.module('templates-app', ['account/account.tpl.html', 'home/home.tpl.html', 'item/item.tpl.html', 'login/login.tpl.html', 'signup/partials/step_1.tpl.html', 'signup/partials/step_2.tpl.html', 'signup/signup.tpl.html']);
 
 angular.module("account/account.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("account/account.tpl.html",
@@ -217,23 +217,6 @@ angular.module("account/account.tpl.html", []).run(["$templateCache", function($
     "</section>\n" +
     "<br>\n" +
     "");
-}]);
-
-angular.module("admin/admin.tpl.html", []).run(["$templateCache", function($templateCache) {
-  $templateCache.put("admin/admin.tpl.html",
-    "And for the admin too this is master and develop too yoo yoo yoo yoo {{ name }}\n" +
-    "\n" +
-    "        {{ content }}\n" +
-    "\n" +
-    "<a href=\"/about\">Account</a>");
-}]);
-
-angular.module("admin/users.tpl.html", []).run(["$templateCache", function($templateCache) {
-  $templateCache.put("admin/users.tpl.html",
-    "<h2>\n" +
-    "    The list of users\n" +
-    "    Yes it is {{ name }}\n" +
-    "</h2>");
 }]);
 
 angular.module("home/home.tpl.html", []).run(["$templateCache", function($templateCache) {
@@ -558,9 +541,30 @@ angular.module("login/login.tpl.html", []).run(["$templateCache", function($temp
     "<br>");
 }]);
 
+angular.module("signup/partials/step_1.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("signup/partials/step_1.tpl.html",
+    "Hello agaiiiiiiiin\n" +
+    "        <button ui-sref=\"signup.step2\" style=\"cursor: pointer;\">Step 2</button>\n" +
+    "\n" +
+    "<a\n" +
+    "        style=\"width: 100%;\"\n" +
+    "        target=\"_top\"\n" +
+    "        ng-href=\"/1.0/auth/facebook\">\n" +
+    "    <img\n" +
+    "            class=\"center\"\n" +
+    "            src=\"./../assets/fb_login.png\">\n" +
+    "</a>");
+}]);
+
+angular.module("signup/partials/step_2.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("signup/partials/step_2.tpl.html",
+    "hello again");
+}]);
+
 angular.module("signup/signup.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("signup/signup.tpl.html",
     "<br>\n" +
+    "        <button ui-sref=\"signup.step1\">step 1</button>\n" +
     "<form\n" +
     "        name=\"signupForm\"\n" +
     "        class=\"signup\"\n" +
