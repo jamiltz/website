@@ -1,0 +1,5 @@
+cd ..
+grunt compile
+git add ./dist
+git commit -am "pushing to development branch"
+git push slate develop
