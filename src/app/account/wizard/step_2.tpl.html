@@ -1,9 +1,23 @@
-unis
+Universities
+<h3>
+    Invite 3 friends from your University to become a true member of Benkyet
+</h3>
+
+        <input
+                ng-trim="false"
+                autofocus="true"
+                type="text"
+                ng-model="criteria">
+
+<section
+        ng-repeat="uni in filteredUnis = (unis | filter:criteria)">
+    {{ uni.education[uni.education.length - 1].school.name }}
+        </section>
 
 <section
         ng-repeat="uni in unis">
 <!--{{ uni.education }}-->
-{{ uni.education[uni.education.length - 1].school.name }}
+
     <br>
 {{ uni.name }}
     <br>

@@ -20,11 +20,21 @@ states on $stateProvider
         })
         .state('wizard.step1', {
             url: '/step1',
-            templateUrl: 'account/wizard/step_1.tpl.html'
+            templateUrl: 'account/wizard/step_1.tpl.html',
+            resolve: {
+                rUser: ['User', function(User) {
+                    return User.autologin('login');
+                }]
+            }
         })
         .state('wizard.step2', {
             url: '/step2',
-            templateUrl: 'account/wizard/step_2.tpl.html'
+            templateUrl: 'account/wizard/step_2.tpl.html',
+            resolve: {
+                rUser: ['User', function(User) {
+                    return User.autologin('login');
+                }]
+            }
         })
         .state('wizard.step3', {
             url: '/step3',
@@ -60,12 +70,23 @@ states on $stateProvider
 .controller('WizardCtrl', function Wizard($scope) {
         $scope.unic = 'James'
 
+        $scope.user = {}
+
             FB.getLoginStatus(function (response) {
                 console.log(response.authResponse.accessToken);
-                var token = 'CAACEdEose0cBAHLdrZCX3zC5SY2m2wfV9VKQBZCyDwIvESJPybZCL2FZC2GBhIpq7cTSE034UIJeNFZBgcnAaOCRy7rZBVnpIhhzGbtcPpu8Xze0JL0JXpZAUI7N0sTjZC154ssjXlF1ydqL2wNvV0x6LEAbdf8DxkPFSFEQ2cPd1nZCa5MxHUrA9oH0jvrdftfnef8ZC0JYSLlwZDZD';
-                FB.api('/me/friends?fields=education,name,picture&access_token=' + token, function(response) {
-                    console.log(response);
-                    $scope.$apply($scope.unis = response.data);
+                console.log(response.authResponse)
+                var token = response.authResponse.accessToken;
+                FB.api('/me?fields=education&access_token=' + token, function(res) {
+                    console.log(res)
+                    var len = res.education.length;
+                    console.log(len)
+                    var val = res.education[len - 1].school.name.toString();
+                    console.log(val)
+                    $scope.criteria = val
+                })
+                FB.api('/me/friends?fields=education,name,picture&access_token=' + token, function(res2) {
+                    console.log(res2);
+                    $scope.$apply($scope.unis = res2.data);
 
                 })
             });
