@@ -59,11 +59,17 @@
     <script>
         window.fbAsyncInit = function() {
             // init the FB JS SDK
+//            FB.init({
+//                appId      : '199098720262784',             // App ID from the app dashboard
+//                channelUrl : '//dev.benkyet.com',           // Channel file for x-domain comms
+//                status     : true,                          // Check Facebook Login status
+//                xfbml      : true                           // Look for social plugins on the page
+//            });
             FB.init({
-                appId      : '199098720262784',             // App ID from the app dashboard
-                channelUrl : '//dev.benkyet.com',           // Channel file for x-domain comms
-                status     : true,                          // Check Facebook Login status
-                xfbml      : true                           // Look for social plugins on the page
+                appId      : '242355285916432',
+                channelUrl : '//localhost:8000',
+                status     : true,
+                xfbml      : true
             });
             // Additional initialization code such as adding Event Listeners goes here
         };
@@ -84,8 +90,6 @@
     <script type="text/javascript" src="vendor/ngcookies/angular-cookies.js"></script>
     <script type="text/javascript" src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
     <script type="text/javascript" src="src/app/account/account.js"></script>
-    <script type="text/javascript" src="src/app/admin/admin.js"></script>
-    <script type="text/javascript" src="src/app/admin/users.js"></script>
     <script type="text/javascript" src="src/app/app.js"></script>
     <script type="text/javascript" src="src/app/home/home.js"></script>
     <script type="text/javascript" src="src/app/item/item.js"></script>

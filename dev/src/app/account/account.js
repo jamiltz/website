@@ -7,34 +7,72 @@ but instead of setting our routes on $routeProvider, we set our
 states on $stateProvider
  */
 .config(function config( $stateProvider ) {
-    $stateProvider.state('account', {
-        url: '/account',
-        views: {
-            main: {
-                templateUrl: '/account/account.tpl.html',
-                controller: 'AccountCtrl'
+    $stateProvider
+        .state('wizard', {
+            abstract: true,
+            url: '/wizard',
+            views: {
+                main: {
+                    template: '<div><div ui-view></div></div>',
+                    controller: 'WizardCtrl'
+                }
             }
-        },
-        resolve: {
-            rUser: ['User', function(User) {
-
-                return User.autologin('login');
-
-            }],
-            rGroups: ['List', function(List) {
-                return List.getGroups()
-                    .then(
-                    function(res) {
-                        return res.groups;
-                    },
-                    function(err) {
-                        console.log(err);
-                    }
-                )
-            }]
-        }
-    });
+        })
+        .state('wizard.step1', {
+            url: '/step1',
+            templateUrl: 'account/wizard/step_1.tpl.html'
+        })
+        .state('wizard.step2', {
+            url: '/step2',
+            templateUrl: 'account/wizard/step_2.tpl.html'
+        })
+        .state('wizard.step3', {
+            url: '/step3',
+            templateUrl: 'account/wizard/step_3.tpl.html'
+        })
+        .state('account', {
+            url: '/account',
+            views: {
+                main: {
+                    templateUrl: 'account/account.tpl.html',
+                    controller: 'AccountCtrl'
+                }
+            },
+            resolve: {
+                rUser: ['User', function(User) {
+                    return User.autologin('login');
+                }],
+                rGroups: ['List', function(List) {
+                    return List.getGroups()
+                        .then(
+                            function(res) {
+                                return res.groups;
+                            },
+                            function(err) {
+                                console.log(err);
+                            }
+                        )
+                }]
+            }
+        })
 })
+
+.controller('WizardCtrl', function Wizard($scope) {
+        $scope.unic = 'James'
+
+            FB.getLoginStatus(function (response) {
+                console.log(response.authResponse.accessToken);
+                var token = 'CAACEdEose0cBAHLdrZCX3zC5SY2m2wfV9VKQBZCyDwIvESJPybZCL2FZC2GBhIpq7cTSE034UIJeNFZBgcnAaOCRy7rZBVnpIhhzGbtcPpu8Xze0JL0JXpZAUI7N0sTjZC154ssjXlF1ydqL2wNvV0x6LEAbdf8DxkPFSFEQ2cPd1nZCa5MxHUrA9oH0jvrdftfnef8ZC0JYSLlwZDZD';
+                FB.api('/me/friends?fields=education,name,picture&access_token=' + token, function(response) {
+                    console.log(response);
+                    $scope.$apply($scope.unis = response.data);
+
+                })
+            });
+
+
+
+    })
 
 .controller('AccountCtrl', function Account($scope, List, rGroups, Session, User, Item, rUser, $rootScope, $timeout) {
 

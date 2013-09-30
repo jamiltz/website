@@ -16,8 +16,6 @@ module.exports = function ( karma ) {
                 'dev/templates-common.js',
                 'vendor/angular-mocks/angular-mocks.js',
                 'src/app/account/account.js',
-                'src/app/admin/admin.js',
-                'src/app/admin/users.js',
                 'src/app/app.js',
                 'src/app/home/home.js',
                 'src/app/item/item.js',

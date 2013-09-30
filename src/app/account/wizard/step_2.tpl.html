@@ -1,9 +1,25 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title></title>
-</head>
-<body>
+unis
 
-</body>
-</html>
+<section
+        ng-repeat="uni in unis">
+<!--{{ uni.education }}-->
+{{ uni.education[uni.education.length - 1].school.name }}
+    <br>
+{{ uni.name }}
+    <br>
+    <img ng-src="{{ uni.picture.data.url }}">
+
+
+
+    <section ng-init="len = uni.education.length - 1;"
+            ng-bind="uni.education[len].name.school.name">
+        {{ len }}
+            </section>
+
+    <br>
+    <br>
+    <br>
+
+        </section>
+
+        {{ unic }}

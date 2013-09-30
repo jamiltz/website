@@ -1,4 +1,4 @@
-angular.module('templates-app', ['account/account.tpl.html', 'home/home.tpl.html', 'item/item.tpl.html', 'login/login.tpl.html', 'signup/partials/step_1.tpl.html', 'signup/partials/step_2.tpl.html', 'signup/signup.tpl.html']);
+angular.module('templates-app', ['account/account.tpl.html', 'account/wizard/step_1.tpl.html', 'account/wizard/step_2.tpl.html', 'home/home.tpl.html', 'item/item.tpl.html', 'login/login.tpl.html', 'signup/partials/step_1.tpl.html', 'signup/partials/step_2.tpl.html', 'signup/signup.tpl.html']);
 
 angular.module("account/account.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("account/account.tpl.html",
@@ -217,6 +217,41 @@ angular.module("account/account.tpl.html", []).run(["$templateCache", function($
     "</section>\n" +
     "<br>\n" +
     "");
+}]);
+
+angular.module("account/wizard/step_1.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("account/wizard/step_1.tpl.html",
+    "htllo again\n" +
+    "        {{ zozo }}");
+}]);
+
+angular.module("account/wizard/step_2.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("account/wizard/step_2.tpl.html",
+    "unis\n" +
+    "\n" +
+    "<section\n" +
+    "        ng-repeat=\"uni in unis\">\n" +
+    "<!--{{ uni.education }}-->\n" +
+    "{{ uni.education[uni.education.length - 1].school.name }}\n" +
+    "    <br>\n" +
+    "{{ uni.name }}\n" +
+    "    <br>\n" +
+    "    <img ng-src=\"{{ uni.picture.data.url }}\">\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "    <section ng-init=\"len = uni.education.length - 1;\"\n" +
+    "            ng-bind=\"uni.education[len].name.school.name\">\n" +
+    "        {{ len }}\n" +
+    "            </section>\n" +
+    "\n" +
+    "    <br>\n" +
+    "    <br>\n" +
+    "    <br>\n" +
+    "\n" +
+    "        </section>\n" +
+    "\n" +
+    "        {{ unic }}");
 }]);
 
 angular.module("home/home.tpl.html", []).run(["$templateCache", function($templateCache) {
