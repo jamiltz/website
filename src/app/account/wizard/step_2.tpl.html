@@ -5,21 +5,22 @@
         </h3>
 
         <input
-                class="form-control"
+                class="form-control by-margin-top-10"
                 autofocus="true"
                 type="text"
                 ng-model="criteria">
     </section>
+    <button
+            ng-disabled="!(valid_invite === true);"
+            ng-click="requestFriends()"
+            class="col-lg-offset-2 col-lg-8 btn btn-primary"
+            >Invite Friends</button>
 
-    <section class="col-lg-offset-1">
+    <section class="col-lg-offset-1 by-invite-friends">
         <section
                 class="col-lg-4 friends"
                 style="padding: 10px 0;"
                 ng-repeat="friend in filteredUnis = (friends | filter:criteria)">
-
-
-
-
 
 
             <div class="media">
@@ -39,12 +40,13 @@
             </div>
 
         </section>
+
+
+
+
     </section>
 
 
-    <button
-            ng-click="requestFriends()"
-            class="btn btn--gray align-right"
-            >Invite</button>
+
 
 </section>

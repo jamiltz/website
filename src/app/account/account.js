@@ -67,7 +67,7 @@ states on $stateProvider
         })
 })
 
-.controller('WizardCtrl', function Wizard($scope) {
+.controller('WizardCtrl', function Wizard($scope, $state) {
         $scope.unic = 'James'
 
         $scope.user = {}
@@ -100,8 +100,11 @@ states on $stateProvider
                 to: invites
             }, function() {
                 console.log(arguments);
+                $scope.$apply($state.transitionTo('account'));
             });
         }
+
+
 
         var invites = [];
 
@@ -113,10 +116,6 @@ states on $stateProvider
                 }
             });
 
-            console.log(invite_state)
-
-            console.log(invites)
-
             if(invite_state[0]) {
                 var idx = invites.indexOf(id);
                 console.log(idx)
@@ -125,7 +124,11 @@ states on $stateProvider
                 invites.push(id);
             }
 
-            console.log(invites)
+            if(invites.length >= 1) {
+                $scope.valid_invite = true;
+            } else {
+                $scope.valid_invite = false;
+            }
 
         }
 
