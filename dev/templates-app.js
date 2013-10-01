@@ -224,118 +224,124 @@ angular.module("account/account.tpl.html", []).run(["$templateCache", function($
 
 angular.module("account/wizard/step_1.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("account/wizard/step_1.tpl.html",
-    "<form\n" +
-    "        name=\"newItemForm\"\n" +
-    "        ng-submit=\"sendItem();\"\n" +
-    "        class=\"form form--blue lyt--new-item-form\">\n" +
-    "    <div>\n" +
-    "        <p class=\"h3\">\n" +
-    "            Item details\n" +
-    "        </p>\n" +
-    "        <input\n" +
-    "                required\n" +
-    "                ng-model=\"item.name\"\n" +
-    "                class=\"ipt ipt--inline\"\n" +
-    "                placeholder=\"Title - Editor - Year\"\n" +
-    "                type=\"text\">\n" +
-    "        <input\n" +
-    "                required\n" +
-    "                ng-model=\"item.price\"\n" +
-    "                class=\"ipt ipt--inline\"\n" +
-    "                placeholder=\"Price\"\n" +
-    "                type=\"text\">\n" +
-    "        <input\n" +
-    "                required\n" +
-    "                ng-model=\"item.location\"\n" +
-    "                class=\"ipt ipt--inline\"\n" +
-    "                placeholder=\"Location\"\n" +
-    "                type=\"text\">\n" +
-    "        <p class=\"h4\">\n" +
-    "            DESCRIPTION\n" +
-    "        </p>\n" +
-    "        <textarea\n" +
-    "                required\n" +
-    "                ng-model=\"item.description\"\n" +
-    "                rows=\"10\"\n" +
-    "                cols=\"98\"\n" +
-    "                placeholder=\"Describe the item here\">\n" +
-    "        </textarea>\n" +
-    "        <br>\n" +
-    "        <p class=\"h4\">\n" +
-    "            COMMUNITY\n" +
-    "        </p>\n" +
-    "        <select\n" +
-    "                required\n" +
-    "                ng-options=\"g for g in groups\"\n" +
-    "                ng-model=\"item.group\"></select>\n" +
-    "        <p class=\"h4\">\n" +
-    "            PICTURES\n" +
-    "        </p>\n" +
-    "        <fileupload pictures=\"pictures\"></fileupload>\n" +
-    "        <br>\n" +
-    "        <!--<progress id=\"progress\" value=\"0\"></progress>-->\n" +
-    "        <button\n" +
-    "                class=\"btn btn--gray\"\n" +
-    "                ng-disabled=\"!canSave('newItemForm') || isProgressing;\">\n" +
-    "            Next</button>\n" +
-    "        <button\n" +
-    "                class=\"btn btn--gray\"\n" +
-    "                ng-click=\"isAddingItem = false;\">Cancel</button>\n" +
-    "        <a\n" +
-    "                href=\"/wizard/step2\"\n" +
-    "                class=\"btn btn--gray\"\n" +
-    "                >Next</a>\n" +
-    "        <img\n" +
-    "                ng-show=\"isProgressing\"\n" +
-    "                src=\"./../assets/spinner.gif\"\n" +
-    "                style=\"vertical-align: middle;\">\n" +
-    "    </div>\n" +
+    "<section\n" +
+    "        class=\"account\">\n" +
+    "\n" +
+    "    <form\n" +
+    "            name=\"newItemForm\"\n" +
+    "            ng-submit=\"sendItem();\"\n" +
+    "            class=\"form form--blue lyt--new-item-form\">\n" +
+    "        <div>\n" +
+    "            <p class=\"h3\">\n" +
+    "                Item details\n" +
+    "            </p>\n" +
+    "            <input\n" +
+    "                    required\n" +
+    "                    ng-model=\"item.name\"\n" +
+    "                    class=\"ipt ipt--inline\"\n" +
+    "                    placeholder=\"Title - Editor - Year\"\n" +
+    "                    type=\"text\">\n" +
+    "            <input\n" +
+    "                    required\n" +
+    "                    ng-model=\"item.price\"\n" +
+    "                    class=\"ipt ipt--inline\"\n" +
+    "                    placeholder=\"Price\"\n" +
+    "                    type=\"text\">\n" +
+    "            <input\n" +
+    "                    required\n" +
+    "                    ng-model=\"item.location\"\n" +
+    "                    class=\"ipt ipt--inline\"\n" +
+    "                    placeholder=\"Location\"\n" +
+    "                    type=\"text\">\n" +
+    "            <p class=\"h4\">\n" +
+    "                DESCRIPTION\n" +
+    "            </p>\n" +
+    "            <textarea\n" +
+    "                    required\n" +
+    "                    ng-model=\"item.description\"\n" +
+    "                    rows=\"10\"\n" +
+    "                    cols=\"98\"\n" +
+    "                    placeholder=\"Describe the item here\">\n" +
+    "            </textarea>\n" +
+    "            <br>\n" +
+    "            <p class=\"h4\">\n" +
+    "                COMMUNITY\n" +
+    "            </p>\n" +
+    "            <select\n" +
+    "                    required\n" +
+    "                    ng-options=\"g for g in groups\"\n" +
+    "                    ng-model=\"item.group\"></select>\n" +
+    "            <p class=\"h4\">\n" +
+    "                PICTURES\n" +
+    "            </p>\n" +
+    "            <fileupload pictures=\"pictures\"></fileupload>\n" +
+    "            <br>\n" +
+    "            <!--<progress id=\"progress\" value=\"0\"></progress>-->\n" +
+    "            <button\n" +
+    "                    class=\"btn btn--gray\"\n" +
+    "                    ng-disabled=\"!canSave('newItemForm') || isProgressing;\">\n" +
+    "                Next</button>\n" +
+    "            <button\n" +
+    "                    class=\"btn btn--gray\"\n" +
+    "                    ng-click=\"isAddingItem = false;\">Cancel</button>\n" +
+    "            <a\n" +
+    "                    href=\"/wizard/step2\"\n" +
+    "                    class=\"btn btn--gray align-right\"\n" +
+    "                    >Next</a>\n" +
+    "            <img\n" +
+    "                    ng-show=\"isProgressing\"\n" +
+    "                    src=\"./../assets/spinner.gif\"\n" +
+    "                    style=\"vertical-align: middle;\">\n" +
+    "        </div>\n" +
     "\n" +
     "\n" +
-    "</form>");
+    "    </form>\n" +
+    "\n" +
+    "</section>\n" +
+    "");
 }]);
 
 angular.module("account/wizard/step_2.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("account/wizard/step_2.tpl.html",
-    "Universities\n" +
-    "<h3>\n" +
-    "    Invite 3 friends from your University to become a true member of Benkyet\n" +
-    "</h3>\n" +
+    "<section\n" +
+    "        class=\"account\">\n" +
+    "\n" +
+    "    <h3>\n" +
+    "        Invite 3 friends from your University to become a true member of Benkyet\n" +
+    "    </h3>\n" +
+    "\n" +
+    "    <input\n" +
+    "            class=\"ipt ipt--single\"\n" +
+    "            autofocus=\"true\"\n" +
+    "            type=\"text\"\n" +
+    "            ng-model=\"criteria\">\n" +
+    "\n" +
+    "    <section\n" +
+    "            ng-repeat=\"friend in filteredUnis = (friends | filter:criteria)\">\n" +
+    "\n" +
     "\n" +
     "        <input\n" +
-    "                ng-trim=\"false\"\n" +
-    "                autofocus=\"true\"\n" +
-    "                type=\"text\"\n" +
-    "                ng-model=\"criteria\">\n" +
+    "                ng-model=\"friend_state\"\n" +
+    "                type=\"checkbox\"\n" +
+    "                ng-click=\"addFriendRequest(friend.id)\">\n" +
+    "        <img\n" +
+    "                style=\"vertical-align: middle;\"\n" +
+    "                ng-src=\"{{ friend.picture.data.url }}\">\n" +
+    "        <h4 class=\"inline\">\n" +
+    "            {{ friend.name }}\n" +
+    "        </h4>\n" +
+    "        <br>\n" +
+    "        <h4 class=\"inline\">\n" +
+    "            {{ friend.education[friend.education.length - 1].school.name }}\n" +
+    "        </h4>\n" +
+    "    </section>\n" +
     "\n" +
-    "<section\n" +
-    "        ng-repeat=\"uni in filteredUnis = (unis | filter:criteria)\">\n" +
-    "    {{ uni.education[uni.education.length - 1].school.name }}\n" +
-    "        </section>\n" +
+    "    <button\n" +
+    "            ng-click=\"requestFriends()\"\n" +
+    "            class=\"btn btn--gray align-right\"\n" +
+    "            >Invite</button>\n" +
     "\n" +
-    "<section\n" +
-    "        ng-repeat=\"uni in unis\">\n" +
-    "<!--{{ uni.education }}-->\n" +
-    "\n" +
-    "    <br>\n" +
-    "{{ uni.name }}\n" +
-    "    <br>\n" +
-    "    <img ng-src=\"{{ uni.picture.data.url }}\">\n" +
-    "\n" +
-    "\n" +
-    "\n" +
-    "    <section ng-init=\"len = uni.education.length - 1;\"\n" +
-    "            ng-bind=\"uni.education[len].name.school.name\">\n" +
-    "        {{ len }}\n" +
-    "            </section>\n" +
-    "\n" +
-    "    <br>\n" +
-    "    <br>\n" +
-    "    <br>\n" +
-    "\n" +
-    "        </section>\n" +
-    "\n" +
-    "        {{ unic }}");
+    "</section>");
 }]);
 
 angular.module("home/home.tpl.html", []).run(["$templateCache", function($templateCache) {

@@ -21,6 +21,12 @@ $gutter-width       :       1em;
   margin: 0 auto;
   display: inline;
 }
+.inline{
+  display: inline-block;
+}
+.align-right{
+  float: right;
+}
 
 /* Few header declarations
    ========================================================================== */

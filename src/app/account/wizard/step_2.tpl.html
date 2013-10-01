@@ -1,39 +1,39 @@
-Universities
-<h3>
-    Invite 3 friends from your University to become a true member of Benkyet
-</h3>
+<section
+        class="account">
+
+    <h3>
+        Invite 3 friends from your University to become a true member of Benkyet
+    </h3>
+
+    <input
+            class="ipt ipt--single"
+            autofocus="true"
+            type="text"
+            ng-model="criteria">
+
+    <section
+            ng-repeat="friend in filteredUnis = (friends | filter:criteria)">
+
 
         <input
-                ng-trim="false"
-                autofocus="true"
-                type="text"
-                ng-model="criteria">
+                ng-model="friend_state"
+                type="checkbox"
+                ng-click="addFriendRequest(friend.id)">
+        <img
+                style="vertical-align: middle;"
+                ng-src="{{ friend.picture.data.url }}">
+        <h4 class="inline">
+            {{ friend.name }}
+        </h4>
+        <br>
+        <h4 class="inline">
+            {{ friend.education[friend.education.length - 1].school.name }}
+        </h4>
+    </section>
 
-<section
-        ng-repeat="uni in filteredUnis = (unis | filter:criteria)">
-    {{ uni.education[uni.education.length - 1].school.name }}
-        </section>
+    <button
+            ng-click="requestFriends()"
+            class="btn btn--gray align-right"
+            >Invite</button>
 
-<section
-        ng-repeat="uni in unis">
-<!--{{ uni.education }}-->
-
-    <br>
-{{ uni.name }}
-    <br>
-    <img ng-src="{{ uni.picture.data.url }}">
-
-
-
-    <section ng-init="len = uni.education.length - 1;"
-            ng-bind="uni.education[len].name.school.name">
-        {{ len }}
-            </section>
-
-    <br>
-    <br>
-    <br>
-
-        </section>
-
-        {{ unic }}
+</section>

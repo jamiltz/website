@@ -86,12 +86,55 @@ states on $stateProvider
                 })
                 FB.api('/me/friends?fields=education,name,picture&access_token=' + token, function(res2) {
                     console.log(res2);
-                    $scope.$apply($scope.unis = res2.data);
+                    $scope.$apply($scope.friends = res2.data);
 
                 })
             });
 
 
+        $scope.requestFriends = function() {
+            FB.ui({
+                method: 'apprequests',
+                message: 'My Great Request',
+                title: 'Hello there',
+                to: invites
+            }, function() {
+                console.log(arguments);
+            });
+        }
+
+        var invites = [];
+
+        $scope.addFriendRequest = function(id) {
+
+            var invite_state = invites.filter(function(elt) {
+                if(elt === id) {
+                    return elt;
+                }
+            });
+
+            console.log(invite_state)
+
+            console.log(invites)
+
+            if(invite_state[0]) {
+                var idx = invites.indexOf(id);
+                console.log(idx)
+                invites.splice(idx, 1);
+            } else {
+                invites.push(id);
+            }
+
+            console.log(invites)
+
+        }
+
+
+
+
+    })
+
+.controller('FriendCtrl', function Friend( $scope ) {
 
     })
 
