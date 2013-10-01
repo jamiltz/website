@@ -1,17 +1,19 @@
 <section class="container">
+<!--<button-->
+        <!--class="btn btn--gray"-->
+        <!--ng-click="isAddingItem = true; isUpdatingAccount = false;">Add Item</button>-->
 <button
-        class="btn btn--gray"
-        ng-click="isAddingItem = true; isUpdatingAccount = false;">Add Item</button>
-<button
-        class="btn btn--gray"
+        class="btn btn-outline-inverse btn-lg by-margin-top-10"
         ng-click="isUpdatingAccount = true; isAddingItem = false;">Update Account</button>
-<a
-        class="btn btn--gray"
-        href="/wizard/step1">Wizard</a>
+<button
+        class="btn btn-outline-inverse btn-lg"
+        ng-click="goToWizard();">Add Item
+    </button>
+
 
 <form
         name="updateAccountForm"
-        class="form form--blue lyt--update-account-form"
+        class="col-lg-offset-2 col-lg-8"
         ng-submit="updateUser();"
         ng-show="isUpdatingAccount === true;">
     <div>
@@ -20,27 +22,27 @@
                 ng-model="current.username"
                 type="text"
                 placeholder="Username"
-                class="ipt ipt--single center">
+                class="form-control by-margin-top-10">
         <input
                 required
                 ng-model="current.email"
                 type="text"
                 placeholder="Email"
-                class="ipt ipt--single center">
+                class="form-control by-margin-top-10">
         <input
                 required
                 ng-init="current.pass = ''"
                 ng-model="current.pass"
                 type="password"
                 placeholder="Change password"
-                class="ipt ipt--single center">
+                class="form-control by-margin-top-10">
         <input
                 required
                 ng-init="current.confirm = ''"
                 ng-model="current.confirm"
                 type="password"
                 placeholder="Confirm New Password"
-                class="ipt ipt--single center">
+                class="form-control by-margin-top-10">
 
         <div class="position-button-middle">
             <button
@@ -127,82 +129,86 @@
 
 <br>
 <br>
-<h3>Your items for sale</h3>
 
-<article class="item-box" ng-repeat="item in filteredItems = (items | filter:criteria | orderBy:sortField:reverse)" ng-controller="s-ItemCtrl">
-    <a class="item--thumb" ng-href="/item/{{ item.ref }}">
-        <img ng-src="{{ item.pictures[0] }}">
-    </a>
-    <div class="item--text" ng-switch="isEditing">
-        <h3>{{ item.name }}</h3>
-        <p class="price">{{ item.price | currency:"£ " }}</p>
-        <br>
-        <a
-                class="btn btn--gray"
-                href=""
-                ng-click="isEditing = true">Edit</a>
-        <a
-                class="btn btn--gray"
-                href=""
-                ng-click="removeItem(item.ref)">Remove</a>
-        <br>
-        <form
-                name="updateItemForm"
-                class="form form--blue lyt--update-item-form"
-                ng-switch-when="true">
-            <div>
-                <p class="h3">
-                    Item details
-                </p>
-                <input
-                        required
-                        ng-model="item.name"
-                        class="ipt ipt--inline"
-                        placeholder="Name of item"
-                        type="text">
-                <input
-                        required
-                        ng-model="item.price"
-                        class="ipt ipt--inline"
-                        placeholder="Price"
-                        type="text">
-                <input
-                        required
-                        ng-model="item.location"
-                        class="ipt ipt--inline"
-                        placeholder="Location"
-                        type="text">
+<section class="col-lg-offset-2 col-lg-8">
+    <h3>Your items for sale</h3>
 
-                <p class="h4">
-                    DESCRIPTION
-                </p>
-                <textarea
-                        required
-                        ng-model="item.description"
-                        rows="10"
-                        cols="72"
-                        placeholder="Describe the item here">
-                </textarea>
-                <br>
-                <p class="h4">
-                    COMMUNITY
-                </p>
-                <select
-                        required
-                        ng-options="g for g in groups"
-                        ng-model="item.group"></select>
+    <article class="item-box" ng-repeat="item in filteredItems = (items | filter:criteria | orderBy:sortField:reverse)" ng-controller="s-ItemCtrl">
+        <a class="item--thumb" ng-href="/item/{{ item.ref }}">
+            <img ng-src="{{ item.pictures[0] }}">
+        </a>
+        <div class="item--text" ng-switch="isEditing">
+            <h3>{{ item.name }}</h3>
+            <p class="price">{{ item.price | currency:"£ " }}</p>
+            <br>
+            <a
+                    class="btn btn--gray"
+                    href=""
+                    ng-click="isEditing = true">Edit</a>
+            <a
+                    class="btn btn--gray"
+                    href=""
+                    ng-click="removeItem(item.ref)">Remove</a>
+            <br>
+            <form
+                    name="updateItemForm"
+                    class="form form--blue lyt--update-item-form"
+                    ng-switch-when="true">
+                <div>
+                    <p class="h3">
+                        Item details
+                    </p>
+                    <input
+                            required
+                            ng-model="item.name"
+                            class="ipt ipt--inline"
+                            placeholder="Name of item"
+                            type="text">
+                    <input
+                            required
+                            ng-model="item.price"
+                            class="ipt ipt--inline"
+                            placeholder="Price"
+                            type="text">
+                    <input
+                            required
+                            ng-model="item.location"
+                            class="ipt ipt--inline"
+                            placeholder="Location"
+                            type="text">
 
-                <!--<progress id="progress" value="0"></progress>-->
-                <br>
-                <br>
-                <button
-                        class="btn btn--gray"
-                        ng-click="updateItem(item);">Save</button>
-                <button
-                        class="btn btn--gray"
-                        ng-click="$parent.isEditing = false;">Cancel</button>
-            </div>
-        </form>
-    </div>
-</article>
+                    <p class="h4">
+                        DESCRIPTION
+                    </p>
+                    <textarea
+                            required
+                            ng-model="item.description"
+                            rows="10"
+                            cols="72"
+                            placeholder="Describe the item here">
+                    </textarea>
+                    <br>
+                    <p class="h4">
+                        COMMUNITY
+                    </p>
+                    <select
+                            required
+                            ng-options="g for g in groups"
+                            ng-model="item.group"></select>
+
+                    <!--<progress id="progress" value="0"></progress>-->
+                    <br>
+                    <br>
+                    <button
+                            class="btn btn--gray"
+                            ng-click="updateItem(item);">Save</button>
+                    <button
+                            class="btn btn--gray"
+                            ng-click="$parent.isEditing = false;">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </article>
+</section>
+
 </section>

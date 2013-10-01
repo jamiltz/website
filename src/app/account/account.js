@@ -141,7 +141,7 @@ states on $stateProvider
 
     })
 
-.controller('AccountCtrl', function Account($scope, List, rGroups, Session, User, Item, rUser, $rootScope, $timeout) {
+.controller('AccountCtrl', function Account($scope, $state, List, rGroups, Session, User, Item, rUser, $rootScope, $timeout) {
 
         //This line is necessary because I noticed a weird behaviour.
         //The user info is published on the rootScope in the autologin method of the User service.
@@ -150,7 +150,9 @@ states on $stateProvider
         //to transfer its data to the local scope
         $scope.current = rUser;
 
-
+        $scope.goToWizard = function() {
+            $state.transitionTo('wizard.step1')
+        }
 
         $scope.updateUser = function() {
             $scope.isProgressing = true;
