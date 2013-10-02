@@ -11,8 +11,12 @@ states on $stateProvider
         .state('wizard', {
             url: '/wizard',
             abstract: true,
-            template: '<div><div ui-view></div></div>',
-            controller: 'WizardCtrl',
+            views: {
+                main: {
+                    template: '<div><div ui-view></div></div>',
+                    controller: 'WizardCtrl'
+                }
+            },
             resolve: {
                 rGroups: ['List', function(List) {
                     return List.getGroups()
