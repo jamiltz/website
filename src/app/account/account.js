@@ -148,6 +148,8 @@ states on $stateProvider
 //                        function(err) {
 //                        }
 //                    );
+                    $state.transitionTo('wizard.step2');
+
 //
                     $scope.$apply($scope.isAddingItem = false);
                 })
@@ -232,6 +234,8 @@ states on $stateProvider
         //Seems like sometimes, the view a local scope would loaded before the rootscope had time
         //to transfer its data to the local scope
         $scope.current = rUser;
+
+        $scope.groups = rGroups;
 
         $scope.goToWizard = function() {
             $state.transitionTo('wizard.step1')
