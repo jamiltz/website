@@ -56,15 +56,21 @@
                 <fileupload pictures="pictures"></fileupload>
                 <br>
 
-                <a
-                        href="/account"
-                        >Back</a>
 
-                <!--ng-disabled="!canSave('newItemForm') || isProgressing;"-->
-                <a
-                        href="/wizard/step2"
+                <button
+                        class="btn btn-danger"
+                        ng-click="goToAccount();">Back</button>
+
+                <button
+                        ng-disabled="!canSave('newItemForm') || isProgressing;"
+                        class="btn btn-success pull-right"
+                        ng-click="senditem();">Next</button>
+                <img
                         class="pull-right"
-                        >Next</a>
+                        ng-show="isProgressing"
+                        src="./../assets/spinner.gif"
+                        style="vertical-align: middle;margin-right: 10px;">
+
                 <img
                         ng-show="isProgressing"
                         src="./../assets/spinner.gif"
