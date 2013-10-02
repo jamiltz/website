@@ -9,14 +9,10 @@ states on $stateProvider
 .config(function config( $stateProvider ) {
     $stateProvider
         .state('wizard', {
-            abstract: true,
             url: '/wizard',
-            views: {
-                main: {
-                    template: '<div><div ui-view></div></div>',
-                    controller: 'WizardCtrl'
-                }
-            },
+            abstract: true,
+            template: '<div><div ui-view></div></div>',
+            controller: 'WizardCtrl',
             resolve: {
                 rGroups: ['List', function(List) {
                     return List.getGroups()
@@ -32,9 +28,10 @@ states on $stateProvider
             }
         })
         .state('wizard.step1', {
+            parent: 'wizard',
+            name: 'step1',
             url: '/step1',
             templateUrl: 'account/wizard/step_1.tpl.html',
-            controller: 'WizardCtrl',
             resolve: {
                 rUser: ['User', function(User) {
                     return User.autologin('login');
@@ -42,17 +39,16 @@ states on $stateProvider
             }
         })
         .state('wizard.step2', {
+//            parent: 'wizard',
+//            name: 'step2',
             url: '/step2',
             templateUrl: 'account/wizard/step_2.tpl.html',
+//            controller: 'WizardCtrl',
             resolve: {
                 rUser: ['User', function(User) {
                     return User.autologin('login');
                 }]
             }
-        })
-        .state('wizard.step3', {
-            url: '/step3',
-            templateUrl: 'account/wizard/step_3.tpl.html'
         })
         .state('account', {
             url: '/account',
@@ -81,23 +77,33 @@ states on $stateProvider
         })
 })
 
-.controller('WizardCtrl', function Wizard($scope, $state, rGroups, User, $rootScope, $timeout) {
+.controller('WizardCtrl', function Wizard($scope, $state, User, rGroups, $rootScope, $timeout) {
 
         $scope.goToAccount = function() {
             $state.transitionTo('account');
+
         };
 
+        $scope.goToStep2 = function() {
+            $state.transitionTo('wizard.step2');
+//            window.location.href='/wizard/step2'
+        }
+
+
+        $scope.state = {};
+        $scope.data = {};
+
         $scope.canSave = function(form_name) {
-            return $scope[form_name].$dirty && $scope[form_name].$valid;
+            return $scope.data.form.$dirty && $scope.data.form.$valid;
         };
 
 
         $scope.groups = rGroups;
 
         $scope.item = {};
-        $scope.pictures = '';
 
-        $scope.sendItem = function() {
+
+        $rootScope.sendItem = function() {
             $scope.isProgressing = true;
 
 //            var data = {
@@ -108,7 +114,7 @@ states on $stateProvider
 //                pictures: $scope.pictures
 //            }
 
-            var str = JSON.stringify($scope.pictures);
+            var str = JSON.stringify($scope.data.pictures);
 
             var form = new FormData();
             form.append('name', $scope.item.name)
@@ -148,10 +154,11 @@ states on $stateProvider
 //                        function(err) {
 //                        }
 //                    );
-                    $state.transitionTo('wizard.step2');
+
+                    $state.transitionTo('account');
 
 //
-                    $scope.$apply($scope.isAddingItem = false);
+//                    $scope.$apply($scope.isAddingItem = false);
                 })
 
             }
@@ -178,14 +185,15 @@ states on $stateProvider
 
 
         $scope.requestFriends = function() {
+            console.log($scope.item)
             FB.ui({
                 method: 'apprequests',
                 message: 'My Great Request',
                 title: 'Hello there',
                 to: invites
             }, function() {
-                console.log(arguments);
-                $scope.$apply($state.transitionTo('account'));
+                console.log('invite sent')
+                $scope.$apply($rootScope.sendItem());
             });
         }
 
@@ -236,6 +244,7 @@ states on $stateProvider
         $scope.current = rUser;
 
         $scope.groups = rGroups;
+        $rootScope.groups = rGroups;
 
         $scope.goToWizard = function() {
             $state.transitionTo('wizard.step1')

@@ -3,7 +3,7 @@
 
         <form
                 name="newItemForm"
-                ng-submit="sendItem();"
+                ng-init="data.form = newItemForm"
                 class="">
             <div>
                 <p class="h3 by-margin-top-10">
@@ -53,7 +53,7 @@
                 <p class="h4 by-margin-top-10">
                     PICTURES
                 </p>
-                <fileupload pictures="pictures"></fileupload>
+                <fileupload pictures="data.pictures"></fileupload>
                 <br>
 
 
@@ -64,7 +64,7 @@
                 <button
                         ng-disabled="!canSave('newItemForm') || isProgressing;"
                         class="btn btn-success pull-right"
-                        ng-click="senditem();">Next</button>
+                        ng-click="goToStep2();">Next</button>
                 <img
                         class="pull-right"
                         ng-show="isProgressing"
