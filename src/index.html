@@ -152,7 +152,14 @@
             ng-show="isAuthenticated();"
             class="by-banr by-banr--small">
         <strong>
-            Replies to your ads are sent to <b class="by-usr--email">{{ current.email }}</b>
+            Replies to your ads are sent to
+            <b class="by-usr--email">{{ current.email }}</b>
+            (<strong>
+                <a
+                        style="color: green;text-decoration: underline;"
+                        href="/account"
+                        ng-click="editEmail();">Change it</a>
+            </strong>)
         </strong>
     </section>
 

@@ -63,9 +63,16 @@ angular.module( 'main', [
             User.logout();
         }
 
+        $rootScope.editEmail = function() {
+            $rootScope.isUpdatingAccount = true;
+        }
+
     })
 
     .controller( 'AppCtrl', function AppCtrl ( $scope, $location ) {
+
+
+
 
     })
 ;
