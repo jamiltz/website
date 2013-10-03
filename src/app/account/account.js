@@ -200,12 +200,12 @@ states on $stateProvider
             console.log($scope.item)
             FB.ui({
                 method: 'apprequests',
-                message: 'My Great Request',
+                message: 'Buy and Sell on campus',
                 title: 'Hello there',
                 to: invites
             }, function() {
                 console.log('invite sent')
-                $scope.$apply($rootScope.sendItem());
+//                $scope.$apply($rootScope.sendItem());
             });
         }
 
