@@ -38,7 +38,7 @@ states on $stateProvider
             templateUrl: 'account/wizard/step_1.tpl.html',
             resolve: {
                 rUser: ['User', function(User) {
-                    return User.autologin('login');
+                    return User.autologin('home');
                 }]
             }
         })
@@ -50,7 +50,7 @@ states on $stateProvider
 //            controller: 'WizardCtrl',
             resolve: {
                 rUser: ['User', function(User) {
-                    return User.autologin('login');
+                    return User.autologin('home');
                 }]
             }
         })
@@ -64,7 +64,7 @@ states on $stateProvider
             },
             resolve: {
                 rUser: ['User', function(User) {
-                    return User.autologin('login');
+                    return User.autologin('home');
                 }],
                 rGroups: ['List', function(List) {
                     return List.getGroups()
